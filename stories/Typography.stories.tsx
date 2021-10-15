@@ -20,7 +20,7 @@ interface Props extends TypographyProps {
 // variant
 // {args.customWeight}
 
-const Template: Story<Props> = (args) => {
+const StoryTypography: Story<Props> = (args) => {
   const isHeading = args.variant.startsWith("h");
 
   return (
@@ -33,9 +33,9 @@ const Template: Story<Props> = (args) => {
   );
 };
 
-export const StoryTypography = Template.bind({});
+export const Default = StoryTypography.bind({});
 
-StoryTypography.args = {
+Default.args = {
   variant: "h1",
   customColor: "text-primary-600 dark:text-white",
   customWeight: "regular",

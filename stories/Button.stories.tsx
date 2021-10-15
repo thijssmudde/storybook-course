@@ -1,5 +1,6 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
+import { FiStar, FiArrowRight } from "react-icons/fi";
 import { Button, ButtonProps } from "../src";
 import StoryLayout from "./StoryLayout";
 
@@ -24,15 +25,25 @@ interface Props extends ButtonProps {
   darkMode: boolean;
 }
 
-const Template: Story<Props> = (args) => (
+const StoryButton: Story<Props> = (args) => (
   <StoryLayout {...args} className="space-y-2">
     <Button {...args}>Button CTA</Button>
+
+    <Button {...args} LeadingIcon={<FiStar />}>
+      Button CTA
+    </Button>
+
+    <Button {...args} TrailingIcon={<FiArrowRight />}>
+      Button CTA
+    </Button>
+
+    <Button {...args} IconOnly={<FiArrowRight />} />
   </StoryLayout>
 );
 
-export const StoryButton = Template.bind({});
+export const Default = StoryButton.bind({});
 
-StoryButton.args = {
+Default.args = {
   variant: "primary",
   size: "md",
   darkMode: false,

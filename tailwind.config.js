@@ -90,6 +90,9 @@ module.exports = {
       height: {
         15: "3.75rem",
       },
+      width: {
+        15: "3.75rem",
+      },
       padding: {
         4.5: "1.125rem",
       },
