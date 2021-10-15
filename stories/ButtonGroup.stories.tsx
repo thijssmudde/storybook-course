@@ -73,8 +73,6 @@ const StoryButtonGroup: Story<Props> = (args) => {
     options3[1].value,
   );
 
-  // With icon
-  // Icons only
   return (
     <StoryLayout {...args} className="space-y-4">
       <div>
