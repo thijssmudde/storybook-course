@@ -1,5 +1,5 @@
-import classNames from "classnames";
 import React, { FC, ButtonHTMLAttributes } from "react";
+import classNames from "classnames";
 
 type ButtonVariant =
   | "primary"

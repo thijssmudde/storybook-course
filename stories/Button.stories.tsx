@@ -7,15 +7,12 @@ import StoryLayout from "./StoryLayout";
 const meta: Meta = {
   title: "Button",
   component: Button,
-  argTypes: {
-    text: {
-      control: {
-        type: "text",
-      },
-    },
-  },
   parameters: {
     controls: { expanded: true },
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/0t0pK5luEdxTorOcg92K49/My-Travel-App?node-id=49%3A24856",
+    },
   },
 };
 

@@ -1,5 +1,5 @@
-import classNames from "classnames";
 import React, { FC } from "react";
+import classNames from "classnames";
 
 type TypographyVariant =
   // Text
@@ -45,7 +45,6 @@ const TypographyVariantClasses: Record<TypographyVariant, string> = {
   h1: "text-h1",
 };
 
-// regular, medium, semibold, bold
 const TypographyWeightClasses: Record<
   TypographyWeightOption,
   TypographyWeightValue

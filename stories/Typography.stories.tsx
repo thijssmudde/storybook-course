@@ -17,9 +17,6 @@ interface Props extends TypographyProps {
   darkMode: boolean;
 }
 
-// variant
-// {args.customWeight}
-
 const StoryTypography: Story<Props> = (args) => {
   const isHeading = args.variant.startsWith("h");
 
@@ -40,4 +37,12 @@ Default.args = {
   customColor: "text-primary-600 dark:text-white",
   customWeight: "regular",
   darkMode: false,
+};
+
+Default.parameters = {
+  design: {
+    type: "figma",
+    url: "https://www.figma.com/file/0t0pK5luEdxTorOcg92K49/My-Travel-App?node-id=6%3A25263",
+  },
+  controls: { include: ["darkMode"] },
 };
