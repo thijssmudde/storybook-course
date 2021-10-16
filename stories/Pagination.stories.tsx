@@ -24,7 +24,6 @@ interface Props extends PaginationProps {
 
 const StoryPagination: Story<Props> = (args) => {
   const [page, setPage] = React.useState<number>(args.page);
-  const totalPages = 10;
 
   React.useEffect(() => {
     if (page >= 0 && page <= 10) {
@@ -34,7 +33,12 @@ const StoryPagination: Story<Props> = (args) => {
 
   return (
     <StoryLayout {...args} className="space-y-4">
-      <Pagination page={page} setPage={setPage} />
+      <Pagination
+        page={page}
+        setPage={setPage}
+        totalPages={10}
+        isMobile={args.isMobile}
+      />
       {/* <div>
         <Pagination
           {...args}
@@ -60,4 +64,6 @@ export const Default = StoryPagination.bind({});
 Default.args = {
   darkMode: false,
   page: 0,
+  totalPage: 10,
+  isMobile: false,
 };
