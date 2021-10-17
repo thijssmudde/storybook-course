@@ -10,16 +10,6 @@ type ButtonVariant =
 
 type ButtonSize = "sm" | "md" | "lg" | "xl" | "2xl";
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children: string | React.ReactElement;
-  variant: ButtonVariant;
-  size?: ButtonSize;
-  LeadingIcon?: React.ReactElement;
-  TrailingIcon?: React.ReactElement;
-  IconOnly?: React.ReactElement;
-  disabled?: boolean;
-}
-
 const ButtonBaseClasses =
   "flex items-center rounded-lg font-medium focus:outline-none";
 
@@ -32,7 +22,7 @@ const ButtonVariantClasses: Record<
   primary: {
     default: "bg-primary-600 dark:bg-gray-800 text-white dark:text-white",
     hover: "hover:bg-primary-700",
-    focus: "focus:ring focus:border-primary-100",
+    focus: "focus:ring focus:border-primary-100 dark:focus:border-opacity-10",
     disabled: "bg-primary-200 text-white",
   },
   secondary: {
@@ -76,6 +66,16 @@ const ButtonIconSizeClasses: Record<ButtonSize, string> = {
   xl: "h-12 w-12",
   "2xl": "h-15 w-15",
 };
+
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children: string | React.ReactElement;
+  variant: ButtonVariant;
+  size?: ButtonSize;
+  LeadingIcon?: React.ReactElement;
+  TrailingIcon?: React.ReactElement;
+  IconOnly?: React.ReactElement;
+  disabled?: boolean;
+}
 
 // Dark Mode
 export const Button: FC<ButtonProps> = ({

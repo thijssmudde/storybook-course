@@ -1,15 +1,15 @@
-import React, { FC, ReactElement } from "react";
+import React, { FC } from "react";
 import classNames from "classnames";
 
 type BadgeVariant = "gray" | "primary" | "error" | "warning" | "success";
 type BadgeSize = "sm" | "md" | "lg";
 
 export interface BadgeProps {
-  children: string | ReactElement;
+  children: string | React.ReactElement;
   variant: BadgeVariant;
   size?: BadgeSize;
-  LeadingIcon?: ReactElement;
-  TrailingIcon?: ReactElement;
+  LeadingIcon?: React.ReactElement;
+  TrailingIcon?: React.ReactElement;
 }
 
 const BadgeBaseClasses = "inline-flex items-center rounded-2xl font-medium";
