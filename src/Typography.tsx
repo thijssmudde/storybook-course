@@ -28,6 +28,7 @@ export interface TypographyProps {
   variant: TypographyVariant;
   customColor?: string;
   customWeight?: TypographyWeightOption;
+  className?: string;
   children: string | React.ReactNode;
 }
 
@@ -59,6 +60,7 @@ export const Typography: FC<TypographyProps> = ({
   variant = "md",
   customColor,
   customWeight = "regular",
+  className,
   children,
 }) => {
   const TypographyVariantClassName = TypographyVariantClasses[variant];
@@ -78,6 +80,7 @@ export const Typography: FC<TypographyProps> = ({
       className={classNames(
         TypographyVariantClassName,
         TypographyWeightClassName,
+        className,
         {
           [trackingClassName]: ["h1", "h2", "h3"].includes(variant),
           [defaultColor]: !customColor,

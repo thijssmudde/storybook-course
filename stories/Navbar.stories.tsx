@@ -23,7 +23,7 @@ interface Props extends NavbarProps {
 }
 
 const StoryNavbar: Story<Props> = (args) => {
-  const [open, setOpen] = React.useState<boolean>(true);
+  const [open, setOpen] = React.useState<boolean>(false);
 
   return (
     <StoryLayout {...args} className="">

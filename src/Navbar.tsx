@@ -1,7 +1,16 @@
 import React, { FC } from "react";
 import classNames from "classnames";
 import { Typography } from ".";
-import { FiHome } from "react-icons/fi";
+import { FiArrowLeft, FiChevronDown } from "react-icons/fi";
+import {
+  FiBarChart2,
+  FiCheckSquare,
+  FiFlag,
+  FiHome,
+  FiLayers,
+  FiSettings,
+  FiUsers,
+} from "react-icons/fi";
 
 export interface NavbarProps {
   open: boolean;
@@ -16,7 +25,7 @@ const renderLogo = () => {
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-8 h-8 mr-2.5"
+      className="w-8 h-8"
     >
       <rect
         width="32"
@@ -24,16 +33,16 @@ const renderLogo = () => {
         rx="8"
         fill="url(#paint0_linear_194:16330)"
       />
-      <line x1="16.1" x2="16.1" y2="32" stroke="#E9EBEF" stroke-width="0.2" />
-      <line x1="11.1" x2="11.1" y2="32" stroke="#E9EBEF" stroke-width="0.2" />
-      <line x1="26.1" x2="26.1" y2="32" stroke="#E9EBEF" stroke-width="0.2" />
-      <line x1="6.1" x2="6.1" y2="32" stroke="#E9EBEF" stroke-width="0.2" />
-      <line x1="21.1" x2="21.1" y2="32" stroke="#E9EBEF" stroke-width="0.2" />
-      <line x1="32" y1="16.1" y2="16.1" stroke="#E9EBEF" stroke-width="0.2" />
-      <line x1="32" y1="11.1" y2="11.1" stroke="#E9EBEF" stroke-width="0.2" />
-      <line x1="32" y1="26.1" y2="26.1" stroke="#E9EBEF" stroke-width="0.2" />
-      <line x1="32" y1="6.1" y2="6.1" stroke="#E9EBEF" stroke-width="0.2" />
-      <line x1="32" y1="21.1" y2="21.1" stroke="#E9EBEF" stroke-width="0.2" />
+      <line x1="16.1" x2="16.1" y2="32" stroke="#E9EBEF" strokeWidth="0.2" />
+      <line x1="11.1" x2="11.1" y2="32" stroke="#E9EBEF" strokeWidth="0.2" />
+      <line x1="26.1" x2="26.1" y2="32" stroke="#E9EBEF" strokeWidth="0.2" />
+      <line x1="6.1" x2="6.1" y2="32" stroke="#E9EBEF" strokeWidth="0.2" />
+      <line x1="21.1" x2="21.1" y2="32" stroke="#E9EBEF" strokeWidth="0.2" />
+      <line x1="32" y1="16.1" y2="16.1" stroke="#E9EBEF" strokeWidth="0.2" />
+      <line x1="32" y1="11.1" y2="11.1" stroke="#E9EBEF" strokeWidth="0.2" />
+      <line x1="32" y1="26.1" y2="26.1" stroke="#E9EBEF" strokeWidth="0.2" />
+      <line x1="32" y1="6.1" y2="6.1" stroke="#E9EBEF" strokeWidth="0.2" />
+      <line x1="32" y1="21.1" y2="21.1" stroke="#E9EBEF" strokeWidth="0.2" />
       <rect
         x="2.1"
         y="2.1"
@@ -41,14 +50,14 @@ const renderLogo = () => {
         height="27.8"
         rx="13.9"
         stroke="#E9EBEF"
-        stroke-width="0.2"
+        strokeWidth="0.2"
       />
       <rect x="8" y="8" width="16" height="16" rx="8" fill="#1570EF" />
       <g filter="url(#filter0_b_194:16330)">
         <path
           d="M0 16H32V24C32 28.4183 28.4183 32 24 32H8C3.58172 32 0 28.4183 0 24V16Z"
           fill="#DDDDDD"
-          fill-opacity="0.01"
+          fillOpacity="0.01"
         />
       </g>
       <defs>
@@ -59,9 +68,9 @@ const renderLogo = () => {
           width="44"
           height="28"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feGaussianBlur in="BackgroundImage" stdDeviation="3" />
           <feComposite
             in2="SourceAlpha"
@@ -83,8 +92,8 @@ const renderLogo = () => {
           y2="32.5"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="#DCE0E5" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="#DCE0E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -94,6 +103,7 @@ const renderLogo = () => {
 interface INavbarItem {
   label: string;
   icon: JSX.Element;
+  toggleSidebar?: boolean;
 }
 
 const navbarItems: INavbarItem[] = [
@@ -101,37 +111,96 @@ const navbarItems: INavbarItem[] = [
     label: "Home",
     icon: <FiHome />,
   },
+  {
+    label: "Dashboard",
+    icon: <FiBarChart2 />,
+  },
+  {
+    label: "Projects",
+    icon: <FiLayers />,
+  },
+  {
+    label: "Tasks",
+    icon: <FiCheckSquare />,
+  },
+  {
+    label: "Reporting",
+    icon: <FiUsers />,
+  },
+];
+
+const navbarItems2: INavbarItem[] = [
+  {
+    label: "Settings",
+    icon: <FiSettings />,
+  },
+  {
+    label: "Close Navbar",
+    icon: <FiArrowLeft />,
+    toggleSidebar: true,
+  },
 ];
 
 export const Navbar: FC<NavbarProps> = ({ open, setOpen }) => {
   const renderNavbarItem = (item: INavbarItem) => {
     return (
-      <div className="flex h-10">
-        <item.icon.type size={24} className="mr-3" {...item.icon.props} />
-        <Typography variant="md" customColor="text-gray-800 dark:text-white">
-          {item.label}
-        </Typography>
-      </div>
+      <li
+        className="flex items-center h-10 px-2 py-2 transition duration-100 ease-out rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-100 dark:hover:bg-opacity-10 group"
+        onClick={item.toggleSidebar ? () => setOpen(!open) : () => {}}
+      >
+        <item.icon.type
+          size={24}
+          className="group-hover:text-primary-600 dark:group-hover:text-white dark:text-white"
+          {...item.icon.props}
+        />
+        {open ? (
+          <>
+            <Typography
+              variant="md"
+              className="flex-grow ml-3"
+              customColor="text-gray-800 dark:text-white group-hover:text-primary-600 dark:group-hover:text-white"
+            >
+              {item.label}
+            </Typography>
+            <FiChevronDown
+              size={20}
+              className="text-gray-400 group-hover:text-primary-600 dark:group-hover:text-white"
+            />
+          </>
+        ) : null}
+      </li>
     );
   };
 
   return (
     <div
-      className={classNames("px-9 py-8 bg-white dark:bg-gray-900", {
-        "w-80": open,
-      })}
+      className={classNames(
+        "py-8 flex flex-col items-center bg-white dark:bg-gray-900 transform ease-out duration-100",
+        {
+          "w-80 px-9 ": open,
+          "w-24": !open,
+          "border border-gray-900": true,
+        },
+      )}
     >
-      <div className="flex mb-8">
+      <div className="flex items-center w-full mb-8">
         {renderLogo()}
-        <Typography variant="xl" customWeight="medium">
-          My Travel App
-        </Typography>
+        {open ? (
+          <Typography variant="xl" className="ml-2.5" customWeight="medium">
+            My Travel App
+          </Typography>
+        ) : null}
       </div>
 
       {/* TODO search input */}
 
       {/* TODO navbar items */}
-      {navbarItems.map((item) => renderNavbarItem(item))}
+      <ul className="w-full space-y-1">
+        {navbarItems.map((item) => renderNavbarItem(item))}
+      </ul>
+      <ul className="w-full mb-6 space-y-1">
+        {navbarItems2.map((item) => renderNavbarItem(item))}
+      </ul>
 
       {/* TODO avatar */}
 
@@ -139,19 +208,21 @@ export const Navbar: FC<NavbarProps> = ({ open, setOpen }) => {
 
       <div className="flex">
         <div></div>
-        <div className="">
-          <Typography
-            variant="sm"
-            customWeight="medium"
-            customColor="text-gray-700 dark:text-white"
-          >
-            Veronica Woods
-          </Typography>
+        {open ? (
+          <div className="">
+            <Typography
+              variant="sm"
+              customWeight="medium"
+              customColor="text-gray-700 dark:text-white"
+            >
+              Veronica Woods
+            </Typography>
 
-          <Typography variant="sm" customColor="text-gray-500">
-            veronicawoods@example.com
-          </Typography>
-        </div>
+            <Typography variant="sm" customColor="text-gray-500">
+              veronicawoods@example.com
+            </Typography>
+          </div>
+        ) : null}
       </div>
     </div>
   );
