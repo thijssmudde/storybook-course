@@ -1,0 +1,30 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="32" height="32" rx="8" fill="url(#paint0_linear_194:16330)"/>
+<line x1="16.1" x2="16.1" y2="32" stroke="#E9EBEF" stroke-width="0.2"/>
+<line x1="11.1" x2="11.1" y2="32" stroke="#E9EBEF" stroke-width="0.2"/>
+<line x1="26.1" x2="26.1" y2="32" stroke="#E9EBEF" stroke-width="0.2"/>
+<line x1="6.1" x2="6.1" y2="32" stroke="#E9EBEF" stroke-width="0.2"/>
+<line x1="21.1" x2="21.1" y2="32" stroke="#E9EBEF" stroke-width="0.2"/>
+<line x1="32" y1="16.1" y2="16.1" stroke="#E9EBEF" stroke-width="0.2"/>
+<line x1="32" y1="11.1" y2="11.1" stroke="#E9EBEF" stroke-width="0.2"/>
+<line x1="32" y1="26.1" y2="26.1" stroke="#E9EBEF" stroke-width="0.2"/>
+<line x1="32" y1="6.1" y2="6.1" stroke="#E9EBEF" stroke-width="0.2"/>
+<line x1="32" y1="21.1" y2="21.1" stroke="#E9EBEF" stroke-width="0.2"/>
+<rect x="2.1" y="2.1" width="27.8" height="27.8" rx="13.9" stroke="#E9EBEF" stroke-width="0.2"/>
+<rect x="8" y="8" width="16" height="16" rx="8" fill="#1570EF"/>
+<g filter="url(#filter0_b_194:16330)">
+<path d="M0 16H32V24C32 28.4183 28.4183 32 24 32H8C3.58172 32 0 28.4183 0 24V16Z" fill="#DDDDDD" fill-opacity="0.01"/>
+</g>
+<defs>
+<filter id="filter0_b_194:16330" x="-6" y="10" width="44" height="28" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImage" stdDeviation="3"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_194:16330"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_194:16330" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_194:16330" x1="16" y1="0" x2="16" y2="32.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#DCE0E5"/>
+</linearGradient>
+</defs>
+</svg>

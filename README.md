@@ -1,5 +1,14 @@
 # Storybook starter with React, Typescript, TailwindCSS and Figma using TSDX
 
+## TODO
+
+- Add flags/avatars to badges
+- Finish dropdown
+- Textinput
+- Navbar
+- Rental card
+- Page
+
 ## Custom installation instructions
 
 First we use tsdx to setup our react + storybook.

@@ -39,10 +39,7 @@ export const Select: FC<SelectProps> = ({
           {label}
         </Typography>
       ) : null}
-      <Listbox
-        value={selectedOption}
-        onChange={() => setSelectedOption(selectedOption)}
-      >
+      <Listbox value={selectedOption} onChange={setSelectedOption}>
         {({ open }) => (
           <>
             <Listbox.Button

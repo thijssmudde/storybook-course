@@ -7,7 +7,7 @@ import "@fontsource/inter";
 interface IStoryArgs {
   darkMode: boolean;
   className?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const StoryLayout = (args: IStoryArgs) => {

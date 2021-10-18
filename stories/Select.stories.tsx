@@ -35,14 +35,20 @@ const StorySelect: Story<Props> = (args) => {
     people[0],
   );
 
+  const handleSelect = (value: IOption) => {
+    const personId = value as unknown as string;
+    const person = people.find((p) => p.value === personId);
+    setSelectedPerson(person);
+  };
+
   return (
     <StoryLayout {...args} className="space-y-2">
       <Select
         {...args}
         options={people}
         selectedOption={selectedPerson}
-        setSelectedOption={setSelectedPerson}
-        LeadingIcon={<FiSearch size={20} />}
+        setSelectedOption={handleSelect}
+        // LeadingIcon={<FiSearch size={20} />}
       />
     </StoryLayout>
   );
