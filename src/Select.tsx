@@ -15,7 +15,7 @@ export interface SelectProps {
   selectedOption: IOption;
   setSelectedOption: (option: IOption) => void;
   label?: string;
-  LeadingIcon?: React.ReactElement;
+  // LeadingIcon?: React.ReactElement;
 }
 
 // TODO options from outside component
@@ -26,7 +26,7 @@ export const Select: FC<SelectProps> = ({
   selectedOption,
   setSelectedOption,
   label,
-  LeadingIcon,
+  // LeadingIcon,
 }) => {
   return (
     <>

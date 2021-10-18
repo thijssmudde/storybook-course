@@ -1,12 +1,12 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
 
-import { Pagination, PaginationProps } from "../src";
+import { Paginate, PaginationProps } from "../src";
 import StoryLayout from "./StoryLayout";
 
 const meta: Meta = {
-  title: "Pagination",
-  component: Pagination,
+  title: "Paginate",
+  component: Paginate,
   parameters: {
     controls: { expanded: true },
     design: {
@@ -33,28 +33,12 @@ const StoryPagination: Story<Props> = (args) => {
 
   return (
     <StoryLayout {...args} className="space-y-4">
-      <Pagination
+      <Paginate
         page={page}
         setPage={setPage}
         totalPages={10}
         isMobile={args.isMobile}
       />
-      {/* <div>
-        <Pagination
-          {...args}
-          active={activeItem1}
-          setActive={setActiveItem1}
-          options={options1}
-        />
-      </div>
-      <div>
-        <Pagination
-          {...args}
-          active={activeItem2}
-          setActive={setActiveItem2}
-          options={options2}
-        />
-      </div> */}
     </StoryLayout>
   );
 };
