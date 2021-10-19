@@ -5,4 +5,4 @@ export * from "./Select";
 export * from "./Paginate";
 export * from "./Typography";
 export * from "./Navbar";
-export * from "./TextInput";
+export * from "./Input";

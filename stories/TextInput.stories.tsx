@@ -1,12 +1,12 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
-// import { FiSearch } from "react-icons/fi";
-import { TextInput, TextInputProps } from "../src";
+import { FiHelpCircle, FiMail } from "react-icons/fi";
+import { Input, InputProps } from "../src";
 import StoryLayout from "./StoryLayout";
 
 const meta: Meta = {
-  title: "TextInput",
-  component: TextInput,
+  title: "Input",
+  component: Input,
   parameters: {
     controls: { expanded: true },
     design: {
@@ -18,19 +18,33 @@ const meta: Meta = {
 
 export default meta;
 
-interface Props extends TextInputProps {
+interface Props extends InputProps {
   darkMode: boolean;
 }
 
-const StoryTextInput: Story<Props> = (args) => {
+const StoryInput: Story<Props> = (args) => {
+  const [text1, setText1] = React.useState<string>("");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setText1(e.target.value);
+  };
+
   return (
     <StoryLayout {...args} className="">
-      <TextInput />
+      <Input
+        type="text"
+        value={text1}
+        handleChange={handleChange}
+        placeholder="Placeholder"
+        label="Email"
+        LeadingIcon={<FiMail />}
+        TrailingIcon={<FiHelpCircle />}
+      />
     </StoryLayout>
   );
 };
 
-export const Default = StoryTextInput.bind({});
+export const Default = StoryInput.bind({});
 
 Default.args = {
   darkMode: false,

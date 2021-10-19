@@ -21,7 +21,7 @@ interface Props extends TypographyProps {
   darkMode: boolean;
 }
 
-const StoryTypography: Story<Props> = (args) => {
+const TypographyDynamic: Story<Props> = (args) => {
   const isHeading = args.variant.startsWith("h");
 
   return (
@@ -34,11 +34,80 @@ const StoryTypography: Story<Props> = (args) => {
   );
 };
 
-export const Default = StoryTypography.bind({});
+const TypographyHeadings: Story<Props> = (args) => {
+  return (
+    <StoryLayout {...args} className="space-y-2">
+      <Typography {...args} variant="h1">
+        Display h1
+      </Typography>
+      <Typography {...args} variant="h2">
+        Display h2
+      </Typography>
+      <Typography {...args} variant="h3">
+        Display h3
+      </Typography>
+      <Typography {...args} variant="h4">
+        Display h4
+      </Typography>
+      <Typography {...args} variant="h5">
+        Display h5
+      </Typography>
+      <Typography {...args} variant="h6">
+        Display h6
+      </Typography>
+    </StoryLayout>
+  );
+};
 
-Default.args = {
+const TypographyText: Story<Props> = (args) => {
+  return (
+    <StoryLayout {...args} className="space-y-2">
+      <Typography {...args} variant="xl">
+        Text xl
+      </Typography>
+      <Typography {...args} variant="lg">
+        Text lg
+      </Typography>
+      <Typography {...args} variant="md">
+        Text xl
+      </Typography>
+      <Typography {...args} variant="sm">
+        Text sm
+      </Typography>
+      <Typography {...args} variant="xs">
+        Text xs
+      </Typography>
+    </StoryLayout>
+  );
+};
+
+export const Dynamic = TypographyDynamic.bind({});
+
+Dynamic.args = {
   variant: "h1",
   customColor: "", //text-primary-600 dark:text-white
   customWeight: "regular",
   darkMode: false,
+};
+
+export const Heading = TypographyHeadings.bind({});
+
+Heading.args = {
+  customWeight: "regular",
+  darkMode: false,
+};
+
+Heading.parameters = {
+  controls: { exclude: ["variant", "customColor", "className"] },
+};
+
+export const Text = TypographyText.bind({});
+
+Text.args = {
+  customWeight: "regular",
+  darkMode: false,
+};
+
+Text.parameters = {
+  controls: { exclude: ["variant", "customColor", "className"] },
 };

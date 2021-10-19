@@ -5,7 +5,7 @@ import { FiArrowLeft, FiChevronDown } from "react-icons/fi";
 import {
   FiBarChart2,
   FiCheckSquare,
-  FiFlag,
+  // FiFlag,
   FiHome,
   FiLayers,
   FiSettings,
