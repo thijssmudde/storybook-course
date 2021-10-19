@@ -17,7 +17,7 @@ export interface NavbarProps {
   setOpen: (open: boolean) => void;
 }
 
-const renderLogo = () => {
+export const renderLogo = () => {
   return (
     <svg
       width="32"

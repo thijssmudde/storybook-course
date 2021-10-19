@@ -6,3 +6,5 @@ export * from "./Paginate";
 export * from "./Typography";
 export * from "./Navbar";
 export * from "./Input";
+export * from "./RentalCard";
+export * from "./MobileNavbar";

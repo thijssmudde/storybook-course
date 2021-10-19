@@ -6,6 +6,7 @@ type BadgeSize = "sm" | "md" | "lg";
 
 export interface BadgeProps {
   children: string | React.ReactElement;
+  className?: string;
   variant: BadgeVariant;
   size?: BadgeSize;
   LeadingIcon?: React.ReactElement;
@@ -33,6 +34,7 @@ export const Badge: FC<BadgeProps> = ({
   size = "md",
   LeadingIcon,
   TrailingIcon,
+  className,
   children,
 }) => {
   const BadgeVariantClassName = BadgeVariantClasses[variant];
@@ -44,6 +46,7 @@ export const Badge: FC<BadgeProps> = ({
         BadgeBaseClasses,
         BadgeVariantClassName,
         BadgeSizeClassName,
+        className,
       )}
     >
       {LeadingIcon ? (

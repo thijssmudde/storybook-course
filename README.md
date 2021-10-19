@@ -4,7 +4,7 @@
 
 - Add flags/avatars to badges
 - Finish dropdown
-- Textinput
+- Input
 - Navbar
 - Rental card
 - Page

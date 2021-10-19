@@ -68,7 +68,7 @@ const ButtonIconSizeClasses: Record<ButtonSize, string> = {
 };
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children: string | React.ReactElement;
+  children?: string | React.ReactElement;
   variant: ButtonVariant;
   size?: ButtonSize;
   LeadingIcon?: React.ReactElement;
