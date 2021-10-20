@@ -1,13 +1,13 @@
 import React, { FC } from "react";
 // import classNames from "classnames";
 import { Listbox, Transition } from "@headlessui/react";
-import { FiCheck, FiChevronDown } from "react-icons/fi";
+import { FiAlertCircle, FiCheck, FiChevronDown } from "react-icons/fi";
 import { Typography } from "./Typography";
 import classNames from "classnames";
 
 export interface IOption {
   value: string;
-  label: string;
+  label: string | React.ReactNode;
 }
 
 export interface SelectProps {
@@ -15,21 +15,23 @@ export interface SelectProps {
   selectedOption: IOption;
   setSelectedOption: (option: IOption) => void;
   label?: string;
-  // LeadingIcon?: React.ReactElement;
+  LeadingIcon?: React.ReactElement;
+  leadingIconInMenu?: boolean;
 }
 
-// TODO placeholder
-// TODO LeadingIcon
 // TODO icons, avatars
 export const Select: FC<SelectProps> = ({
   options,
   selectedOption,
   setSelectedOption,
   label,
-  // LeadingIcon,
+  LeadingIcon,
+  leadingIconInMenu,
 }) => {
+  // console.log
+
   return (
-    <>
+    <div className="relative inline-block">
       {label ? (
         <Typography
           variant="sm"
@@ -52,6 +54,14 @@ export const Select: FC<SelectProps> = ({
                 },
               )}
             >
+              {LeadingIcon ? (
+                <LeadingIcon.type
+                  {...LeadingIcon.props}
+                  size={20}
+                  className="mr-2"
+                />
+              ) : null}
+
               {selectedOption ? selectedOption.label : "Select team member"}
               <FiChevronDown
                 size={20}
@@ -71,7 +81,7 @@ export const Select: FC<SelectProps> = ({
               leaveFrom="transform scale-100 opacity-100"
               leaveTo="transform scale-95 opacity-0"
             >
-              <Listbox.Options className="inline-flex flex-col bg-white border rounded-lg shadow-lg dark:border-gray-500 dark:bg-gray-800">
+              <Listbox.Options className="absolute z-10 inline-flex flex-col w-full bg-white border rounded-lg shadow-lg top-18 dark:border-gray-500 dark:bg-gray-800">
                 {options.map((option, index) => (
                   <Listbox.Option
                     key={option.value}
@@ -80,14 +90,24 @@ export const Select: FC<SelectProps> = ({
                       "flex items-center pl-3.5 pr-3 justify-between h-11 text-gray-900 dark:text-white text-md cursor-pointer hover:bg-primary-25 dark:hover:bg-gray-100 dark:hover:bg-opacity-10",
                       {
                         "bg-primary-25 dark:bg-gray-100 dark:bg-opacity-10":
+                          selectedOption &&
                           option.value === selectedOption.value,
                         "rounded-t-lg": index === 0,
                         "rounded-b-lg": index === options.length - 1,
                       },
                     )}
                   >
-                    {option.label}
-                    {option.value === selectedOption.value ? (
+                    <div className="flex items-center">
+                      {LeadingIcon && leadingIconInMenu ? (
+                        <LeadingIcon.type
+                          {...LeadingIcon.props}
+                          size={20}
+                          className="mr-2 text-gray-500"
+                        />
+                      ) : null}
+                      {option.label}
+                    </div>
+                    {selectedOption && option.value === selectedOption.value ? (
                       <FiCheck className="ml-5 text-primary-600 dark:text-white" />
                     ) : null}
                   </Listbox.Option>
@@ -97,6 +117,6 @@ export const Select: FC<SelectProps> = ({
           </>
         )}
       </Listbox>
-    </>
+    </div>
   );
 };

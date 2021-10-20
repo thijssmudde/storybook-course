@@ -92,15 +92,11 @@ module.exports = {
       ...defaultTheme.screens,
     },
     extend: {
-      height: {
-        15: "3.75rem",
-      },
-      width: {
-        15: "3.75rem",
-        50: "12.5rem",
-      },
-      padding: {
+      spacing: {
         4.5: "1.125rem",
+        15: "3.75rem",
+        18: "4.5rem",
+        50: "12.5rem",
       },
     },
     breakpointsInspector: {
