@@ -1,12 +1,12 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
 // import { FiSearch } from "react-icons/fi";
-import { Navbar, NavbarProps } from "../src";
+import { SideNav, SideNavProps } from "../src";
 import StoryLayout from "./StoryLayout";
 
 const meta: Meta = {
-  title: "Navbar",
-  component: Navbar,
+  title: "SideNav",
+  component: SideNav,
   parameters: {
     controls: { expanded: true },
     design: {
@@ -18,21 +18,21 @@ const meta: Meta = {
 
 export default meta;
 
-interface Props extends NavbarProps {
+interface Props extends SideNavProps {
   darkMode: boolean;
 }
 
-const StoryNavbar: Story<Props> = (args) => {
+const StorySideNav: Story<Props> = (args) => {
   const [open, setOpen] = React.useState<boolean>(false);
 
   return (
     <StoryLayout {...args} className="">
-      <Navbar open={open} setOpen={setOpen} />
+      <SideNav open={open} setOpen={setOpen} />
     </StoryLayout>
   );
 };
 
-export const Default = StoryNavbar.bind({});
+export const Default = StorySideNav.bind({});
 
 Default.args = {
   darkMode: false,

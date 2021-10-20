@@ -12,7 +12,7 @@ import {
   FiUsers,
 } from "react-icons/fi";
 
-export interface NavbarProps {
+export interface SideNavProps {
   open: boolean;
   setOpen: (open: boolean) => void;
 }
@@ -100,13 +100,13 @@ export const renderLogo = () => {
   );
 };
 
-interface INavbarItem {
+interface INavItem {
   label: string;
   icon: JSX.Element;
   toggleSidebar?: boolean;
 }
 
-const navbarItems: INavbarItem[] = [
+const navItems: INavItem[] = [
   {
     label: "Home",
     icon: <FiHome />,
@@ -129,7 +129,7 @@ const navbarItems: INavbarItem[] = [
   },
 ];
 
-const navbarItems2: INavbarItem[] = [
+const navItems2: INavItem[] = [
   {
     label: "Settings",
     icon: <FiSettings />,
@@ -141,8 +141,8 @@ const navbarItems2: INavbarItem[] = [
   },
 ];
 
-export const Navbar: FC<NavbarProps> = ({ open, setOpen }) => {
-  const renderNavbarItem = (item: INavbarItem) => {
+export const SideNav: FC<SideNavProps> = ({ open, setOpen }) => {
+  const renderNavItem = (item: INavItem) => {
     return (
       <li
         className="flex items-center h-10 px-2 py-2 transition duration-100 ease-out rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-100 dark:hover:bg-opacity-10 group"
@@ -194,12 +194,11 @@ export const Navbar: FC<NavbarProps> = ({ open, setOpen }) => {
 
       {/* TODO search input */}
 
-      {/* TODO navbar items */}
       <ul className="w-full space-y-1">
-        {navbarItems.map((item) => renderNavbarItem(item))}
+        {navItems.map((item) => renderNavItem(item))}
       </ul>
       <ul className="w-full mb-6 space-y-1">
-        {navbarItems2.map((item) => renderNavbarItem(item))}
+        {navItems2.map((item) => renderNavItem(item))}
       </ul>
 
       {/* TODO avatar */}

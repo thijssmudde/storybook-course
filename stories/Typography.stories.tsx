@@ -10,7 +10,7 @@ const meta: Meta = {
     controls: { expanded: true },
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/0t0pK5luEdxTorOcg92K49/My-Travel-App?node-id=6%3A25263",
+      url: "https://www.figma.com/file/0t0pK5luEdxTorOcg92K49/?node-id=6%3A25187",
     },
   },
 };
@@ -69,7 +69,7 @@ const TypographyText: Story<Props> = (args) => {
         Text lg
       </Typography>
       <Typography {...args} variant="md">
-        Text xl
+        Text md
       </Typography>
       <Typography {...args} variant="sm">
         Text sm

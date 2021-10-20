@@ -10,7 +10,7 @@ const meta: Meta = {
     controls: { expanded: true },
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/0t0pK5luEdxTorOcg92K49/?node-id=12%3A21913",
+      url: "https://www.figma.com/file/0t0pK5luEdxTorOcg92K49/?node-id=257%3A19734",
     },
   },
 };
