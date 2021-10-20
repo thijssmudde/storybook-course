@@ -37,6 +37,7 @@ export const Select: FC<SelectProps> = ({
           variant="sm"
           customWeight="medium"
           customColor="text-gray-700 dark:text-white"
+          className="mb-1.5"
         >
           {label}
         </Typography>
@@ -81,7 +82,7 @@ export const Select: FC<SelectProps> = ({
               leaveFrom="transform scale-100 opacity-100"
               leaveTo="transform scale-95 opacity-0"
             >
-              <Listbox.Options className="absolute z-10 inline-flex flex-col w-full bg-white border rounded-lg shadow-lg top-18 dark:border-gray-500 dark:bg-gray-800">
+              <Listbox.Options className="absolute z-10 inline-flex flex-col w-full bg-white border rounded-lg shadow-lg top-19.5 dark:border-gray-500 dark:bg-gray-800">
                 {options.map((option, index) => (
                   <Listbox.Option
                     key={option.value}
