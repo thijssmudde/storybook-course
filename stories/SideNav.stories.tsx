@@ -37,3 +37,7 @@ export const Default = StorySideNav.bind({});
 Default.args = {
   darkMode: false,
 };
+
+Default.parameters = {
+  controls: { exclude: ["open", "setOpen"] },
+};

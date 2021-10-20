@@ -87,6 +87,7 @@ Dynamic.args = {
   variant: "h1",
   customColor: "", //text-primary-600 dark:text-white
   customWeight: "regular",
+  className: "",
   darkMode: false,
 };
 
@@ -94,6 +95,7 @@ export const Heading = TypographyHeadings.bind({});
 
 Heading.args = {
   customWeight: "regular",
+  className: "",
   darkMode: false,
 };
 
@@ -105,6 +107,7 @@ export const Text = TypographyText.bind({});
 
 Text.args = {
   customWeight: "regular",
+  className: "",
   darkMode: false,
 };
 

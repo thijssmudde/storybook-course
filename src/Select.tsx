@@ -18,7 +18,7 @@ export interface SelectProps {
   // LeadingIcon?: React.ReactElement;
 }
 
-// TODO options from outside component
+// TODO placeholder
 // TODO LeadingIcon
 // TODO icons, avatars
 export const Select: FC<SelectProps> = ({
@@ -39,12 +39,13 @@ export const Select: FC<SelectProps> = ({
           {label}
         </Typography>
       ) : null}
+
       <Listbox value={selectedOption} onChange={setSelectedOption}>
         {({ open }) => (
           <>
             <Listbox.Button
               className={classNames(
-                "flex items-center text-md border border-gray-300 h-11 px-3.5 rounded-lg focus:outline-none focus:ring focus:border-primary-100 dark:focus:border-gray-100 dark:focus:border-opacity-10",
+                "flex items-center text-md border border-gray-300 dark:border-gray-500 h-11 px-3.5 rounded-lg bg-white dark:bg-gray-800",
                 {
                   "text-gray-900 dark:text-white": selectedOption,
                   "text-gray-500 dark:text-gray-300": !selectedOption,
@@ -70,16 +71,18 @@ export const Select: FC<SelectProps> = ({
               leaveFrom="transform scale-100 opacity-100"
               leaveTo="transform scale-95 opacity-0"
             >
-              <Listbox.Options className="inline-flex flex-col bg-white rounded-lg shadow-lg dark:bg-gray-800">
-                {options.map((option) => (
+              <Listbox.Options className="inline-flex flex-col bg-white border rounded-lg shadow-lg dark:border-gray-500 dark:bg-gray-800">
+                {options.map((option, index) => (
                   <Listbox.Option
                     key={option.value}
                     value={option.value}
                     className={classNames(
-                      "flex items-center px-3.5 justify-between h-11 text-gray-900 dark:text-white text-md cursor-pointer hover:bg-primary-25 dark:hover:bg-gray-100 dark:hover:bg-opacity-10",
+                      "flex items-center pl-3.5 pr-3 justify-between h-11 text-gray-900 dark:text-white text-md cursor-pointer hover:bg-primary-25 dark:hover:bg-gray-100 dark:hover:bg-opacity-10",
                       {
                         "bg-primary-25 dark:bg-gray-100 dark:bg-opacity-10":
                           option.value === selectedOption.value,
+                        "rounded-t-lg": index === 0,
+                        "rounded-b-lg": index === options.length - 1,
                       },
                     )}
                   >

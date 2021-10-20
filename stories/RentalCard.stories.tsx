@@ -54,5 +54,8 @@ export const Default = StoryRentalCard.bind({});
 
 Default.args = {
   darkMode: false,
+};
+
+Default.parameters = {
   controls: { exclude: ["rental"] },
 };

@@ -45,6 +45,7 @@ export const RentalCard: FC<RentalCardProps> = ({ rental }) => {
         <img
           src={rental.image}
           className="object-cover w-full rounded-t-lg md:rounded-lg md:w-50 h-36"
+          alt={rental.title}
         />
         {rental.badge ? (
           <Badge

@@ -46,3 +46,7 @@ Default.args = {
   darkMode: false,
   disabled: false,
 };
+
+Default.parameters = {
+  controls: { exclude: ["LeadingIcon", "TrailingIcon", "IconOnly"] },
+};

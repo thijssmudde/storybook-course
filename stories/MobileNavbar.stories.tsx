@@ -35,4 +35,9 @@ export const Default = StoryMobileNavbar.bind({});
 
 Default.args = {
   darkMode: false,
+  open: false,
+};
+
+Default.parameters = {
+  controls: { exclude: ["setOpen"] },
 };

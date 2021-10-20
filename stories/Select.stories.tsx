@@ -60,3 +60,7 @@ Default.args = {
   label: "Team member",
   darkMode: false,
 };
+
+Default.parameters = {
+  controls: { exclude: ["options", "selectedOption", "setSelectedOption"] },
+};

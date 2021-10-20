@@ -48,6 +48,10 @@ export const Default = StoryPagination.bind({});
 Default.args = {
   darkMode: false,
   page: 0,
-  totalPage: 10,
+  totalPages: 10,
   isMobile: false,
+};
+
+Default.parameters = {
+  controls: { exclude: ["setPage"] },
 };

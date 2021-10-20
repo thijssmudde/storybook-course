@@ -108,3 +108,7 @@ export const Default = StoryButtonGroup.bind({});
 Default.args = {
   darkMode: false,
 };
+
+Default.parameters = {
+  controls: { exclude: ["active", "setActive", "options"] },
+};
