@@ -1,14 +1,8 @@
 import React, { FC } from "react";
-// import classNames from "classnames";
 import { Listbox, Transition } from "@headlessui/react";
-import { FiAlertCircle, FiCheck, FiChevronDown } from "react-icons/fi";
-import { Typography } from "./Typography";
+import { FiCheck, FiChevronDown } from "react-icons/fi";
+import { Typography, IOption } from ".";
 import classNames from "classnames";
-
-export interface IOption {
-  value: string;
-  label: string | React.ReactNode;
-}
 
 export interface SelectProps {
   options: IOption[];
@@ -19,7 +13,6 @@ export interface SelectProps {
   leadingIconInMenu?: boolean;
 }
 
-// TODO icons, avatars
 export const Select: FC<SelectProps> = ({
   options,
   selectedOption,
@@ -28,8 +21,6 @@ export const Select: FC<SelectProps> = ({
   LeadingIcon,
   leadingIconInMenu,
 }) => {
-  // console.log
-
   return (
     <div className="relative inline-block">
       {label ? (
@@ -82,7 +73,15 @@ export const Select: FC<SelectProps> = ({
               leaveFrom="transform scale-100 opacity-100"
               leaveTo="transform scale-95 opacity-0"
             >
-              <Listbox.Options className="absolute z-10 inline-flex flex-col w-full bg-white border rounded-lg shadow-lg top-19.5 dark:border-gray-500 dark:bg-gray-800">
+              <Listbox.Options
+                className={classNames(
+                  "absolute z-10 inline-flex flex-col w-full bg-white border rounded-lg shadow-lg dark:border-gray-500 dark:bg-gray-800",
+                  {
+                    "top-13": !label,
+                    "top-19.5": label,
+                  },
+                )}
+              >
                 {options.map((option, index) => (
                   <Listbox.Option
                     key={option.value}

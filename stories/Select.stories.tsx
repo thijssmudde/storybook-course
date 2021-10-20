@@ -72,11 +72,38 @@ const usernames: IOption[] = [
     ),
   },
 ];
+
+const getCountryFlag = (countryISO: string) =>
+  `https://hatscripts.github.io/circle-flags/flags/${countryISO.toLowerCase()}.svg`;
+
+const countries: IOption[] = [
+  {
+    value: "1",
+    label: (
+      <>
+        <img src={getCountryFlag("nl")} alt="nl" className="w-5 h-5 mr-2" />{" "}
+        Amsterdam, NL
+      </>
+    ),
+  },
+  {
+    value: "2",
+    label: (
+      <>
+        <img src={getCountryFlag("us")} alt="us" className="w-5 h-5 mr-2" />{" "}
+        Washington, US
+      </>
+    ),
+  },
+];
 // TODO add option with flags
 
 const StorySelect: Story<Props> = (args) => {
   const [selectedPerson, setSelectedPerson] = React.useState<IOption>();
   const [selectedUsername, setSelectedUsername] = React.useState<IOption>();
+  const [selectedCountry, setSelectedCountry] = React.useState<IOption>(
+    countries[0],
+  );
 
   const handleSelectPerson = (value: IOption) => {
     const personValue = value as unknown as string;
@@ -90,6 +117,12 @@ const StorySelect: Story<Props> = (args) => {
     setSelectedUsername(username);
   };
 
+  const handleSelectCountry = (value: IOption) => {
+    const countryValue = value as unknown as string;
+    const country = countries.find((p) => p.value === countryValue);
+    setSelectedCountry(country);
+  };
+
   return (
     <StoryLayout {...args}>
       {/* <Select
@@ -100,7 +133,7 @@ const StorySelect: Story<Props> = (args) => {
         LeadingIcon={<FiUser />}
         leadingIconInMenu={args.leadingIconInMenu}
       /> */}
-      <div className="my-2" />
+      {/* <div className="my-2" />
       <Select
         {...args}
         options={usernames}
@@ -108,6 +141,12 @@ const StorySelect: Story<Props> = (args) => {
         setSelectedOption={handleSelectUsername}
         LeadingIcon={<FiUser />}
         leadingIconInMenu={args.leadingIconInMenu}
+      /> */}
+      <div className="my-2" />
+      <Select
+        options={countries}
+        selectedOption={selectedCountry}
+        setSelectedOption={handleSelectCountry}
       />
     </StoryLayout>
   );

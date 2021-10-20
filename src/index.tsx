@@ -8,3 +8,5 @@ export * from "./SideNav";
 export * from "./TextInput";
 export * from "./RentalCard";
 export * from "./MobileNavbar";
+
+export * from "./@interfaces";

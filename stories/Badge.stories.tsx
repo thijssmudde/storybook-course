@@ -22,9 +22,21 @@ interface Props extends BadgeProps {
   darkMode: boolean;
 }
 
+const getCountryFlag = (countryISO: string) =>
+  `https://hatscripts.github.io/circle-flags/flags/${countryISO.toLowerCase()}.svg`;
+
 const StoryBadge: Story<Props> = (args) => (
   <StoryLayout {...args} className="inline-flex flex-col space-y-2">
     <Badge {...args} LeadingIcon={<FiStar />}>
+      Label
+    </Badge>
+
+    <Badge
+      {...args}
+      LeadingIcon={
+        <img src={getCountryFlag("nl")} alt="nl" className="w-4 h-4" />
+      }
+    >
       Label
     </Badge>
 
