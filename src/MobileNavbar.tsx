@@ -25,7 +25,7 @@ export const MobileNavbar: FC<MobileNavbarProps> = ({ open, setOpen }) => {
         <path
           d="M4 16H22.6667M4 8H28M4 24H28"
           stroke="#667085"
-          stroke-width="2"
+          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         />

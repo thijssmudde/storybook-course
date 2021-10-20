@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   purge: ["./src/components/**/*.tsx"],
   darkMode: "class", // or 'media' or 'class'
@@ -84,6 +86,10 @@ module.exports = {
       h3: ["48px", "60px"],
       h2: ["60px", "72px"],
       h1: ["72px", "90px"],
+    },
+    screens: {
+      xs: "400px",
+      ...defaultTheme.screens,
     },
     extend: {
       height: {

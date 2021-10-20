@@ -69,6 +69,7 @@ const ButtonIconSizeClasses: Record<ButtonSize, string> = {
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children?: string | React.ReactElement;
+  className?: string;
   variant: ButtonVariant;
   size?: ButtonSize;
   LeadingIcon?: React.ReactElement;
@@ -80,6 +81,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 // Dark Mode
 export const Button: FC<ButtonProps> = ({
   children,
+  className,
   variant = "primary",
   size = "md",
   LeadingIcon,
@@ -94,7 +96,7 @@ export const Button: FC<ButtonProps> = ({
   return (
     <button
       {...buttonProps}
-      className={classNames(ButtonBaseClasses, {
+      className={classNames(ButtonBaseClasses, className, {
         [ButtonSizeClasses[size]]: !IconOnly,
         [classNames(ButtonIconSizeClassName, "justify-center")]: IconOnly,
         [classNames(
