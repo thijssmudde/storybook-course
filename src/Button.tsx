@@ -21,32 +21,37 @@ const ButtonVariantClasses: Record<
 > = {
   primary: {
     default: "bg-primary-600 dark:bg-gray-800 text-white dark:text-white",
-    hover: "hover:bg-primary-700",
-    focus: "focus:ring focus:border-primary-100 dark:focus:border-opacity-10",
+    hover: "hover:bg-primary-700 dark:hover:bg-gray-700",
+    focus:
+      "focus:ring focus:border-primary-100 dark:focus:border-gray-300 dark:focus:border-opacity-10",
     disabled: "bg-primary-200 text-white",
   },
   secondary: {
-    default: "bg-primary-50 text-primary-700",
+    default: "bg-primary-50 dark:bg-gray-800 text-primary-700",
     hover: "hover:bg-primary-100",
-    focus: "focus:ring focus:border-primary-100",
+    focus:
+      "focus:ring focus:border-primary-100 dark:focus:border-gray-300 dark:focus:border-opacity-10",
     disabled: "bg-primary-25 text-primary-300",
   },
   secondaryGray: {
     default: "bg-white text-gray-700 border border-gray-300",
     hover: "hover:bg-gray-50 hover:text-gray-800",
-    focus: "focus:ring focus:border-gray-100",
+    focus:
+      "focus:ring focus:border-primary-100 dark:focus:border-gray-300 dark:focus:border-opacity-10",
     disabled: "border border-gray-200 text-gray-300",
   },
   tertiary: {
     default: "bg-white text-primary-700",
     hover: "hover:bg-primary-50",
-    focus: "",
+    focus:
+      "focus:ring focus:border-primary-100 dark:focus:border-gray-300 dark:focus:border-opacity-10",
     disabled: "bg-white text-gray-300",
   },
   tertiaryGray: {
     default: "bg-white text-gray-500",
     hover: "hover:bg-gray-50 hover:text-gray-600",
-    focus: "",
+    focus:
+      "focus:ring focus:border-primary-100 dark:focus:border-gray-300 dark:focus:border-opacity-10",
     disabled: "bg-white text-gray-300",
   },
 };

@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Listbox, Transition } from "@headlessui/react";
+import { Listbox } from "@headlessui/react";
 import { FiCheck, FiChevronDown } from "react-icons/fi";
 import { Typography, IOption } from ".";
 import classNames from "classnames";
@@ -65,55 +65,45 @@ export const Select: FC<SelectProps> = ({
                 )}
               />
             </Listbox.Button>
-            <Transition
-              enter="transition duration-100 ease-out"
-              enterFrom="transform scale-95 opacity-0"
-              enterTo="transform scale-100 opacity-100"
-              leave="transition duration-75 ease-out"
-              leaveFrom="transform scale-100 opacity-100"
-              leaveTo="transform scale-95 opacity-0"
+            <Listbox.Options
+              className={classNames(
+                "absolute z-10 inline-flex flex-col w-full bg-white border rounded-lg shadow-lg dark:border-gray-500 dark:bg-gray-800",
+                {
+                  "top-13": !label,
+                  "top-19.5": label,
+                },
+              )}
             >
-              <Listbox.Options
-                className={classNames(
-                  "absolute z-10 inline-flex flex-col w-full bg-white border rounded-lg shadow-lg dark:border-gray-500 dark:bg-gray-800",
-                  {
-                    "top-13": !label,
-                    "top-19.5": label,
-                  },
-                )}
-              >
-                {options.map((option, index) => (
-                  <Listbox.Option
-                    key={option.value}
-                    value={option.value}
-                    className={classNames(
-                      "flex items-center pl-3.5 pr-3 justify-between h-11 text-gray-900 dark:text-white text-md cursor-pointer hover:bg-primary-25 dark:hover:bg-gray-100 dark:hover:bg-opacity-10",
-                      {
-                        "bg-primary-25 dark:bg-gray-100 dark:bg-opacity-10":
-                          selectedOption &&
-                          option.value === selectedOption.value,
-                        "rounded-t-lg": index === 0,
-                        "rounded-b-lg": index === options.length - 1,
-                      },
-                    )}
-                  >
-                    <div className="flex items-center">
-                      {LeadingIcon && leadingIconInMenu ? (
-                        <LeadingIcon.type
-                          {...LeadingIcon.props}
-                          size={20}
-                          className="mr-2 text-gray-500"
-                        />
-                      ) : null}
-                      {option.label}
-                    </div>
-                    {selectedOption && option.value === selectedOption.value ? (
-                      <FiCheck className="ml-5 text-primary-600 dark:text-white" />
+              {options.map((option, index) => (
+                <Listbox.Option
+                  key={option.value}
+                  value={option.value}
+                  className={classNames(
+                    "flex items-center pl-3.5 pr-3 justify-between h-11 text-gray-900 dark:text-white text-md cursor-pointer hover:bg-primary-25 dark:hover:bg-gray-100 dark:hover:bg-opacity-10",
+                    {
+                      "bg-primary-25 dark:bg-gray-100 dark:bg-opacity-10":
+                        selectedOption && option.value === selectedOption.value,
+                      "rounded-t-lg": index === 0,
+                      "rounded-b-lg": index === options.length - 1,
+                    },
+                  )}
+                >
+                  <div className="flex items-center">
+                    {LeadingIcon && leadingIconInMenu ? (
+                      <LeadingIcon.type
+                        {...LeadingIcon.props}
+                        size={20}
+                        className="mr-2 text-gray-500"
+                      />
                     ) : null}
-                  </Listbox.Option>
-                ))}
-              </Listbox.Options>
-            </Transition>
+                    {option.label}
+                  </div>
+                  {selectedOption && option.value === selectedOption.value ? (
+                    <FiCheck className="ml-5 text-primary-600 dark:text-white" />
+                  ) : null}
+                </Listbox.Option>
+              ))}
+            </Listbox.Options>
           </>
         )}
       </Listbox>
