@@ -59,6 +59,18 @@ const TypographyHeadings: Story<Props> = (args) => {
   );
 };
 
+export const Heading = TypographyHeadings.bind({});
+
+Heading.args = {
+  customWeight: "regular",
+  className: "",
+  darkMode: false,
+};
+
+Heading.parameters = {
+  controls: { exclude: ["variant", "customColor", "className"] },
+};
+
 const TypographyText: Story<Props> = (args) => {
   return (
     <StoryLayout {...args} className="space-y-2">
@@ -79,18 +91,6 @@ const TypographyText: Story<Props> = (args) => {
       </Typography>
     </StoryLayout>
   );
-};
-
-export const Heading = TypographyHeadings.bind({});
-
-Heading.args = {
-  customWeight: "regular",
-  className: "",
-  darkMode: false,
-};
-
-Heading.parameters = {
-  controls: { exclude: ["variant", "customColor", "className"] },
 };
 
 export const Text = TypographyText.bind({});

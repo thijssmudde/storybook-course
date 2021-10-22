@@ -66,6 +66,8 @@ const navItems2: INavItem[] = [
   },
 ];
 
+// TODO subnav items
+// TODO mobile subnav items
 export const SideNav: FC<SideNavProps> = ({ open, setOpen }) => {
   const [searchString, setSearchString] = React.useState("");
 
@@ -143,7 +145,6 @@ export const SideNav: FC<SideNavProps> = ({ open, setOpen }) => {
         </Typography>
       </div>
 
-      {/* TODO search input */}
       <div
         className={classNames("w-62 mb-8", {
           "opacity-0": !open,

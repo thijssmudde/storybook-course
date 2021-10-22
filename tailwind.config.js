@@ -1,7 +1,10 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  purge: ["./src/components/**/*.tsx"],
+  purge: {
+    enabled: true,
+    content: ["./src/**/*.tsx"],
+  },
   darkMode: "class", // or 'media' or 'class'
   theme: {
     colors: {
