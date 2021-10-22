@@ -39,7 +39,8 @@ export const Select: FC<SelectProps> = ({
           <>
             <Listbox.Button
               className={classNames(
-                "flex items-center text-md border border-gray-300 dark:border-gray-500 h-11 px-3.5 rounded-lg bg-white dark:bg-gray-800",
+                "shadow-sm flex items-center text-md border border-gray-300 dark:border-gray-500 h-11 px-3.5 rounded-lg bg-white dark:bg-gray-800",
+                "focus:ring-4 focus:border-primary-300 dark:focus:border-gray-100 focus:ring-primary-100 dark:focus:ring-gray-100 dark:focus:ring-opacity-20",
                 {
                   "text-gray-900 dark:text-white": selectedOption,
                   "text-gray-500 dark:text-gray-300": !selectedOption,
@@ -67,7 +68,7 @@ export const Select: FC<SelectProps> = ({
             </Listbox.Button>
             <Listbox.Options
               className={classNames(
-                "absolute z-10 inline-flex flex-col w-full bg-white border rounded-lg shadow-lg dark:border-gray-500 dark:bg-gray-800",
+                "absolute z-10 inline-flex flex-col w-full bg-white border border-gray-300 rounded-lg shadow-lg dark:border-gray-500 dark:bg-gray-800",
                 {
                   "top-13": !label,
                   "top-19.5": label,

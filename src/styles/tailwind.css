@@ -95,8 +95,7 @@
   }
 
   .btn-primary-focus {
-    @apply focus:shadow-primary;
-    /* dark:focus:shadow-grayDark; */
+    @apply focus:ring-4 focus:ring-primary-100 dark:focus:ring-gray-100 dark:focus:ring-opacity-20;
   }
 
   .btn-primary-disabled {
@@ -113,8 +112,7 @@
   }
 
   .btn-secondary-focus {
-    @apply focus:shadow-primary;
-    /* dark:focus:shadow-grayDark; */
+    @apply focus:ring-4 focus:ring-primary-100 dark:focus:ring-gray-100 dark:focus:ring-opacity-20;
   }
 
   .btn-secondary-disabled {
@@ -131,7 +129,7 @@
   }
 
   .btn-secondaryGray-focus {
-    @apply focus:shadow-gray;
+    @apply focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-100 dark:focus:ring-opacity-20;
   }
 
   .btn-secondaryGray-disabled {

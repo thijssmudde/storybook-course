@@ -99,10 +99,7 @@ module.exports = {
         15: "3.75rem",
         19.5: "4.875rem",
         50: "12.5rem",
-      },
-      boxShadow: {
-        primary: "0px 0px 0px 4px #d1e9ff",
-        gray: "0px 0px 0px 4px #F2F4F7",
+        62: "15.5rem",
       },
     },
     breakpointsInspector: {

@@ -26,7 +26,7 @@ const StorySideNav: Story<Props> = (args) => {
   const [open, setOpen] = React.useState<boolean>(false);
 
   return (
-    <StoryLayout {...args} className="">
+    <StoryLayout {...args} className="h-screen" noPadding>
       <SideNav open={open} setOpen={setOpen} />
     </StoryLayout>
   );

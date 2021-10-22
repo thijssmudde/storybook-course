@@ -42,11 +42,11 @@ export const TextInput: FC<TextInputProps> = ({
         </Typography>
       ) : null}
       <div
-        className={classNames("w-80 relative", {
+        className={classNames("relative", {
           "flex items-center": leadingText,
         })}
       >
-        <div className="h-11 w-full absolute flex items-center justify-between px-3.5 pointer-events-none">
+        <div className="h-11 shadow-sm rounded-lg w-full absolute flex items-center justify-between px-3.5 pointer-events-none">
           {LeadingIcon ? (
             <LeadingIcon.type className="text-gray-500" />
           ) : (
@@ -82,7 +82,7 @@ export const TextInput: FC<TextInputProps> = ({
           onChange={handleChange}
           placeholder={placeholder}
           className={classNames(
-            "w-80 text-gray-900 dark:text-white text-md border h-11 focus:outline-none focus:shadow",
+            "w-full text-gray-900 dark:text-white text-md border h-11 focus:ring-4 focus:border-primary-300 dark:focus:border-gray-100 focus:ring-primary-100 dark:focus:ring-gray-100 dark:focus:ring-opacity-20",
             {
               "pl-9": LeadingIcon,
               "pr-9": TrailingIcon,
