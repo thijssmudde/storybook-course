@@ -8,7 +8,7 @@ export interface MobileNavbarProps {
 
 export const MobileNavbar: FC<MobileNavbarProps> = ({ open, setOpen }) => {
   return (
-    <div className="flex items-center justify-between h-20 py-6 pr-4 bg-white shadow-md dark:bg-gray-900 pl-7">
+    <div className="mobile-nav">
       {renderLogo()}
       <Typography variant="h6" customWeight="medium">
         My Travel App

@@ -16,7 +16,6 @@ export interface TextInputProps {
   disabled?: boolean;
 }
 
-// TODO states: focused & disabled
 export const TextInput: FC<TextInputProps> = ({
   type,
   value,

@@ -66,14 +66,10 @@ export const Typography: FC<TypographyProps> = ({
   const TypographyVariantClassName = TypographyVariantClasses[variant];
   const TypographyWeightClassName = TypographyWeightClasses[customWeight];
 
-  // h1-h6 should have correct component
+  // h1-h6 should have corresponding component
   // others should be p
   const isHeading = variant.startsWith("h");
   const Component = (isHeading ? variant : "p") as keyof JSX.IntrinsicElements;
-
-  const defaultColor = "text-black dark:text-white";
-
-  const trackingClassName = "tracking-tight";
 
   return (
     <Component
@@ -82,8 +78,8 @@ export const Typography: FC<TypographyProps> = ({
         TypographyWeightClassName,
         className,
         {
-          [trackingClassName]: ["h1", "h2", "h3"].includes(variant),
-          [defaultColor]: !customColor,
+          ["tracking-tight"]: ["h1", "h2", "h3"].includes(variant),
+          ["text-black dark:text-white"]: !customColor,
         },
         customColor,
       )}

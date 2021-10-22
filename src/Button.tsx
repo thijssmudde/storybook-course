@@ -9,10 +9,6 @@ type ButtonVariant =
   | "tertiaryGray";
 
 type ButtonSize = "sm" | "md" | "lg" | "xl" | "2xl";
-
-const ButtonBaseClasses =
-  "flex items-center rounded-lg font-medium focus:outline-none";
-
 type ButtonState = "default" | "hover" | "focus" | "disabled";
 
 const ButtonVariantClasses: Record<
@@ -20,56 +16,51 @@ const ButtonVariantClasses: Record<
   Record<ButtonState, string>
 > = {
   primary: {
-    default: "bg-primary-600 dark:bg-gray-800 text-white dark:text-white",
-    hover: "hover:bg-primary-700 dark:hover:bg-gray-700",
-    focus:
-      "focus:ring focus:border-primary-100 dark:focus:border-gray-300 dark:focus:border-opacity-10",
-    disabled: "bg-primary-200 text-white",
+    default: "btn-primary",
+    hover: "btn-primary-hover",
+    focus: "btn-primary-focus shadow-grayDark",
+    disabled: "btn-primary-disabled",
   },
   secondary: {
-    default: "bg-primary-50 dark:bg-gray-800 text-primary-700",
-    hover: "hover:bg-primary-100",
-    focus:
-      "focus:ring focus:border-primary-100 dark:focus:border-gray-300 dark:focus:border-opacity-10",
-    disabled: "bg-primary-25 text-primary-300",
+    default: "btn-secondary",
+    hover: "btn-secondary-hover",
+    focus: "btn-secondary-focus shadow-grayDark",
+    disabled: "btn-secondary-disabled",
   },
   secondaryGray: {
-    default: "bg-white text-gray-700 border border-gray-300",
-    hover: "hover:bg-gray-50 hover:text-gray-800",
-    focus:
-      "focus:ring focus:border-primary-100 dark:focus:border-gray-300 dark:focus:border-opacity-10",
-    disabled: "border border-gray-200 text-gray-300",
+    default: "btn-secondaryGray",
+    hover: "btn-secondaryGray-hover",
+    focus: "btn-secondaryGray-focus dark:shadow-none",
+    disabled: "btn-secondaryGray-disabled",
   },
   tertiary: {
-    default: "bg-white text-primary-700",
-    hover: "hover:bg-primary-50",
-    focus:
-      "focus:ring focus:border-primary-100 dark:focus:border-gray-300 dark:focus:border-opacity-10",
-    disabled: "bg-white text-gray-300",
+    default: "btn-tertiary",
+    hover: "btn-tertiary-hover",
+    focus: "",
+    disabled: "btn-tertiary-disabled",
   },
   tertiaryGray: {
-    default: "bg-white text-gray-500",
-    hover: "hover:bg-gray-50 hover:text-gray-600",
-    focus:
-      "focus:ring focus:border-primary-100 dark:focus:border-gray-300 dark:focus:border-opacity-10",
-    disabled: "bg-white text-gray-300",
+    default: "btn-tertiaryGray",
+    hover: "btn-tertiaryGray-hover",
+    focus: "",
+    disabled: "btn-tertiaryGray-disabled",
   },
 };
 
 const ButtonSizeClasses: Record<ButtonSize, string> = {
-  sm: "h-9 px-3.5 text-sm",
-  md: "h-10 px-4 text-sm",
-  lg: "h-11 px-4.5 text-md",
-  xl: "h-12 px-5 text-md",
-  "2xl": "h-15 px-7 text-lg",
+  sm: "btn-sm",
+  md: "btn-md",
+  lg: "btn-lg",
+  xl: "btn-xl",
+  "2xl": "btn-2xl",
 };
 
 const ButtonIconSizeClasses: Record<ButtonSize, string> = {
-  sm: "h-9 w-9",
-  md: "h-10 w-10",
-  lg: "h-11 w-11",
-  xl: "h-12 w-12",
-  "2xl": "h-15 w-15",
+  sm: "btn-icon-sm",
+  md: "btn-icon-md",
+  lg: "btn-icon-lg",
+  xl: "btn-icon-xl",
+  "2xl": "btn-icon-2xl",
 };
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -101,7 +92,7 @@ export const Button: FC<ButtonProps> = ({
   return (
     <button
       {...buttonProps}
-      className={classNames(ButtonBaseClasses, className, {
+      className={classNames("btn-base", className, {
         [ButtonSizeClasses[size]]: !IconOnly,
         [classNames(ButtonIconSizeClassName, "justify-center")]: IconOnly,
         [classNames(

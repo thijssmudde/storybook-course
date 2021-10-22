@@ -81,16 +81,6 @@ const TypographyText: Story<Props> = (args) => {
   );
 };
 
-export const Dynamic = TypographyDynamic.bind({});
-
-Dynamic.args = {
-  variant: "h1",
-  customColor: "", //text-primary-600 dark:text-white
-  customWeight: "regular",
-  className: "",
-  darkMode: false,
-};
-
 export const Heading = TypographyHeadings.bind({});
 
 Heading.args = {
@@ -113,4 +103,14 @@ Text.args = {
 
 Text.parameters = {
   controls: { exclude: ["variant", "customColor", "className"] },
+};
+
+export const Dynamic = TypographyDynamic.bind({});
+
+Dynamic.args = {
+  variant: "h1",
+  customColor: "", //text-primary-600 dark:text-white
+  customWeight: "regular",
+  className: "",
+  darkMode: false,
 };

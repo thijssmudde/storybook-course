@@ -96,7 +96,6 @@ const countries: IOption[] = [
     ),
   },
 ];
-// TODO add option with flags
 
 const StorySelect: Story<Props> = (args) => {
   const [selectedPerson, setSelectedPerson] = React.useState<IOption>();

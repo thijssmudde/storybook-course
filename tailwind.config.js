@@ -5,6 +5,7 @@ module.exports = {
   darkMode: "class", // or 'media' or 'class'
   theme: {
     colors: {
+      transparent: "transparent",
       white: "#fff",
       gray: {
         25: "#FCFCFD",
@@ -32,7 +33,6 @@ module.exports = {
         800: "#1849A9",
         900: "#194185",
       },
-      // error, warning success
       error: {
         25: "#FFFBFA",
         50: "#FEF3F2",
@@ -99,6 +99,10 @@ module.exports = {
         15: "3.75rem",
         19.5: "4.875rem",
         50: "12.5rem",
+      },
+      boxShadow: {
+        primary: "0px 0px 0px 4px #d1e9ff",
+        gray: "0px 0px 0px 4px #F2F4F7",
       },
     },
     breakpointsInspector: {

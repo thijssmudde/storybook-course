@@ -13,20 +13,18 @@ export interface BadgeProps {
   TrailingIcon?: React.ReactElement;
 }
 
-const BadgeBaseClasses = "inline-flex items-center rounded-2xl font-medium";
-
 const BadgeVariantClasses: Record<BadgeVariant, string> = {
-  gray: "bg-gray-100 text-gray-700",
-  primary: "bg-primary-50 text-primary-700",
-  error: "bg-error-50 text-error-700",
-  warning: "bg-warning-50 text-warning-700",
-  success: "bg-success-50 text-success-700",
+  gray: "badge-gray",
+  primary: "badge-primary",
+  error: "badge-error",
+  warning: "badge-warning",
+  success: "badge-success",
 };
 
 const BadgeSizeClasses: Record<BadgeSize, string> = {
-  sm: "h-5.5 px-2 text-xs",
-  md: "h-6 px-2.5 text-xs",
-  lg: "h-7 px-3 text-sm",
+  sm: "badge-sm",
+  md: "badge-md ",
+  lg: "badge-lg",
 };
 
 export const Badge: FC<BadgeProps> = ({
@@ -43,18 +41,24 @@ export const Badge: FC<BadgeProps> = ({
   return (
     <div
       className={classNames(
-        BadgeBaseClasses,
+        "badge-base",
         BadgeVariantClassName,
         BadgeSizeClassName,
         className,
       )}
     >
       {LeadingIcon ? (
-        <LeadingIcon.type {...LeadingIcon.props} className="mr-1.5" />
+        <LeadingIcon.type
+          {...LeadingIcon.props}
+          className={classNames("mr-1.5", LeadingIcon.props.className)}
+        />
       ) : null}
       {children}
       {TrailingIcon ? (
-        <TrailingIcon.type {...TrailingIcon.props} className="ml-1.5" />
+        <TrailingIcon.type
+          {...TrailingIcon.props}
+          className={classNames("ml-1.5", TrailingIcon.props.className)}
+        />
       ) : null}
     </div>
   );

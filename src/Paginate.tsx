@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
-import classNames from "classnames";
 import { Pagination } from "react-headless-pagination";
+import classNames from "classnames";
 
 export interface PaginationProps {
   isMobile: boolean;
@@ -10,7 +10,6 @@ export interface PaginationProps {
   totalPages: number;
 }
 
-// TODO add dark and mobile
 export const Paginate: FC<PaginationProps> = ({
   isMobile,
   page,
@@ -36,7 +35,7 @@ export const Paginate: FC<PaginationProps> = ({
             }
           }}
         />
-        <div className="flex justify-center flex-grow text-gray-700 select-none dark:text-white">
+        <div className="flex justify-center flex-grow text-sm text-gray-700 select-none dark:text-white">
           Page {page + 1} out of {totalPages}
         </div>
         <FiArrowRight
@@ -66,7 +65,7 @@ export const Paginate: FC<PaginationProps> = ({
     >
       <Pagination.PrevButton
         className={classNames(
-          "h-10 flex items-center mr-2 text-gray-500 dark:text-white  hover:text-gray-600 dark:hover:text-gray-200 focus:outline-none",
+          "h-10 font-medium flex items-center mr-2 text-gray-500 dark:text-white  hover:text-gray-600 dark:hover:text-gray-200 focus:outline-none",
           {
             "cursor-pointer": page !== 0,
             "opacity-50": page === 0,
@@ -82,14 +81,14 @@ export const Paginate: FC<PaginationProps> = ({
           activeClassName="bg-primary-50 dark:bg-opacity-0 text-primary-600 dark:text-white"
           inactiveClassName="text-gray-500"
           className={
-            "flex items-center justify-center h-10 w-10 rounded-full cursor-pointer"
+            "flex items-center justify-center h-10 w-10 rounded-full cursor-pointer font-medium"
           }
         />
       </div>
 
       <Pagination.NextButton
         className={classNames(
-          "h-10 flex items-center mr-2 text-gray-500 dark:text-white hover:text-gray-600 dark:hover:text-gray-200 focus:outline-none",
+          "h-10 font-medium flex items-center mr-2 text-gray-500 dark:text-white hover:text-gray-600 dark:hover:text-gray-200 focus:outline-none",
           {
             "cursor-pointer": page !== totalPages - 1,
             "opacity-50": page === totalPages - 1,

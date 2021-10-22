@@ -53,3 +53,7 @@ Default.args = {
   size: "md",
   darkMode: false,
 };
+
+Default.parameters = {
+  controls: { exclude: ["LeadingIcon", "TrailingIcon", "className"] },
+};

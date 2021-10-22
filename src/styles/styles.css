@@ -1,3 +1,11 @@
 body {
   font-family: "Inter";
 }
+
+.dark .shadow-grayDark:focus {
+  box-shadow: 0px 0px 0px 4px rgba(242, 244, 247, 0.1);
+}
+
+.dark .shadow-none:focus {
+  box-shadow: none !important;
+}

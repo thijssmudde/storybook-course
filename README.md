@@ -2,11 +2,9 @@
 
 ## TODO
 
-- Add flags/avatars to badges
-- Finish dropdown
-- Input
+- Button Dark Mode
+- Figma add countries to select
 - Navbar
-- Rental card
 - Page
 
 ## Custom installation instructions
