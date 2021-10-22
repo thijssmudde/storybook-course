@@ -2,8 +2,8 @@
 
 ## TODO
 
-- Button Dark Mode
-- Figma add countries to select
+- Auto deploy to netlify:
+  - Setup deploy for mytravelapp with https://docs.netlify.com/configure-builds/repo-permissions-linking/#deploy-keys
 - Navbar
 - Page
 
@@ -71,6 +71,11 @@ import './tailwind.css`;
 ```
 
 ## Commands
+
+### build:css
+
+- Install postcss globally: npm install postcss-cli -g
+  Then run yarn build:css
 
 TSDX scaffolds your new library inside `/src`, and also sets up a [Parcel-based](https://parceljs.org) playground for it inside `/example`.
 

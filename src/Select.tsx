@@ -1,8 +1,9 @@
 import React, { FC } from "react";
 import { Listbox } from "@headlessui/react";
 import { FiCheck, FiChevronDown } from "react-icons/fi";
-import { Typography, IOption } from ".";
 import classNames from "classnames";
+import { Typography } from "./Typography";
+import { IOption } from "./@interfaces";
 
 export interface SelectProps {
   options: IOption[];
@@ -51,7 +52,7 @@ export const Select: FC<SelectProps> = ({
                 <LeadingIcon.type
                   {...LeadingIcon.props}
                   size={20}
-                  className="mr-2"
+                  className="mr-2 text-gray-400"
                 />
               ) : null}
 

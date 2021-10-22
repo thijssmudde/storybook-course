@@ -33,7 +33,7 @@
   ],
   "scripts": {
     "start": "tsdx watch",
-    "build": "NODE_ENV=production tsdx build",
+    "build": "NODE_ENV=production tsdx build && yarn build:css",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
@@ -42,7 +42,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "chromatic": "npx chromatic --project-token TODO token",
-    "build:css": "postcss ./src/styles/tailwind.css build -o dist/tailwind.css --minify"
+    "build:css": "postcss ./src/styles/tailwind.css build -o tailwind.css --minify"
   },
   "devDependencies": {
     "@babel/core": "7.12.13",
@@ -68,8 +68,7 @@
     "classnames": "2.3.1",
     "husky": "4.3.8",
     "identity-obj-proxy": "3.0.0",
-    "postcss": "^8.3.11",
-    "postcss-cli": "^9.0.1",
+    "postcss": "7",
     "prettier": "2.4.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",

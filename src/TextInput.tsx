@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import classNames from "classnames";
-import { Typography } from ".";
+import { Typography } from "./Typography";
 
 export interface TextInputProps {
   type: "text" | "email";

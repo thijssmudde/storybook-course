@@ -6,13 +6,13 @@ interface IButtonItem {
   content: React.ReactNode;
 }
 
-export interface ButtonGroupProps {
-  active: string;
-  setActive: (active: string) => void;
+export interface ButtonGroupProps<T> {
+  active: T;
+  setActive: <T>(active: T) => void;
   options: IButtonItem[]; // Start with string[]
 }
 
-export const ButtonGroup: FC<ButtonGroupProps> = ({
+export const ButtonGroup: FC<ButtonGroupProps<any>> = ({
   active,
   setActive,
   options,

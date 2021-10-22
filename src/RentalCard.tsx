@@ -1,5 +1,8 @@
 import React, { FC } from "react";
-import { Badge, Button, Typography } from ".";
+import { Badge } from "./Badge";
+import { Button } from "./Button";
+import { Typography } from "./Typography";
+import { IRental } from "./@interfaces";
 import {
   FiMapPin,
   FiStar,
@@ -8,20 +11,6 @@ import {
   FiHeart,
   FiAward,
 } from "react-icons/fi";
-
-export interface IRental {
-  title: string;
-  subtitle: string;
-  image: string;
-  badge?: string;
-  rating: string;
-  reviews: number;
-  address: string;
-  bed: string;
-  wifi: string;
-  price: string;
-  currency: string;
-}
 
 export interface RentalCardProps {
   rental: IRental;

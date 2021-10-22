@@ -1,6 +1,5 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
-// import { FiSearch } from "react-icons/fi";
 import { SideNav, SideNavProps } from "../src";
 import StoryLayout from "./StoryLayout";
 

@@ -21,17 +21,12 @@ interface Props extends RentalCardProps {
   darkMode: boolean;
 }
 
-const image1 =
-  "https://res.cloudinary.com/tailwindcss/image/upload/v1634674297/image_1_egxeww.png";
-const image2 =
-  "https://res.cloudinary.com/tailwindcss/image/upload/v1634674298/image_2_ngqift.png";
-const image3 =
-  "https://res.cloudinary.com/tailwindcss/image/upload/v1634674297/image_3_c7xiit.png";
-
 const rental: IRental = {
+  id: 0,
   title: "Single bedroom apartment near Central Station",
   subtitle: "In the heart of the flower market city centre",
-  image: image2,
+  image:
+    "https://res.cloudinary.com/tailwindcss/image/upload/v1634674298/image_2_ngqift.png",
   badge: "Rare find",
   rating: "4.8",
   reviews: 20,

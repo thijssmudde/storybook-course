@@ -107,10 +107,13 @@ export const Button: FC<ButtonProps> = ({
       {LeadingIcon ? (
         <LeadingIcon.type
           {...LeadingIcon.props}
-          className={classNames({
-            "mr-2": size !== "2xl",
-            "mr-3": size === "2xl",
-          })}
+          className={classNames(
+            {
+              "mr-2": size !== "2xl",
+              "mr-3": size === "2xl",
+            },
+            LeadingIcon.props.className,
+          )}
         />
       ) : null}
       {children}

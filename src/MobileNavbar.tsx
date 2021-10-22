@@ -1,5 +1,6 @@
 import React, { FC } from "react";
-import { renderLogo, Typography } from ".";
+import { Typography } from "./Typography";
+import { renderLogo } from "./SideNav";
 
 export interface MobileNavbarProps {
   open: boolean;

@@ -1,11 +1,14 @@
 import React, { FC } from "react";
 import classNames from "classnames";
-import { TextInput, Typography } from ".";
-import { FiArrowLeft, FiChevronDown, FiLogOut, FiSearch } from "react-icons/fi";
+import { Typography } from "./Typography";
+import { TextInput } from "./TextInput";
 import {
+  FiArrowLeft,
+  FiChevronDown,
+  FiLogOut,
+  FiSearch,
   FiBarChart2,
   FiCheckSquare,
-  // FiFlag,
   FiHome,
   FiLayers,
   FiSettings,
