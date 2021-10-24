@@ -79,6 +79,7 @@ const StoryButtonGroup: Story<Props> = (args) => {
         <ButtonGroup
           {...args}
           active={activeItem1}
+          // @ts-ignore all
           setActive={setActiveItem1}
           options={options1}
         />
@@ -87,6 +88,7 @@ const StoryButtonGroup: Story<Props> = (args) => {
         <ButtonGroup
           {...args}
           active={activeItem2}
+          // @ts-ignore all
           setActive={setActiveItem2}
           options={options2}
         />
@@ -95,6 +97,7 @@ const StoryButtonGroup: Story<Props> = (args) => {
         <ButtonGroup
           {...args}
           active={activeItem3}
+          // @ts-ignore all
           setActive={setActiveItem3}
           options={options3}
         />

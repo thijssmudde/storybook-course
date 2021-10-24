@@ -2,10 +2,15 @@
 
 ## TODO
 
+- Check why some classes are not working anymore
 - Auto deploy to netlify:
   - Setup deploy for mytravelapp with https://docs.netlify.com/configure-builds/repo-permissions-linking/#deploy-keys
 - Navbar
 - Page
+
+## Demo
+
+https://6173282dd6f6a80008394844--storybook-course.netlify.app/
 
 ## Custom installation instructions
 

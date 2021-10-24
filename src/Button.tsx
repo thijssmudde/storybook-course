@@ -30,7 +30,7 @@ const ButtonVariantClasses: Record<
   secondaryGray: {
     default: "btn-secondaryGray",
     hover: "btn-secondaryGray-hover",
-    focus: "btn-secondaryGray-focus dark:shadow-none",
+    focus: "btn-secondaryGray-focus",
     disabled: "btn-secondaryGray-disabled",
   },
   tertiary: {
@@ -74,7 +74,6 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   disabled?: boolean;
 }
 
-// Dark Mode
 export const Button: FC<ButtonProps> = ({
   children,
   className,

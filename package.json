@@ -42,7 +42,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "chromatic": "npx chromatic --project-token TODO token",
-    "build:css": "postcss ./src/styles/tailwind.css build -o tailwind.css --minify"
+    "build:css": "postcss ./src/styles/tailwind.css build -o dist/tailwind.css --minify"
   },
   "devDependencies": {
     "@babel/core": "7.12.13",
