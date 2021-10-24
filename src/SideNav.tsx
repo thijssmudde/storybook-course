@@ -81,7 +81,13 @@ export const SideNav: FC<SideNavProps> = ({ open, setOpen }) => {
   const renderNavItem = (item: INavItem) => {
     return (
       <li
-        className="flex items-center w-full h-10 px-4 py-2 transition duration-100 ease-out rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-100 dark:hover:bg-opacity-10 group"
+        className={classNames(
+          "flex items-center w-full h-10 py-2 transition duration-100 ease-out rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-100 dark:hover:bg-opacity-10 group",
+          {
+            "px-4": open,
+            "px-2": !open,
+          },
+        )}
         onClick={item.toggleSidebar ? () => setOpen(!open) : () => {}}
       >
         <item.icon.type

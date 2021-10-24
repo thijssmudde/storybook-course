@@ -8,6 +8,7 @@ export interface PaginationProps {
   page: number;
   setPage: (page: number) => void;
   totalPages: number;
+  className?: string;
 }
 
 export const Paginate: FC<PaginationProps> = ({
@@ -15,6 +16,7 @@ export const Paginate: FC<PaginationProps> = ({
   page,
   setPage,
   totalPages,
+  className,
 }) => {
   const handlePageChange = (page: number) => {
     setPage(page);
@@ -59,7 +61,10 @@ export const Paginate: FC<PaginationProps> = ({
       currentPage={page}
       totalPages={totalPages}
       setCurrentPage={handlePageChange}
-      className="flex items-center w-full h-10 text-sm select-none"
+      className={classNames(
+        "flex items-center w-full h-10 text-sm select-none",
+        className,
+      )}
       truncableText="..."
       truncableClassName="w-10 px-0.5 text-center"
     >

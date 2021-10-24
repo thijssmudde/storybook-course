@@ -8,7 +8,7 @@ import { IOption } from "./@interfaces";
 export interface SelectProps {
   options: IOption[];
   selectedOption: IOption;
-  setSelectedOption: (option: IOption) => void;
+  setSelectedOption: (option: string) => void;
   label?: string;
   LeadingIcon?: React.ReactElement;
   leadingIconInMenu?: boolean;
@@ -35,7 +35,7 @@ export const Select: FC<SelectProps> = ({
         </Typography>
       ) : null}
 
-      <Listbox value={selectedOption} onChange={setSelectedOption}>
+      <Listbox value={selectedOption.value} onChange={setSelectedOption}>
         {({ open }) => (
           <>
             <Listbox.Button
@@ -78,31 +78,37 @@ export const Select: FC<SelectProps> = ({
             >
               {options.map((option, index) => (
                 <Listbox.Option
+                  as={React.Fragment}
                   key={option.value}
                   value={option.value}
-                  className={classNames(
-                    "flex items-center pl-3.5 pr-3 justify-between h-11 text-gray-900 dark:text-white text-md cursor-pointer hover:bg-primary-25 dark:hover:bg-gray-100 dark:hover:bg-opacity-10",
-                    {
-                      "bg-primary-25 dark:bg-gray-100 dark:bg-opacity-10":
-                        selectedOption && option.value === selectedOption.value,
-                      "rounded-t-lg": index === 0,
-                      "rounded-b-lg": index === options.length - 1,
-                    },
-                  )}
                 >
-                  <div className="flex items-center">
-                    {LeadingIcon && leadingIconInMenu ? (
-                      <LeadingIcon.type
-                        {...LeadingIcon.props}
-                        size={20}
-                        className="mr-2 text-gray-500"
-                      />
-                    ) : null}
-                    {option.label}
-                  </div>
-                  {selectedOption && option.value === selectedOption.value ? (
-                    <FiCheck className="ml-5 text-primary-600 dark:text-white" />
-                  ) : null}
+                  {({ active, selected }) => (
+                    <li
+                      className={classNames(
+                        "flex items-center pl-3.5 pr-3 justify-between h-11 text-gray-900 dark:text-white text-md cursor-pointer hover:bg-primary-25 dark:hover:bg-gray-100 dark:hover:bg-opacity-10",
+                        {
+                          "bg-primary-25 dark:bg-gray-100 dark:bg-opacity-10":
+                            active,
+                          "rounded-t-lg": index === 0,
+                          "rounded-b-lg": index === options.length - 1,
+                        },
+                      )}
+                    >
+                      <div className="flex items-center">
+                        {LeadingIcon && leadingIconInMenu ? (
+                          <LeadingIcon.type
+                            {...LeadingIcon.props}
+                            size={20}
+                            className="mr-2 text-gray-500"
+                          />
+                        ) : null}
+                        {option.label}
+                      </div>
+                      {selected ? (
+                        <FiCheck className="ml-5 text-primary-600 dark:text-white" />
+                      ) : null}
+                    </li>
+                  )}
                 </Listbox.Option>
               ))}
             </Listbox.Options>

@@ -104,20 +104,17 @@ const StorySelect: Story<Props> = (args) => {
     countries[0],
   );
 
-  const handleSelectPerson = (value: IOption) => {
-    const personValue = value as unknown as string;
+  const handleSelectPerson = (personValue: string) => {
     const person = people.find((p) => p.value === personValue);
     setSelectedPerson(person);
   };
 
-  const handleSelectUsername = (value: IOption) => {
-    const usernameValue = value as unknown as string;
+  const handleSelectUsername = (usernameValue: string) => {
     const username = usernames.find((p) => p.value === usernameValue);
     setSelectedUsername(username);
   };
 
-  const handleSelectCountry = (value: IOption) => {
-    const countryValue = value as unknown as string;
+  const handleSelectCountry = (countryValue: string) => {
     const country = countries.find((p) => p.value === countryValue);
     setSelectedCountry(country);
   };
