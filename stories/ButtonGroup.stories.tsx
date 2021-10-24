@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
-import { FiArrowLeft, FiArrowRight, FiCircle, FiPlus } from "react-icons/fi";
+import { FiCircle, FiGrid, FiList } from "react-icons/fi";
 
 import { ButtonGroup, ButtonGroupProps } from "../src";
 import StoryLayout from "./StoryLayout";
@@ -65,14 +65,8 @@ const StoryButtonGroup: Story<Props> = (args) => {
     options2[1].value,
   );
 
-  const options3 = [
-    { value: "first", content: <FiArrowLeft size={20} /> },
-    { value: "second", content: <FiPlus size={20} /> },
-    { value: "third", content: <FiArrowRight size={20} /> },
-  ];
-  const [activeItem3, setActiveItem3] = React.useState<string>(
-    options3[1].value,
-  );
+  type ViewOption = "list" | "grid";
+  const [viewOption, setViewOption] = React.useState<ViewOption>("list");
 
   return (
     <StoryLayout {...args} className="space-y-4">
@@ -88,18 +82,24 @@ const StoryButtonGroup: Story<Props> = (args) => {
         <ButtonGroup
           {...args}
           active={activeItem2}
-          // @ts-ignore all
           setActive={setActiveItem2}
           options={options2}
         />
       </div>
       <div>
         <ButtonGroup
-          {...args}
-          active={activeItem3}
-          // @ts-ignore all
-          setActive={setActiveItem3}
-          options={options3}
+          active={viewOption}
+          options={[
+            {
+              content: <FiList size={20} />,
+              value: "list",
+            },
+            {
+              content: <FiGrid size={20} />,
+              value: "grid",
+            },
+          ]}
+          setActive={setViewOption}
         />
       </div>
     </StoryLayout>

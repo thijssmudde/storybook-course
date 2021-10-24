@@ -1,4 +1,4 @@
-import React, { FC, Dispatch, SetStateAction } from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import classNames from "classnames";
 
 interface IButtonItem<T> {
@@ -12,17 +12,17 @@ export interface ButtonGroupProps<T> {
   options: IButtonItem<T>[];
 }
 
-export const ButtonGroup: FC<ButtonGroupProps<string>> = ({
+export const ButtonGroup = <T extends unknown>({
   active,
   setActive,
   options,
-}) => {
+}: ButtonGroupProps<T>) => {
   return (
     <>
       {options.map((option, index) => {
         return (
           <button
-            key={option.value}
+            key={option.value as string}
             className={classNames("btn-group", {
               "rounded-l-lg border-r-0": index === 0,
               "border-r-0": index !== 0 && index !== options.length - 1,
