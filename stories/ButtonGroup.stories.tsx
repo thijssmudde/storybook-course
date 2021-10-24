@@ -19,7 +19,7 @@ const meta: Meta = {
 
 export default meta;
 
-interface Props extends ButtonGroupProps {
+interface Props extends ButtonGroupProps<string> {
   darkMode: boolean;
 }
 
@@ -29,6 +29,7 @@ const StoryButtonGroup: Story<Props> = (args) => {
     { value: "Middle", content: "Middle" },
     { value: "Trailing", content: "Trailing" },
   ];
+
   const [activeItem1, setActiveItem1] = React.useState<string>(
     options1[1].value,
   );
@@ -79,7 +80,6 @@ const StoryButtonGroup: Story<Props> = (args) => {
         <ButtonGroup
           {...args}
           active={activeItem1}
-          // @ts-ignore all
           setActive={setActiveItem1}
           options={options1}
         />

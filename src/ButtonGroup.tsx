@@ -1,18 +1,18 @@
-import React, { FC } from "react";
+import React, { FC, Dispatch, SetStateAction } from "react";
 import classNames from "classnames";
 
-interface IButtonItem {
-  value: string;
+interface IButtonItem<T> {
+  value: T;
   content: React.ReactNode;
 }
 
 export interface ButtonGroupProps<T> {
   active: T;
-  setActive: <T>(active: T) => void;
-  options: IButtonItem[]; // Start with string[]
+  setActive: Dispatch<SetStateAction<T>>;
+  options: IButtonItem<T>[];
 }
 
-export const ButtonGroup: FC<ButtonGroupProps<any>> = ({
+export const ButtonGroup: FC<ButtonGroupProps<string>> = ({
   active,
   setActive,
   options,
