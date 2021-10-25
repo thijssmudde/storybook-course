@@ -43,7 +43,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "chromatic": "npx chromatic --project-token TODO token",
-    "build:css": "postcss ./src/styles/tailwind.css build -o css/tailwind.css --minify"
+    "build:css": "postcss ./src/styles/tailwind.css build -o css/tailwind.dist.css --minify"
   },
   "dependencies": {
     "@headlessui/react": "1.4.1",

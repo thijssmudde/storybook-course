@@ -87,7 +87,7 @@
 
   /* Primary */
   .btn-primary {
-    @apply bg-primary-600 dark:bg-gray-600 text-white dark:text-white;
+    @apply bg-primary-600 dark:bg-gray-800 text-white dark:text-white;
   }
 
   .btn-primary-hover {
@@ -104,11 +104,11 @@
 
   /* Secondary */
   .btn-secondary {
-    @apply shadow-sm border border-transparent dark:border-white bg-primary-50 dark:bg-gray-900 text-primary-700 dark:text-white;
+    @apply shadow-sm border border-transparent dark:border-white bg-primary-50 dark:bg-opacity-20 text-primary-700 dark:text-white;
   }
 
   .btn-secondary-hover {
-    @apply dark:border-gray-300 hover:bg-primary-100 dark:hover:bg-gray-900 dark:hover:text-gray-300;
+    @apply hover:bg-primary-100 dark:hover:bg-white dark:hover:bg-opacity-40 dark:hover:border-opacity-40 dark:hover:text-white;
   }
 
   .btn-secondary-focus {
@@ -116,16 +116,16 @@
   }
 
   .btn-secondary-disabled {
-    @apply shadow-sm bg-primary-25 dark:bg-gray-600 text-primary-300 dark:text-white;
+    @apply shadow-sm bg-primary-25 dark:bg-white dark:bg-opacity-20 text-primary-300 dark:border-gray-300 dark:text-gray-300;
   }
 
   /* SecondaryGray */
   .btn-secondaryGray {
-    @apply shadow-sm border border-gray-300 dark:border-white bg-white dark:bg-opacity-20 text-gray-700 dark:text-white;
+    @apply shadow-sm border border-gray-300 dark:border-white bg-white dark:bg-gray-900 text-gray-700 dark:text-white;
   }
 
   .btn-secondaryGray-hover {
-    @apply dark:hover:border-opacity-40 hover:bg-gray-50 dark:hover:bg-white dark:hover:bg-opacity-40 hover:text-gray-800 dark:hover:text-white;
+    @apply hover:bg-gray-50 dark:hover:bg-gray-900 hover:text-gray-800 dark:hover:text-gray-300 dark:border-gray-300;
   }
 
   .btn-secondaryGray-focus {
@@ -133,7 +133,7 @@
   }
 
   .btn-secondaryGray-disabled {
-    @apply shadow-sm border border-gray-200 dark:border-gray-300 text-gray-300 dark:text-white dark:text-opacity-20;
+    @apply shadow-sm border border-gray-200 text-gray-300 dark:bg-gray-600  dark:text-white;
   }
 
   /* Tertiary */
