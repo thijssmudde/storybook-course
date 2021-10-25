@@ -12,6 +12,7 @@ export interface SelectProps {
   label?: string;
   LeadingIcon?: React.ReactElement;
   leadingIconInMenu?: boolean;
+  fullWidth?: boolean;
 }
 
 export const Select: FC<SelectProps> = ({
@@ -21,9 +22,14 @@ export const Select: FC<SelectProps> = ({
   label,
   LeadingIcon,
   leadingIconInMenu,
+  fullWidth,
 }) => {
   return (
-    <div className="relative inline-block">
+    <div
+      className={classNames("relative inline-block", {
+        "w-full": fullWidth,
+      })}
+    >
       {label ? (
         <Typography
           variant="sm"
@@ -45,6 +51,7 @@ export const Select: FC<SelectProps> = ({
                 {
                   "text-gray-900 dark:text-white": selectedOption,
                   "text-gray-500 dark:text-gray-300": !selectedOption,
+                  "w-full": fullWidth,
                 },
               )}
             >
@@ -60,9 +67,11 @@ export const Select: FC<SelectProps> = ({
               <FiChevronDown
                 size={20}
                 className={classNames(
-                  "ml-3.5 text-gray-500 dark:text-gray-300 transform duration-100 ease-out",
+                  "text-gray-500 dark:text-gray-300 transform duration-100 ease-out",
                   {
                     "-rotate-180": open,
+                    "ml-auto": fullWidth,
+                    "ml-3.5": !fullWidth,
                   },
                 )}
               />

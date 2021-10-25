@@ -128,8 +128,8 @@ const StorySelect: Story<Props> = (args) => {
         setSelectedOption={handleSelectPerson}
         LeadingIcon={<FiUser />}
         leadingIconInMenu={args.leadingIconInMenu}
-      /> */}
-      {/* <div className="my-2" />
+      />
+      <div className="my-2" />
       <Select
         {...args}
         options={usernames}
@@ -143,6 +143,7 @@ const StorySelect: Story<Props> = (args) => {
         options={countries}
         selectedOption={selectedCountry}
         setSelectedOption={handleSelectCountry}
+        fullWidth={args.fullWidth}
       />
     </StoryLayout>
   );
@@ -154,6 +155,7 @@ Default.args = {
   label: "Team member",
   darkMode: false,
   leadingIconInMenu: false,
+  fullWidth: false,
 };
 
 Default.parameters = {
