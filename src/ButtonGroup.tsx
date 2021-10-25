@@ -8,7 +8,7 @@ interface IButtonItem<T> {
 
 export interface ButtonGroupProps<T> {
   active: T;
-  setActive: Dispatch<SetStateAction<T>>;
+  setActive: Dispatch<SetStateAction<T>>; // or if you prefer a function use (active: T) => void
   options: IButtonItem<T>[];
 }
 

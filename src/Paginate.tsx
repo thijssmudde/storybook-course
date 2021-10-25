@@ -24,7 +24,7 @@ export const Paginate: FC<PaginationProps> = ({
 
   if (isMobile) {
     return (
-      <div className="flex items-center w-full">
+      <div className={classNames("flex items-center w-full", className)}>
         <FiArrowLeft
           size={20}
           className={classNames("mr-3 text-gray-500 dark:text-white", {

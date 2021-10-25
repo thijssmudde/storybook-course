@@ -7,7 +7,8 @@
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
-    "src"
+    "src",
+    "css"
   ],
   "engines": {
     "node": ">=12.13"
@@ -17,7 +18,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": ""
+      "pre-commit": "yarn build:css"
     }
   },
   "module": "dist/tappui.esm.js",
@@ -42,7 +43,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "chromatic": "npx chromatic --project-token TODO token",
-    "build:css": "postcss ./src/styles/tailwind.css build -o src/tailwind.css --minify"
+    "build:css": "postcss ./src/styles/tailwind.css build -o css/tailwind.css --minify"
   },
   "dependencies": {
     "@headlessui/react": "1.4.1",
