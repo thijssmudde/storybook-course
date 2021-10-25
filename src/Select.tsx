@@ -7,9 +7,10 @@ import { IOption } from "./@interfaces";
 
 export interface SelectProps {
   options: IOption[];
-  selectedOption: IOption;
+  selectedOption: IOption | undefined;
   setSelectedOption: (option: string) => void;
   label?: string;
+  placeholder?: string;
   LeadingIcon?: React.ReactElement;
   leadingIconInMenu?: boolean;
   fullWidth?: boolean;
@@ -20,6 +21,7 @@ export const Select: FC<SelectProps> = ({
   selectedOption,
   setSelectedOption,
   label,
+  placeholder,
   LeadingIcon,
   leadingIconInMenu,
   fullWidth,
@@ -41,7 +43,10 @@ export const Select: FC<SelectProps> = ({
         </Typography>
       ) : null}
 
-      <Listbox value={selectedOption.value} onChange={setSelectedOption}>
+      <Listbox
+        value={selectedOption && selectedOption.value}
+        onChange={setSelectedOption}
+      >
         {({ open }) => (
           <>
             <Listbox.Button
@@ -63,7 +68,7 @@ export const Select: FC<SelectProps> = ({
                 />
               ) : null}
 
-              {selectedOption ? selectedOption.label : "Select team member"}
+              {selectedOption ? selectedOption.label : placeholder}
               <FiChevronDown
                 size={20}
                 className={classNames(

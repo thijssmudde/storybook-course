@@ -141,8 +141,9 @@ const StorySelect: Story<Props> = (args) => {
       <div className="my-2" />
       <Select
         options={countries}
-        selectedOption={selectedCountry}
+        selectedOption={undefined}
         setSelectedOption={handleSelectCountry}
+        placeholder="Select a country"
         fullWidth={args.fullWidth}
       />
     </StoryLayout>
