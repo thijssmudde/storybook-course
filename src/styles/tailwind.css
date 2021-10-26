@@ -169,6 +169,6 @@
 
   /* Navigation */
   .mobile-nav {
-    @apply flex items-center justify-between h-20 py-6 pr-4 bg-white shadow-md dark:bg-gray-900 pl-7;
+    @apply flex items-center justify-between h-20 py-6 pr-4 bg-white shadow-md dark:bg-gray-900 pl-7 z-50;
   }
 }

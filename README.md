@@ -3,7 +3,13 @@
 ## TODO
 
 - Navbar
+  - Subnav items
+    - open on desktop
+    - open on mobile
+  -
 - Page
+  - Dark mode toggle
+  - Map
 
 ## Demo
 

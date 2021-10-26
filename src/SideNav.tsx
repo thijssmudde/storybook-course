@@ -69,8 +69,6 @@ const navItems2: INavItem[] = [
   },
 ];
 
-// TODO subnav items
-// TODO mobile subnav items
 export const SideNav: FC<SideNavProps> = ({ open, setOpen }) => {
   const [searchString, setSearchString] = React.useState("");
 
@@ -81,6 +79,7 @@ export const SideNav: FC<SideNavProps> = ({ open, setOpen }) => {
   const renderNavItem = (item: INavItem) => {
     return (
       <li
+        key={item.label}
         className={classNames(
           "flex items-center w-full h-10 py-2 transition duration-100 ease-out rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-100 dark:hover:bg-opacity-10 group",
           {
@@ -155,7 +154,7 @@ export const SideNav: FC<SideNavProps> = ({ open, setOpen }) => {
       </div>
 
       <div
-        className={classNames("w-62 mb-8", {
+        className={classNames("w-62 px-4 mb-8", {
           "opacity-0": !open,
         })}
       >

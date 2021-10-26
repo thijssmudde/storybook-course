@@ -92,7 +92,7 @@ module.exports = {
       h1: ["72px", "90px"],
     },
     screens: {
-      xs: "400px",
+      xs: "420px",
       ...defaultTheme.screens,
     },
     extend: {

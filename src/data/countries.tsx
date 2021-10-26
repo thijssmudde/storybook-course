@@ -1,55 +1,53 @@
 import React from "react";
 import { IOption } from "../@interfaces";
-
-const getCountryFlag = (countryISO: string) =>
-  `https://hatscripts.github.io/circle-flags/flags/${countryISO.toLowerCase()}.svg`;
+import { CountryISO, devImages } from "./img";
 
 interface ICountry {
   city: string;
-  iso: string;
+  countryISO: CountryISO;
 }
 
 const countriesData: ICountry[] = [
   {
     city: "Rome",
-    iso: "IT",
+    countryISO: "it",
   },
   {
     city: "Amsterdam",
-    iso: "NL",
+    countryISO: "nl",
   },
   {
     city: "Berlin",
-    iso: "DE",
+    countryISO: "de",
   },
   {
     city: "Paris",
-    iso: "FR",
+    countryISO: "fr",
   },
   {
     city: "Washington",
-    iso: "US",
+    countryISO: "us",
   },
   {
     city: "Moscow",
-    iso: "RU",
+    countryISO: "ru",
   },
   {
     city: "Brussels",
-    iso: "BE",
+    countryISO: "be",
   },
 ];
 
 export const countries: IOption[] = countriesData.map((country) => ({
-  value: country.iso,
+  value: country.countryISO,
   label: (
     <>
       <img
-        src={getCountryFlag(country.iso.toLowerCase())}
-        alt={country.iso.toLowerCase()}
+        src={devImages[country.countryISO]}
+        alt={country.countryISO.toLowerCase()}
         className="w-5 h-5 mr-2"
       />{" "}
-      {`${country.city}, ${country.iso}`}
+      {`${country.city}, ${country.countryISO}`}
     </>
   ),
 }));

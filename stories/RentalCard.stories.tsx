@@ -1,11 +1,18 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
-import { IRental, RentalCard, RentalCardProps } from "../src";
+import { RentalCard, RentalCardProps } from "../src";
 import StoryLayout from "./StoryLayout";
+import { rentals } from "../src/data";
 
 const meta: Meta = {
   title: "RentalCard",
   component: RentalCard,
+  argTypes: {
+    rentalAddress: {
+      options: [rentals[0].address, rentals[1].address, rentals[2].address],
+      control: { type: "radio" },
+    },
+  },
   parameters: {
     controls: { expanded: true },
     design: {
@@ -19,25 +26,21 @@ export default meta;
 
 interface Props extends RentalCardProps {
   darkMode: boolean;
+  rentalAddress: string;
+  rareFind: boolean;
 }
 
-const rental: IRental = {
-  id: 0,
-  title: "Single bedroom apartment near Central Station",
-  subtitle: "In the heart of the flower market city centre",
-  image:
-    "https://res.cloudinary.com/tailwindcss/image/upload/v1634674298/image_2_ngqift.png",
-  badge: "Rare find",
-  rating: "4.8",
-  reviews: 20,
-  address: "Prinsengracht",
-  bed: "1 bed",
-  wifi: "Wi-Fi",
-  price: "€480",
-  currency: "EUR",
-};
-
 const StoryRentalCard: Story<Props> = (args) => {
+  const rentalIndex = rentals.findIndex(
+    (rental) => rental.address === args.rentalAddress,
+  );
+
+  // adjust badge based on rarefind
+  const rental = {
+    ...rentals[rentalIndex],
+    badge: args.rareFind ? "Rare Find" : "",
+  };
+
   return (
     <StoryLayout {...args}>
       <RentalCard rental={rental} />
@@ -49,6 +52,8 @@ export const Default = StoryRentalCard.bind({});
 
 Default.args = {
   darkMode: false,
+  rentalAddress: rentals[0].address,
+  rareFind: true,
 };
 
 Default.parameters = {

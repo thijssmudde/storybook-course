@@ -10,3 +10,5 @@ export * from "./RentalCard";
 export * from "./MobileNavbar";
 
 export * from "./@interfaces";
+export * from "./data";
+export * from "./data/img";

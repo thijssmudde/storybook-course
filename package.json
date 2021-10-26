@@ -8,13 +8,11 @@
   "files": [
     "dist",
     "src",
-    "css"
+    "css",
+    "img"
   ],
   "engines": {
     "node": ">=12.13"
-  },
-  "peerDependencies": {
-    "react": ">=16"
   },
   "husky": {
     "hooks": {
@@ -34,7 +32,7 @@
   ],
   "scripts": {
     "start": "tsdx watch",
-    "build": "NODE_ENV=production tsdx build && yarn build:css",
+    "build": "$env:NODE_ENV='production' tsdx build && yarn build:css",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
@@ -48,6 +46,10 @@
   "dependencies": {
     "@headlessui/react": "1.4.1",
     "react-headless-pagination": "0.1.0"
+  },
+  "peerDependencies": {
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
   },
   "devDependencies": {
     "@babel/core": "7.12.13",
@@ -74,8 +76,6 @@
     "identity-obj-proxy": "3.0.0",
     "postcss": "7",
     "prettier": "2.4.1",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
     "react-icons": "4.3.1",
     "react-is": "17.0.1",
     "rollup-plugin-postcss": "4.0.0",

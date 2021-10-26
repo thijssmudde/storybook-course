@@ -13,7 +13,7 @@ export interface SelectProps {
   placeholder?: string;
   LeadingIcon?: React.ReactElement;
   leadingIconInMenu?: boolean;
-  fullWidth?: boolean;
+  width?: string;
 }
 
 export const Select: FC<SelectProps> = ({
@@ -24,14 +24,10 @@ export const Select: FC<SelectProps> = ({
   placeholder,
   LeadingIcon,
   leadingIconInMenu,
-  fullWidth,
+  width,
 }) => {
   return (
-    <div
-      className={classNames("relative inline-block", {
-        "w-full": fullWidth,
-      })}
-    >
+    <div className={classNames("relative inline-block", width)}>
       {label ? (
         <Typography
           variant="sm"
@@ -56,16 +52,14 @@ export const Select: FC<SelectProps> = ({
                 {
                   "text-gray-900 dark:text-white": selectedOption,
                   "text-gray-500 dark:text-gray-300": !selectedOption,
-                  "w-full": fullWidth,
                 },
+                width,
               )}
             >
               {LeadingIcon ? (
-                <LeadingIcon.type
-                  {...LeadingIcon.props}
-                  size={20}
-                  className="mr-2 text-gray-400"
-                />
+                <div className="w-5 h-5 mr-2 overflow-hidden">
+                  <LeadingIcon.type size={20} className="text-gray-400" />
+                </div>
               ) : null}
 
               {selectedOption ? selectedOption.label : placeholder}
@@ -75,8 +69,8 @@ export const Select: FC<SelectProps> = ({
                   "text-gray-500 dark:text-gray-300 transform duration-100 ease-out",
                   {
                     "-rotate-180": open,
-                    "ml-auto": fullWidth,
-                    "ml-3.5": !fullWidth,
+                    "ml-auto": width,
+                    "ml-3.5": !width,
                   },
                 )}
               />
