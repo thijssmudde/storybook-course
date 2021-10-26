@@ -171,4 +171,12 @@
   .mobile-nav {
     @apply flex items-center justify-between h-20 py-6 pr-4 bg-white shadow-md dark:bg-gray-900 pl-7 z-50;
   }
+
+  .navItem {
+    @apply flex items-center w-full h-10 py-2 transition duration-100 ease-out rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-100 dark:hover:bg-opacity-10;
+  }
+
+  .navItemLabel {
+    @apply text-gray-800 dark:text-white;
+  }
 }

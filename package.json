@@ -8,8 +8,7 @@
   "files": [
     "dist",
     "src",
-    "css",
-    "img"
+    "css"
   ],
   "engines": {
     "node": ">=12.13"
@@ -32,7 +31,7 @@
   ],
   "scripts": {
     "start": "tsdx watch",
-    "build": "$env:NODE_ENV='production' tsdx build && yarn build:css",
+    "build": "NODE_ENV=production tsdx build && yarn build:css",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
     "prepare": "tsdx build",

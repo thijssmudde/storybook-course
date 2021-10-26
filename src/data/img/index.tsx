@@ -1,10 +1,13 @@
 export type CountryISO = "be" | "de" | "fr" | "it" | "nl" | "ru" | "us";
 type rentalImg = "rental0" | "rental1" | "rental2";
 
-type image = CountryISO | rentalImg;
+type image = "logo" | "demoAvatar" | CountryISO | rentalImg;
 
 // Development images
-export const devImages: Record<image, string> = {
+const devImages: Record<image, string> = {
+  logo: require("./logo.png"),
+  demoAvatar: require("./demoAvatar.png"),
+
   be: require("./be.svg"),
   de: require("./de.svg"),
   fr: require("./fr.svg"),
@@ -19,7 +22,11 @@ export const devImages: Record<image, string> = {
 };
 
 // Production images using the CDN
-export const images: Record<image, string> = {
+const prodImages: Record<image, string> = {
+  logo: "https://res.cloudinary.com/tailwindcss/image/upload/v1634916081/Logo_Icon_dq276z.png",
+  demoAvatar:
+    "https://res.cloudinary.com/tailwindcss/image/upload/v1634915122/demoAvatar_jooj6y.png",
+
   be: "https://res.cloudinary.com/tailwindcss/image/upload/v1635279280/be_jrkj6d.svg",
   de: "https://res.cloudinary.com/tailwindcss/image/upload/v1635279281/de_umqzrw.svg",
   fr: "https://res.cloudinary.com/tailwindcss/image/upload/v1635279284/fr_kfnvdu.svg",
@@ -35,3 +42,6 @@ export const images: Record<image, string> = {
   rental2:
     "https://res.cloudinary.com/tailwindcss/image/upload/v1634674297/image_3_c7xiit.png",
 };
+
+export const images =
+  process.env.NODE_ENV === "production" ? prodImages : devImages;

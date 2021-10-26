@@ -1,11 +1,11 @@
 import { IRental } from "../@interfaces";
-import { devImages } from "./img";
+import { images } from "./img";
 
 const rental0: IRental = {
   id: 0,
   title: "Single bedroom apartment near Central Station",
   subtitle: "In the heart of the flower market city centre",
-  image: devImages.rental0,
+  image: images.rental0,
   badge: "Rare find",
   rating: "4.8",
   reviews: 20,
@@ -20,7 +20,7 @@ const rental1: IRental = {
   id: 1,
   title: "Double bedroom apartment in Slotermeer",
   subtitle: "Lovely and stylish apartment in the city centre",
-  image: devImages.rental1,
+  image: images.rental1,
   badge: "Rare find",
   rating: "3.9",
   reviews: 96,
@@ -35,7 +35,7 @@ const rental2: IRental = {
   id: 2,
   title: "Modern studio in Jordaan",
   subtitle: "Charming new studio apartment Jordaan",
-  image: devImages.rental2,
+  image: images.rental2,
   badge: "Rare find",
   rating: "4.3",
   reviews: 5,

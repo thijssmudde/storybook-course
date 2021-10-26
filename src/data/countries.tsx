@@ -1,6 +1,6 @@
 import React from "react";
 import { IOption } from "../@interfaces";
-import { CountryISO, devImages } from "./img";
+import { CountryISO, images } from "./img";
 
 interface ICountry {
   city: string;
@@ -43,7 +43,7 @@ export const countries: IOption[] = countriesData.map((country) => ({
   label: (
     <>
       <img
-        src={devImages[country.countryISO]}
+        src={images[country.countryISO]}
         alt={country.countryISO.toLowerCase()}
         className="w-5 h-5 mr-2"
       />{" "}

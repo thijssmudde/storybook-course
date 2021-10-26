@@ -1,7 +1,9 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
-import { SideNav, SideNavProps } from "../src";
+
 import StoryLayout from "./StoryLayout";
+import { SideNav, ISideNavProps } from "../src";
+import { navItemsTop, navItemsBottom } from "../src/data";
 
 const meta: Meta = {
   title: "SideNav",
@@ -17,7 +19,7 @@ const meta: Meta = {
 
 export default meta;
 
-interface Props extends SideNavProps {
+interface Props extends ISideNavProps {
   darkMode: boolean;
 }
 
@@ -26,7 +28,14 @@ const StorySideNav: Story<Props> = (args) => {
 
   return (
     <StoryLayout {...args} className="h-screen" noPadding>
-      <SideNav open={open} setOpen={setOpen} />
+      <SideNav
+        navItemsTop={navItemsTop}
+        navItemsBottom={navItemsBottom}
+        open={open}
+        setOpen={setOpen}
+        username="Veronica Woods"
+        email="veronica@example.com"
+      />
     </StoryLayout>
   );
 };
