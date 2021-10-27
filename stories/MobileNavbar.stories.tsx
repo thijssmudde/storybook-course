@@ -32,12 +32,12 @@ const StoryMobileNavbar: Story<Props> = (args) => {
   };
 
   return (
-    <StoryLayout {...args} noPadding>
+    <StoryLayout {...args} className="" noPadding>
       <MobileNavbar open={open} toggleOpen={handleToggle} />
 
       {open ? (
         <div
-          className="fixed top-0 left-0 w-screen h-screen bg-gray-500 cursor-pointer bg-opacity-80"
+          className="fixed top-0 left-0 z-40 w-screen h-screen bg-gray-500 cursor-pointer bg-opacity-80"
           onClick={() => setOpen(false)}
         >
           <FiX size={40} className="fixed text-white top-6 right-4" />
@@ -46,7 +46,7 @@ const StoryMobileNavbar: Story<Props> = (args) => {
 
       {open ? (
         <SideNav
-          className="fixed top-0 left-0 h-screen"
+          className="relative z-50 h-screen -mt-20"
           navItemsTop={navItemsTop}
           navItemsBottom={navItemsBottom}
           open={true}
@@ -67,5 +67,5 @@ Default.args = {
 };
 
 Default.parameters = {
-  controls: { exclude: ["setOpen"] },
+  controls: { exclude: ["open", "toggleOpen"] },
 };
