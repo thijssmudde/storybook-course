@@ -7,7 +7,7 @@ export * from "./Typography";
 export * from "./nav/SideNav";
 export * from "./TextInput";
 export * from "./RentalCard";
-export * from "./MobileNavbar";
+export * from "./nav/MobileNavbar";
 
 export * from "./@interfaces";
 export * from "./data";

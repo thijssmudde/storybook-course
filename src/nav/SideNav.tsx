@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { FiLogOut, FiSearch } from "react-icons/fi";
 import { Typography } from "../Typography";
 import { TextInput } from "../TextInput";
-import { images, ISideNavProps } from "../";
+import { images } from "..";
 import { NavItem } from "./NavItem";
 import { INavItem } from "../@interfaces";
 
@@ -11,8 +11,19 @@ export const renderLogo = () => (
   <img src={images.logo} className="w-8 h-8 select-none" alt="logo" />
 );
 
+export interface ISideNavProps {
+  className?: string;
+  navItemsTop: INavItem[];
+  navItemsBottom: INavItem[];
+  open: boolean;
+  setOpen: (open: boolean) => void;
+  username: string;
+  email: string;
+}
+
 // Hover for subnav items when sidebar is closed
 export const SideNav: FC<ISideNavProps> = ({
+  className,
   navItemsTop,
   navItemsBottom,
   open,
@@ -49,15 +60,16 @@ export const SideNav: FC<ISideNavProps> = ({
   return (
     <div
       className={classNames(
-        "py-8 flex flex-col flex-grow bg-white dark:bg-gray-900 transform ease-out duration-100",
+        "py-6 flex flex-col flex-grow bg-white dark:bg-gray-900 transform ease-out duration-100",
         {
           "w-80": open,
           "w-24": !open,
           "border-r border-gray-300 dark:border-opacity-20": true,
         },
+        className,
       )}
     >
-      <div className="flex items-center w-full mb-8 ml-8">
+      <div className="flex items-center w-full mb-8 ml-9">
         {renderLogo()}
 
         <Typography

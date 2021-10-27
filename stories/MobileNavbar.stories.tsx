@@ -1,7 +1,10 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
-import { MobileNavbar, MobileNavbarProps } from "../src";
+
 import StoryLayout from "./StoryLayout";
+import { MobileNavbar, MobileNavbarProps, SideNav } from "../src";
+import { navItemsTop, navItemsBottom } from "../src/data";
+import { FiX } from "react-icons/fi";
 
 const meta: Meta = {
   title: "MobileNavbar",
@@ -24,9 +27,34 @@ interface Props extends MobileNavbarProps {
 const StoryMobileNavbar: Story<Props> = (args) => {
   const [open, setOpen] = React.useState<boolean>(false);
 
+  const handleToggle = () => {
+    setOpen(!open);
+  };
+
   return (
-    <StoryLayout {...args} className="">
-      <MobileNavbar open={open} setOpen={setOpen} />
+    <StoryLayout {...args} noPadding>
+      <MobileNavbar open={open} toggleOpen={handleToggle} />
+
+      {open ? (
+        <div
+          className="fixed top-0 left-0 w-screen h-screen bg-gray-500 cursor-pointer bg-opacity-80"
+          onClick={() => setOpen(false)}
+        >
+          <FiX size={40} className="fixed text-white top-6 right-4" />
+        </div>
+      ) : null}
+
+      {open ? (
+        <SideNav
+          className="fixed top-0 left-0 h-screen"
+          navItemsTop={navItemsTop}
+          navItemsBottom={navItemsBottom}
+          open={true}
+          setOpen={handleToggle}
+          username="Veronica Woods"
+          email="veronica@example.com"
+        />
+      ) : null}
     </StoryLayout>
   );
 };
