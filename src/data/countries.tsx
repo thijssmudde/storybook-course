@@ -10,31 +10,31 @@ interface ICountry {
 const countriesData: ICountry[] = [
   {
     city: "Rome",
-    countryISO: "it",
+    countryISO: "IT",
   },
   {
     city: "Amsterdam",
-    countryISO: "nl",
+    countryISO: "NL",
   },
   {
     city: "Berlin",
-    countryISO: "de",
+    countryISO: "DE",
   },
   {
     city: "Paris",
-    countryISO: "fr",
+    countryISO: "FR",
   },
   {
     city: "Washington",
-    countryISO: "us",
+    countryISO: "US",
   },
   {
     city: "Moscow",
-    countryISO: "ru",
+    countryISO: "RU",
   },
   {
     city: "Brussels",
-    countryISO: "be",
+    countryISO: "BE",
   },
 ];
 

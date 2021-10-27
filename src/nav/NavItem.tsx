@@ -8,16 +8,18 @@ import { SubNavItem } from "./SubNavItem";
 interface INavItemProps {
   item: INavItem;
   isActive: boolean;
+  activeSubNavItem: string;
   open: boolean;
-  setOpen: (open: boolean) => void;
-  onClick: (item: string) => void;
+  openDropdown: boolean;
+  onClick: (item: INavItem, subNavPath?: string) => void;
 }
 
 export const NavItem = ({
   item,
   isActive,
+  activeSubNavItem,
   open,
-  setOpen,
+  openDropdown,
   onClick,
 }: INavItemProps) => (
   <>
@@ -25,12 +27,10 @@ export const NavItem = ({
       key={item.label}
       className={classNames("navItem group", {
         "px-4": open,
-        "px-2": !open,
-        "bg-primary-50 dark:bg-gray-100 dark:hover:bg-opacity-10": isActive,
+        "ml-2 px-2 w-10": !open,
+        "bg-primary-50 dark:bg-gray-100 dark:bg-opacity-10": isActive,
       })}
-      onClick={
-        item.toggleSidebar ? () => setOpen(!open) : () => onClick(item.label)
-      }
+      onClick={() => onClick(item)}
     >
       <item.icon.type
         size={24}
@@ -63,10 +63,12 @@ export const NavItem = ({
           <FiChevronDown
             size={20}
             className={classNames(
-              "text-gray-400 group-hover:text-primary-600 dark:group-hover:text-white",
+              "group-hover:text-primary-600 dark:group-hover:text-white transform duration-100 ease-out",
               {
                 "opacity-0 hidden": !open,
+                "text-gray-400": !isActive,
                 "text-primary-600 dark:text-white": isActive,
+                "-rotate-180": openDropdown,
               },
             )}
           />
@@ -74,8 +76,14 @@ export const NavItem = ({
       </>
     </li>
 
-    {open && item.subItems && item.subItems.length > 0
-      ? item.subItems.map((subItem) => <SubNavItem subItem={subItem} />)
+    {openDropdown && open && item.subItems && item.subItems.length > 0
+      ? item.subItems.map((subItem) => (
+          <SubNavItem
+            isActive={activeSubNavItem === subItem.label}
+            subItem={subItem}
+            onClick={() => onClick(item, subItem.label)}
+          />
+        ))
       : null}
   </>
 );

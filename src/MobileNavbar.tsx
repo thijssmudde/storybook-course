@@ -19,7 +19,7 @@ export const MobileNavbar: FC<MobileNavbarProps> = ({ open, setOpen }) => {
         height="32"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
-        className="text-gray-500 transition duration-100 ease-out cursor-pointer stroke-current hover:text-gray-900 dark:text-white dark:hover:text-gray-200"
+        className="text-gray-500 transition-all duration-100 ease-out cursor-pointer stroke-current hover:text-gray-900 dark:text-white dark:hover:text-gray-200"
         onClick={() => setOpen(!open)}
       >
         <path

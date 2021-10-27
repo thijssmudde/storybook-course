@@ -173,7 +173,10 @@
   }
 
   .navItem {
-    @apply flex items-center w-full h-10 py-2 transition duration-100 ease-out rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-100 dark:hover:bg-opacity-10;
+    @apply flex items-center w-full h-10 py-2 rounded-lg cursor-pointer 
+    text-md font-medium whitespace-nowrap select-none
+    transition-all duration-100 ease-out
+    hover:bg-primary-50 dark:hover:bg-gray-100 dark:hover:bg-opacity-10;
   }
 
   .navItemLabel {

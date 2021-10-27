@@ -104,6 +104,7 @@ module.exports = {
         19.5: "4.875rem",
         50: "12.5rem",
         62: "15.5rem",
+        70: "17.5rem",
       },
     },
     breakpointsInspector: {

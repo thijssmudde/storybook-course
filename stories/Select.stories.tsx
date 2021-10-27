@@ -25,7 +25,9 @@ interface Props extends SelectProps {
 }
 
 const StorySelect: Story<Props> = (args) => {
-  const [selectedCountry, setSelectedCountry] = React.useState<IOption>();
+  const [selectedCountry, setSelectedCountry] = React.useState<IOption>(
+    countries[0],
+  );
   const [selectedDate, setSelectedDate] = React.useState<IOption>();
   const [selectedPrice, setSelectedPrice] = React.useState<IOption>();
 

@@ -1,6 +1,13 @@
-export interface INavItem {
+interface IBaseNavItem {
+  order: number;
+  path?: string;
   label: string;
+}
+
+export interface INavItem extends IBaseNavItem {
   icon: JSX.Element;
   toggleSidebar?: boolean;
-  subItems?: string[];
+  subItems?: ISubNavItem[];
 }
+
+export interface ISubNavItem extends IBaseNavItem {}

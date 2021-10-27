@@ -24,10 +24,10 @@ interface Props extends ISideNavProps {
 }
 
 const StorySideNav: Story<Props> = (args) => {
-  const [open, setOpen] = React.useState<boolean>(false);
+  const [open, setOpen] = React.useState<boolean>(true);
 
   return (
-    <StoryLayout {...args} className="h-screen" noPadding>
+    <StoryLayout {...args} className="flex flex-col h-screen" noPadding>
       <SideNav
         navItemsTop={navItemsTop}
         navItemsBottom={navItemsBottom}
@@ -47,5 +47,14 @@ Default.args = {
 };
 
 Default.parameters = {
-  controls: { exclude: ["open", "setOpen"] },
+  controls: {
+    exclude: [
+      "open",
+      "setOpen",
+      "navItemsTop",
+      "navItemsBottom",
+      "username",
+      "email",
+    ],
+  },
 };

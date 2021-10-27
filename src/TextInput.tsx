@@ -82,7 +82,7 @@ export const TextInput: FC<TextInputProps> = ({
           onChange={handleChange}
           placeholder={placeholder}
           className={classNames(
-            "w-full text-gray-900 dark:text-white text-md border h-11 focus:ring-4 focus:border-primary-300 dark:focus:border-gray-100 focus:ring-primary-100 dark:focus:ring-gray-100 dark:focus:ring-opacity-20",
+            "w-full select-none text-gray-900 dark:text-white text-md border h-11 focus:ring-4 focus:border-primary-300 dark:focus:border-gray-100 focus:ring-primary-100 dark:focus:ring-gray-100 dark:focus:ring-opacity-20",
             {
               "pl-9": LeadingIcon,
               "pr-9": TrailingIcon,
