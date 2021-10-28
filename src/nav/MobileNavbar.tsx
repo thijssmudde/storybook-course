@@ -9,7 +9,7 @@ export interface MobileNavbarProps {
 }
 
 export const MobileNavbar: FC<MobileNavbarProps> = ({ open, toggleOpen }) => (
-  <div className="z-40 flex items-center justify-between h-20 py-6 pr-5 bg-white shadow-md dark:bg-gray-900 pl-9">
+  <div className="z-40 flex items-center justify-between h-20 py-6 bg-white shadow-md dark:bg-gray-900 px-9">
     {renderLogo()}
     <Typography variant="h6" customWeight="medium" className="select-none">
       My Travel App

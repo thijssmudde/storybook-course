@@ -1229,7 +1229,6 @@ body::after {
 	padding-bottom: 0.5rem;
 	font-size: 16px;
 	line-height: 24px;
-	font-weight: 500;
 	transition-property: all;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-duration: 150ms;
@@ -1244,14 +1243,6 @@ body::after {
 	--tw-bg-opacity: 1;
 	background-color: rgba(242, 244, 247, var(--tw-bg-opacity));
 	--tw-bg-opacity: 0.1;
-}
-.navItemLabel {
-	--tw-text-opacity: 1;
-	color: rgba(29, 41, 57, var(--tw-text-opacity));
-}
-.dark .navItemLabel {
-	--tw-text-opacity: 1;
-	color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 .pointer-events-none {
 	pointer-events: none;
@@ -1283,6 +1274,15 @@ body::after {
 .top-19\.5 {
 	top: 4.875rem;
 }
+.top-19 {
+	top: 4.75rem;
+}
+.-top-3 {
+	top: -0.75rem;
+}
+.left-19 {
+	left: 4.75rem;
+}
 .top-0 {
 	top: 0px;
 }
@@ -1310,6 +1310,10 @@ body::after {
 .mx-2 {
 	margin-left: 0.5rem;
 	margin-right: 0.5rem;
+}
+.my-2 {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 .mx-9 {
 	margin-left: 2.25rem;
@@ -1390,9 +1394,6 @@ body::after {
 .ml-7 {
 	margin-left: 1.75rem;
 }
-.ml-13 {
-	margin-left: 3.25rem;
-}
 .-mt-20 {
 	margin-top: -5rem;
 }
@@ -1449,6 +1450,9 @@ body::after {
 }
 .w-5 {
 	width: 1.25rem;
+}
+.w-58 {
+	width: 14.5rem;
 }
 .w-8 {
 	width: 2rem;
@@ -1660,6 +1664,10 @@ body::after {
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
 }
+.py-3 {
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
+}
 .pt-2 {
 	padding-top: 0.5rem;
 }
@@ -1680,6 +1688,12 @@ body::after {
 }
 .pr-5 {
 	padding-right: 1.25rem;
+}
+.pl-13 {
+	padding-left: 3.25rem;
+}
+.pl-4 {
+	padding-left: 1rem;
 }
 .text-center {
 	text-align: center;
@@ -1774,6 +1788,10 @@ body::after {
 .text-error-500 {
 	--tw-text-opacity: 1;
 	color: rgba(240, 68, 56, var(--tw-text-opacity));
+}
+.text-gray-800 {
+	--tw-text-opacity: 1;
+	color: rgba(29, 41, 57, var(--tw-text-opacity));
 }
 .text-white {
 	--tw-text-opacity: 1;

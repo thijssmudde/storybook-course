@@ -2,7 +2,6 @@
 
 ## TODO
 
--
 - Page
   - Dark mode toggle
   - Map

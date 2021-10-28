@@ -59,7 +59,7 @@ export const SideNav: FC<ISideNavProps> = ({
   return (
     <div
       className={classNames(
-        "py-6 flex flex-col flex-grow bg-white dark:bg-gray-900 transform ease-out duration-100",
+        "py-6 flex flex-col flex-grow bg-white dark:bg-gray-900 transform ease-out duration-100 overflow-y-auto xs:overflow-y-visible overflow-x-hidden",
         {
           "w-80": open,
           "w-24": !open,
@@ -142,7 +142,7 @@ export const SideNav: FC<ISideNavProps> = ({
           className="w-10 h-10 rounded-full cursor-pointer select-none"
         />
         {open ? (
-          <div className="flex justify-between flex-grow ml-3">
+          <div className="flex justify-between ml-3">
             <div className="select-none">
               <Typography
                 variant="sm"
@@ -157,7 +157,7 @@ export const SideNav: FC<ISideNavProps> = ({
               </Typography>
             </div>
 
-            <FiLogOut size={24} className="text-gray-400 cursor-pointer" />
+            <FiLogOut size={24} className="ml-6 text-gray-400 cursor-pointer" />
           </div>
         ) : null}
       </div>
