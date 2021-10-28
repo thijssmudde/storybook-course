@@ -1557,9 +1557,6 @@ body::after {
 .overflow-y-auto {
 	overflow-y: auto;
 }
-.overflow-x-hidden {
-	overflow-x: hidden;
-}
 .whitespace-nowrap {
 	white-space: nowrap;
 }

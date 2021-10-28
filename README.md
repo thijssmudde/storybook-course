@@ -2,8 +2,8 @@
 
 ## TODO
 
-- Page
-  - Dark mode toggle
+- Test coverage
+- Test for all components?
 
 ## Demo
 

@@ -40,9 +40,11 @@ export const SideNav: FC<ISideNavProps> = ({
   };
 
   const onClickNavItem = (item: INavItem, subNavPath?: string) => {
+    if (subNavPath) {
+      setActiveSubNavItem(subNavPath);
+    }
     if (!item.toggleSidebar) {
       setActiveNavItem(item.label);
-      setActiveSubNavItem(subNavPath ?? "");
     } else if (item.toggleSidebar) {
       setOpen(!open);
     }
@@ -56,10 +58,12 @@ export const SideNav: FC<ISideNavProps> = ({
     }
   };
 
+  console.log({ openDropdowns, activeSubNavItem });
+
   return (
     <div
       className={classNames(
-        "py-6 flex flex-col flex-grow bg-white dark:bg-gray-900 transform ease-out duration-100 overflow-y-auto xs:overflow-y-visible overflow-x-hidden",
+        "py-6 flex flex-col flex-grow bg-white dark:bg-gray-900 transform ease-out duration-100 overflow-y-auto xs:overflow-y-visible",
         {
           "w-80": open,
           "w-24": !open,
@@ -96,7 +100,14 @@ export const SideNav: FC<ISideNavProps> = ({
         )}
       </div>
 
-      <div className="flex flex-col justify-between h-full ml-5 w-70">
+      <div
+        className={classNames(
+          "flex flex-col justify-between h-full ml-5 w-70",
+          {
+            "w-14": !open,
+          },
+        )}
+      >
         <ul className="flex flex-col space-y-1">
           {navItemsTop.map((item) => (
             <NavItem
