@@ -9,12 +9,12 @@ interface ICountry {
 
 const countriesData: ICountry[] = [
   {
-    city: "Rome",
-    countryISO: "IT",
-  },
-  {
     city: "Amsterdam",
     countryISO: "NL",
+  },
+  {
+    city: "Rome",
+    countryISO: "IT",
   },
   {
     city: "Berlin",

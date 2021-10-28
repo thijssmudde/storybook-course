@@ -4,22 +4,22 @@ type rentalImg = "rental0" | "rental1" | "rental2";
 type image = "logo" | "demoAvatar" | CountryISO | rentalImg;
 
 // Development images
-const devImages: Record<image, string> = {
-  logo: require("./logo.png"),
-  demoAvatar: require("./demoAvatar.png"),
+// const devImages: Record<image, string> = {
+//   logo: require("./logo.png"),
+//   demoAvatar: require("./demoAvatar.png"),
 
-  BE: require("./be.svg"),
-  DE: require("./de.svg"),
-  FR: require("./fr.svg"),
-  IT: require("./it.svg"),
-  NL: require("./nl.svg"),
-  RU: require("./ru.svg"),
-  US: require("./us.svg"),
+//   BE: require("./be.svg"),
+//   DE: require("./de.svg"),
+//   FR: require("./fr.svg"),
+//   IT: require("./it.svg"),
+//   NL: require("./nl.svg"),
+//   RU: require("./ru.svg"),
+//   US: require("./us.svg"),
 
-  rental0: require("./rental0.png"),
-  rental1: require("./rental1.png"),
-  rental2: require("./rental2.png"),
-};
+//   rental0: require("./rental0.png"),
+//   rental1: require("./rental1.png"),
+//   rental2: require("./rental2.png"),
+// };
 
 // Production images using the CDN
 const prodImages: Record<image, string> = {
@@ -43,5 +43,7 @@ const prodImages: Record<image, string> = {
     "https://res.cloudinary.com/tailwindcss/image/upload/v1634674297/image_3_c7xiit.png",
 };
 
-export const images =
-  process.env.NODE_ENV === "production" ? prodImages : devImages;
+export const images = prodImages;
+// export const images =
+//   process.env.NODE_ENV === "production" ? prodImages : devImages;
+// process.env.NODE_ENV

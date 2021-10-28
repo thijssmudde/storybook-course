@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import React, { FC } from "react";
-import { Typography } from "../";
+import { Typography } from "../Typography";
 import { renderLogo } from "./SideNav";
 
 export interface MobileNavbarProps {

@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { FiLogOut, FiSearch } from "react-icons/fi";
 import { Typography } from "../Typography";
 import { TextInput } from "../TextInput";
-import { images } from "..";
+import { images } from "../data/img";
 import { NavItem } from "./NavItem";
 import { INavItem } from "../@interfaces";
 

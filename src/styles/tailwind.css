@@ -42,7 +42,7 @@
 
   /* Button */
   .btn-base {
-    @apply flex items-center rounded-lg font-medium focus:outline-none;
+    @apply flex items-center rounded-lg font-medium focus:outline-none whitespace-nowrap select-none;
   }
 
   .btn-sm {

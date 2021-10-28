@@ -2,7 +2,8 @@ import classNames from "classnames";
 import React from "react";
 
 import { FiChevronDown } from "react-icons/fi";
-import { INavItem, Typography } from "..";
+import { Typography } from "../Typography";
+import { INavItem } from "../@interfaces";
 import { SubNavItem } from "./SubNavItem";
 
 interface INavItemProps {
