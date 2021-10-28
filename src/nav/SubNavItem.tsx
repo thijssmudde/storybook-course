@@ -1,15 +1,18 @@
-import classNames from "classnames";
 import React from "react";
+import classNames from "classnames";
 
-import { Typography, ISubNavItem } from "..";
+import { Typography } from "../Typography";
+import { ISubNavItem } from "../@interfaces";
 
 interface ISubNavItemProps {
+  inDropdown?: boolean;
   isActive: boolean;
   subItem: ISubNavItem;
   onClick: React.MouseEventHandler<HTMLLIElement>;
 }
 
 export const SubNavItem = ({
+  inDropdown = false,
   isActive,
   subItem,
   onClick,
@@ -23,10 +26,15 @@ export const SubNavItem = ({
   >
     <Typography
       variant="md"
-      className={classNames("flex-grow ml-13")}
+      customWeight="medium"
+      className={classNames("flex-grow", {
+        "pl-13": !inDropdown,
+        "pl-4": inDropdown,
+      })}
       customColor={classNames(
-        "navItemLabel group-hover:text-primary-600 dark:group-hover:text-white",
+        "group-hover:text-primary-600 dark:group-hover:text-white",
         {
+          "text-gray-800 dark:text-white": !isActive,
           "text-primary-600 dark:text-white": isActive,
         },
       )}

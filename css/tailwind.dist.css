@@ -877,7 +877,12 @@ body::after {
 /* Button */
 .btn-base {
 	display: flex;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
 	align-items: center;
+	white-space: nowrap;
 	border-radius: 0.5rem;
 	font-weight: 500;
 }

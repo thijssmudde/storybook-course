@@ -11,4 +11,5 @@ export interface IRental {
   wifi: string;
   price: string;
   currency: string;
+  coordinates: [number, number];
 }

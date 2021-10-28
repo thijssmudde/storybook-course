@@ -24,7 +24,7 @@ interface Props extends ISideNavProps {
 }
 
 const StorySideNav: Story<Props> = (args) => {
-  const [open, setOpen] = React.useState<boolean>(true);
+  const [open, setOpen] = React.useState<boolean>(false);
 
   return (
     <StoryLayout {...args} className="flex flex-col h-screen" noPadding>

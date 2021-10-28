@@ -14,6 +14,7 @@ const rental0: IRental = {
   wifi: "Wi-Fi",
   price: "€480",
   currency: "EUR",
+  coordinates: [52.3676, 4.9041],
 };
 
 const rental1: IRental = {
@@ -29,6 +30,7 @@ const rental1: IRental = {
   wifi: "Wi-Fi",
   price: "€950",
   currency: "EUR",
+  coordinates: [52.3825, 4.8064],
 };
 
 const rental2: IRental = {
@@ -44,6 +46,7 @@ const rental2: IRental = {
   wifi: "Wi-Fi",
   price: "€810",
   currency: "EUR",
+  coordinates: [52.3739, 4.8809],
 };
 
 export const rentals: IRental[] = [rental0, rental1, rental2];

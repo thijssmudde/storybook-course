@@ -21,7 +21,6 @@ export interface ISideNavProps {
   email: string;
 }
 
-// Hover for subnav items when sidebar is closed
 export const SideNav: FC<ISideNavProps> = ({
   className,
   navItemsTop,

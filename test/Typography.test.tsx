@@ -83,6 +83,4 @@ describe("Typography", () => {
     expect(textElement.classList).toContain("font-medium");
     expect(textElement.classList.contains("font-regular")).toBe(false);
   });
-
-  // Height 90px
 });
