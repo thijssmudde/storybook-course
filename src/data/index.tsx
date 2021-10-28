@@ -1,3 +1,4 @@
+export * from "./colors";
 export * from "./countries";
 export * from "./dates";
 export * from "./prices";
