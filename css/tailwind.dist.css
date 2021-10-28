@@ -1856,6 +1856,10 @@ body::after {
 	--tw-border-opacity: 1;
 	border-color: rgba(132, 202, 255, var(--tw-border-opacity));
 }
+.focus\:border-error-300:focus {
+	--tw-border-opacity: 1;
+	border-color: rgba(253, 162, 155, var(--tw-border-opacity));
+}
 .focus\:outline-none:focus {
 	outline: 2px solid transparent;
 	outline-offset: 2px;
@@ -1868,6 +1872,10 @@ body::after {
 .focus\:ring-primary-100:focus {
 	--tw-ring-opacity: 1;
 	--tw-ring-color: rgba(209, 233, 255, var(--tw-ring-opacity));
+}
+.focus\:ring-error-100:focus {
+	--tw-ring-opacity: 1;
+	--tw-ring-color: rgba(254, 228, 226, var(--tw-ring-opacity));
 }
 .group:hover .group-hover\:text-primary-600 {
 	--tw-text-opacity: 1;
