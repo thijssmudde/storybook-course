@@ -82,14 +82,16 @@ export const TextInput: FC<TextInputProps> = ({
           onChange={handleChange}
           placeholder={placeholder}
           className={classNames(
-            "w-full select-none text-gray-900 dark:text-white text-md border h-11 focus:ring-4 focus:border-primary-300 dark:focus:border-gray-100 focus:ring-primary-100 dark:focus:ring-gray-100 dark:focus:ring-opacity-20",
+            "w-full select-none text-gray-900 dark:text-white text-md border h-11",
             {
               "pl-9": LeadingIcon,
               "pr-9": TrailingIcon,
               "rounded-l-0 rounded-r-lg": leadingText,
               "rounded-lg": !leadingText,
-              "border-gray-300 dark:border-gray-500": !error,
-              "border-error-300": error,
+              "border-gray-300 dark:border-gray-500 focus:ring-4 focus:border-primary-300 dark:focus:border-gray-100 focus:ring-primary-100 dark:focus:ring-gray-100 dark:focus:ring-opacity-20":
+                !error,
+              "border-error-300 focus:ring-4 focus:border-error-300 focus:ring-error-100":
+                error,
               "bg-white dark:bg-gray-800": !disabled,
               "bg-gray-50 dark:bg-gray-700": disabled,
             },
