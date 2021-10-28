@@ -4,7 +4,6 @@
 
 - Page
   - Dark mode toggle
-  - Map
 
 ## Demo
 

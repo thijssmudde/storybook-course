@@ -1183,6 +1183,7 @@ body::after {
 	display: inline-flex;
 	height: 2.5rem;
 	align-items: center;
+	white-space: nowrap;
 	border-width: 1px;
 	--tw-border-opacity: 1;
 	border-color: rgba(208, 213, 221, var(--tw-border-opacity));
@@ -1289,11 +1290,11 @@ body::after {
 .left-0 {
 	left: 0px;
 }
-.top-6 {
-	top: 1.5rem;
+.top-5 {
+	top: 1.25rem;
 }
-.right-4 {
-	right: 1rem;
+.right-9 {
+	right: 2.25rem;
 }
 .z-10 {
 	z-index: 10;
@@ -1393,6 +1394,9 @@ body::after {
 }
 .ml-7 {
 	margin-left: 1.75rem;
+}
+.ml-6 {
+	margin-left: 1.5rem;
 }
 .-mt-20 {
 	margin-top: -5rem;
@@ -1550,6 +1554,12 @@ body::after {
 .overflow-hidden {
 	overflow: hidden;
 }
+.overflow-y-auto {
+	overflow-y: auto;
+}
+.overflow-x-hidden {
+	overflow-x: hidden;
+}
 .whitespace-nowrap {
 	white-space: nowrap;
 }
@@ -1656,6 +1666,10 @@ body::after {
 	padding-top: 1.5rem;
 	padding-bottom: 1.5rem;
 }
+.px-9 {
+	padding-left: 2.25rem;
+	padding-right: 2.25rem;
+}
 .px-4 {
 	padding-left: 1rem;
 	padding-right: 1rem;
@@ -1685,9 +1699,6 @@ body::after {
 }
 .pr-9 {
 	padding-right: 2.25rem;
-}
-.pr-5 {
-	padding-right: 1.25rem;
 }
 .pl-13 {
 	padding-left: 3.25rem;
@@ -1937,6 +1948,10 @@ body::after {
 
 	.xs\:flex {
 		display: flex;
+	}
+
+	.xs\:overflow-y-visible {
+		overflow-y: visible;
 	}
 }
 @media (min-width: 640px) {
