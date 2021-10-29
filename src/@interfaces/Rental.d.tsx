@@ -4,7 +4,7 @@ export interface IRental {
   subtitle: string;
   image: string;
   badge?: string;
-  rating: string;
+  rating: number;
   reviews: number;
   address: string;
   bed: string;

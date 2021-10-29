@@ -1,8 +1,8 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
-import { FiCircle, FiGrid, FiList } from "react-icons/fi";
+import { FiGrid, FiList } from "react-icons/fi";
 
-import { ButtonGroup, ButtonGroupProps } from "../src";
+import { ButtonGroup, ButtonGroupProps, options1, options2 } from "../src";
 import StoryLayout from "./StoryLayout";
 
 const meta: Meta = {
@@ -24,42 +24,9 @@ interface Props extends ButtonGroupProps<string> {
 }
 
 const StoryButtonGroup: Story<Props> = (args) => {
-  const options1 = [
-    { value: "Leading", content: "Leading" },
-    { value: "Middle", content: "Middle" },
-    { value: "Trailing", content: "Trailing" },
-  ];
-
   const [activeItem1, setActiveItem1] = React.useState<string>(
     options1[1].value,
   );
-
-  const options2 = [
-    {
-      value: "first",
-      content: (
-        <>
-          <FiCircle size={20} className="mr-2" /> First
-        </>
-      ),
-    },
-    {
-      value: "second",
-      content: (
-        <>
-          <FiCircle size={20} className="mr-2" /> Second
-        </>
-      ),
-    },
-    {
-      value: "third",
-      content: (
-        <>
-          <FiCircle size={20} className="mr-2" /> Third
-        </>
-      ),
-    },
-  ];
 
   const [activeItem2, setActiveItem2] = React.useState<string>(
     options2[1].value,

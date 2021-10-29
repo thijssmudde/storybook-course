@@ -1,8 +1,4 @@
-interface IColor {
-  bgClass: string;
-  code: number;
-  hex: string;
-}
+import { IColor } from "../@interfaces";
 
 export const colors: IColor[] = [
   {

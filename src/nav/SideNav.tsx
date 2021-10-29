@@ -58,8 +58,6 @@ export const SideNav: FC<ISideNavProps> = ({
     }
   };
 
-  console.log({ openDropdowns, activeSubNavItem });
-
   return (
     <div
       className={classNames(

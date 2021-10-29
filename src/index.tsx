@@ -1,12 +1,14 @@
 export * from "./Badge";
 export * from "./Button";
 export * from "./ButtonGroup";
-export * from "./Select";
+export * from "./ColorBox";
 export * from "./Paginate";
-export * from "./Typography";
-export * from "./nav/SideNav";
-export * from "./TextInput";
 export * from "./RentalCard";
+export * from "./Select";
+export * from "./TextInput";
+export * from "./Typography";
+
+export * from "./nav/SideNav";
 export * from "./nav/MobileNavbar";
 
 export * from "./@interfaces";

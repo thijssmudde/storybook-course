@@ -6,7 +6,7 @@ module.exports = {
     enabled: true,
     content: ["./src/**/*.tsx", "./stories/**/*.tsx"],
   },
-  darkMode: "class", // or 'media' or 'class'
+  darkMode: "class",
   theme: {
     colors: {
       transparent: "transparent",

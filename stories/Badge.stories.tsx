@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
 import { FiStar, FiArrowRight } from "react-icons/fi";
-import { Badge, BadgeProps } from "../src";
+import { Badge, BadgeProps, images } from "../src";
 import StoryLayout from "./StoryLayout";
 
 const meta: Meta = {
@@ -22,9 +22,6 @@ interface Props extends BadgeProps {
   darkMode: boolean;
 }
 
-const getCountryFlag = (countryISO: string) =>
-  `https://hatscripts.github.io/circle-flags/flags/${countryISO.toLowerCase()}.svg`;
-
 const StoryBadge: Story<Props> = (args) => (
   <StoryLayout {...args} className="inline-flex flex-col space-y-2">
     <Badge {...args} LeadingIcon={<FiStar />}>
@@ -33,9 +30,7 @@ const StoryBadge: Story<Props> = (args) => (
 
     <Badge
       {...args}
-      LeadingIcon={
-        <img src={getCountryFlag("nl")} alt="nl" className="w-4 h-4" />
-      }
+      LeadingIcon={<img src={images.NL} alt="nl" className="w-4 h-4" />}
     >
       Label
     </Badge>

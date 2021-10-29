@@ -11,22 +11,16 @@ import {
   FiHeart,
   FiAward,
 } from "react-icons/fi";
+import { useRentalRating } from "./helpers/useRentalRating";
 
 export interface RentalCardProps {
   rental: IRental;
 }
 
 export const RentalCard: FC<RentalCardProps> = ({ rental }) => {
-  const starsFilled = Math.ceil(parseFloat(rental.rating));
-  const starsRemaining = 5 - starsFilled;
-
-  const arrayStarsFilled = Array(starsFilled)
-    .fill(0)
-    .map((_, i) => i + 1);
-
-  const arrayRemainingFilled = Array(starsRemaining)
-    .fill(0)
-    .map((_, i) => i + 1);
+  const { arrayStarsFilled, arrayRemainingFilled } = useRentalRating(
+    rental.rating,
+  );
 
   return (
     <div className="relative flex flex-col bg-white rounded-lg shadow-md md:p-5 md:flex-row dark:bg-gray-800">
@@ -49,7 +43,7 @@ export const RentalCard: FC<RentalCardProps> = ({ rental }) => {
       </div>
 
       <div className="flex items-center px-5 pt-2 space-x-3 md:pr-0 md:hidden">
-        <Typography variant="lg" customWeight="bold" className="">
+        <Typography variant="lg" customWeight="bold">
           {rental.price}
         </Typography>
         <Typography variant="md" customColor="text-gray-500 dark:text-white">
@@ -86,26 +80,22 @@ export const RentalCard: FC<RentalCardProps> = ({ rental }) => {
 
         <div className="flex mt-5 mb-5">
           <div className="flex items-center space-x-1">
-            {arrayStarsFilled.map((index: number) => {
-              return (
-                <FiStar
-                  key={index}
-                  size={20}
-                  fill="#FDB022"
-                  className="text-warning-400"
-                />
-              );
-            })}
-            {arrayRemainingFilled.map((index: number) => {
-              return (
-                <FiStar
-                  key={index}
-                  size={20}
-                  fill="#E4E7EC"
-                  className="text-gray-200"
-                />
-              );
-            })}
+            {arrayStarsFilled.map((index: number) => (
+              <FiStar
+                key={index}
+                size={20}
+                fill="#FDB022"
+                className="text-warning-400"
+              />
+            ))}
+            {arrayRemainingFilled.map((index: number) => (
+              <FiStar
+                key={index}
+                size={20}
+                fill="#E4E7EC"
+                className="text-gray-200"
+              />
+            ))}
           </div>
           <Typography
             variant="md"
