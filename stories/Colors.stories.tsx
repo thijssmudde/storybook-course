@@ -1,6 +1,7 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
 import StoryLayout from "./StoryLayout";
+
 import { ColorBox } from "../src";
 import { colors } from "../src/data";
 
