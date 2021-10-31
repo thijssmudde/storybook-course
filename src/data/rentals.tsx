@@ -1,5 +1,5 @@
 import { IRental } from "../@interfaces";
-import { images } from "../images";
+import { images } from "./images";
 
 const rental0: IRental = {
   id: 0,

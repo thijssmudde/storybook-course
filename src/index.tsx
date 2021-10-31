@@ -13,4 +13,4 @@ export * from "./nav/MobileNavbar";
 
 export * from "./@interfaces";
 export * from "./data";
-export * from "./images";
+export * from "./data/images";

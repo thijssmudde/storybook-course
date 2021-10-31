@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* TODO locally scope tailwind */
+
 @layer components {
   /* Badge */
   .badge-base {

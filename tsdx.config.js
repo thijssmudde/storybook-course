@@ -4,7 +4,7 @@ module.exports = {
   rollup(config, options) {
     options.env = "production";
 
-    config.plugins.push(
+    config.plugins = [
       postcss({
         config: {
           path: "./postcss.config.js",
@@ -15,7 +15,8 @@ module.exports = {
           insertAt: "top",
         },
       }),
-    );
+      ...config.plugins,
+    ];
 
     return config;
   },

@@ -1,5 +1,3 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
-
 module.exports = {
   mode: "jit",
   purge: {
@@ -91,11 +89,10 @@ module.exports = {
       h2: ["60px", "72px"],
       h1: ["72px", "90px"],
     },
-    screens: {
-      xs: "420px",
-      ...defaultTheme.screens,
-    },
     extend: {
+      screens: {
+        xs: "420px",
+      },
       spacing: {
         4.5: "1.125rem",
         5.5: "1.375rem",
