@@ -1,6 +1,7 @@
 export * from "./Badge";
 export * from "./Button";
 export * from "./ButtonGroup";
+export * from "./ButtonGroup1";
 export * from "./ColorBox";
 export * from "./Paginate";
 export * from "./RentalCard";
