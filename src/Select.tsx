@@ -2,17 +2,14 @@ import React, { FC } from "react";
 import { Listbox } from "@headlessui/react";
 import { FiCheck, FiChevronDown } from "react-icons/fi";
 import classNames from "classnames";
-import { Typography } from "./Typography";
 import { IOption } from "./@interfaces";
 
 export interface SelectProps {
   options: IOption[];
   selectedOption: IOption | undefined;
   setSelectedOption: (option: string) => void;
-  label?: string;
   placeholder?: string;
   LeadingIcon?: React.ReactElement;
-  leadingIconInMenu?: boolean;
   width?: string;
 }
 
@@ -20,25 +17,12 @@ export const Select: FC<SelectProps> = ({
   options,
   selectedOption,
   setSelectedOption,
-  label,
   placeholder,
   LeadingIcon,
-  leadingIconInMenu,
   width,
 }) => {
   return (
     <div className={classNames("relative inline-block", width)}>
-      {label ? (
-        <Typography
-          variant="sm"
-          customWeight="medium"
-          customColor="text-gray-700 dark:text-white"
-          className="mb-1.5"
-        >
-          {label}
-        </Typography>
-      ) : null}
-
       <Listbox
         value={selectedOption && selectedOption.value}
         onChange={setSelectedOption}
@@ -75,15 +59,7 @@ export const Select: FC<SelectProps> = ({
                 )}
               />
             </Listbox.Button>
-            <Listbox.Options
-              className={classNames(
-                "absolute z-10 inline-flex flex-col w-full bg-white border border-gray-300 rounded-lg shadow-lg dark:border-gray-500 dark:bg-gray-800",
-                {
-                  "top-13": !label,
-                  "top-19.5": label,
-                },
-              )}
-            >
+            <Listbox.Options className="absolute z-10 inline-flex flex-col w-full bg-white border border-gray-300 rounded-lg shadow-lg top-13 dark:border-gray-500 dark:bg-gray-800">
               {options.map((option, index) => (
                 <Listbox.Option
                   as={React.Fragment}
@@ -102,16 +78,7 @@ export const Select: FC<SelectProps> = ({
                         },
                       )}
                     >
-                      <div className="flex items-center">
-                        {LeadingIcon && leadingIconInMenu ? (
-                          <LeadingIcon.type
-                            {...LeadingIcon.props}
-                            size={20}
-                            className="mr-2 text-gray-500"
-                          />
-                        ) : null}
-                        {option.label}
-                      </div>
+                      <div className="flex items-center">{option.label}</div>
                       {selected ? (
                         <FiCheck className="ml-5 text-primary-600 dark:text-white" />
                       ) : null}

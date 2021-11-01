@@ -7,16 +7,10 @@
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
-    "src",
-    "css"
+    "src"
   ],
   "engines": {
     "node": ">=12.13"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn build:css"
-    }
   },
   "module": "dist/tappui.esm.js",
   "size-limit": [

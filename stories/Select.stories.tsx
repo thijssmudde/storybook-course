@@ -80,9 +80,7 @@ const StorySelect: Story<Props> = (args) => {
 export const Default = StorySelect.bind({});
 
 Default.args = {
-  label: "Team member",
   darkMode: false,
-  leadingIconInMenu: false,
 };
 
 Default.parameters = {
