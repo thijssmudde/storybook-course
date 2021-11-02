@@ -2,7 +2,7 @@ import React from "react";
 import { Meta, Story } from "@storybook/react";
 import { RentalCard, RentalCardProps } from "../src";
 import StoryLayout from "./StoryLayout";
-import { rentals } from "../src/data";
+import { rentals, Figma } from "../src/data";
 
 const meta: Meta = {
   title: "RentalCard",
@@ -17,7 +17,7 @@ const meta: Meta = {
     controls: { expanded: true },
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/0t0pK5luEdxTorOcg92K49/?node-id=257%3A19734",
+      url: Figma.RentalCard,
     },
   },
 };

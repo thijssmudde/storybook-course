@@ -4,7 +4,7 @@ import { FiCalendar, FiDollarSign } from "react-icons/fi";
 import { Select, SelectProps, IOption } from "../src";
 import StoryLayout from "./StoryLayout";
 
-import { countries, dates, prices } from "../src/data";
+import { countries, dates, Figma, prices } from "../src/data";
 
 const meta: Meta = {
   title: "Select",
@@ -13,7 +13,7 @@ const meta: Meta = {
     controls: { expanded: true },
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/0t0pK5luEdxTorOcg92K49/?node-id=11%3A15146",
+      url: Figma.Select,
     },
   },
 };

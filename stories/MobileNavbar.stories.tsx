@@ -3,7 +3,7 @@ import { Meta, Story } from "@storybook/react";
 
 import StoryLayout from "./StoryLayout";
 import { MobileNavbar, MobileNavbarProps, SideNav } from "../src";
-import { navItemsTop, navItemsBottom } from "../src/data";
+import { navItemsTop, navItemsBottom, Figma } from "../src/data";
 import { FiX } from "react-icons/fi";
 
 const meta: Meta = {
@@ -13,7 +13,7 @@ const meta: Meta = {
     controls: { expanded: true },
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/0t0pK5luEdxTorOcg92K49/My-Travel-App?node-id=88%3A24089",
+      url: Figma.Navbar,
     },
   },
 };

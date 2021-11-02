@@ -2,6 +2,7 @@ import React from "react";
 import { Meta, Story } from "@storybook/react";
 
 import { Typography, TypographyProps } from "../src";
+import { Figma } from "../src/data";
 import StoryLayout from "./StoryLayout";
 
 const meta: Meta = {
@@ -11,7 +12,7 @@ const meta: Meta = {
     controls: { expanded: true },
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/0t0pK5luEdxTorOcg92K49/?node-id=6%3A25187",
+      url: Figma.Typography,
     },
   },
 };

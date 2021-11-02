@@ -2,7 +2,13 @@ import React from "react";
 import { Meta, Story } from "@storybook/react";
 import { FiGrid, FiList } from "react-icons/fi";
 
-import { ButtonGroup, ButtonGroupProps, options1, options2 } from "../src";
+import {
+  ButtonGroup,
+  ButtonGroupProps,
+  Figma,
+  options1,
+  options2,
+} from "../src";
 import StoryLayout from "./StoryLayout";
 
 const meta: Meta = {
@@ -12,7 +18,7 @@ const meta: Meta = {
     controls: { expanded: true },
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/0t0pK5luEdxTorOcg92K49/My-Travel-App?node-id=11%3A14583",
+      url: Figma.ButtonGroup,
     },
   },
 };

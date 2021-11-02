@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
 
-import { Paginate, PaginationProps } from "../src";
+import { Figma, Paginate, PaginationProps } from "../src";
 import StoryLayout from "./StoryLayout";
 
 const meta: Meta = {
@@ -11,7 +11,7 @@ const meta: Meta = {
     controls: { expanded: true },
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/0t0pK5luEdxTorOcg92K49/?node-id=13%3A24715",
+      url: Figma.Paginate,
     },
   },
 };

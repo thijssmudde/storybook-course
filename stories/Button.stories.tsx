@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
 import { FiStar, FiArrowRight } from "react-icons/fi";
-import { Button, ButtonProps } from "../src";
+import { Button, ButtonProps, Figma } from "../src";
 import StoryLayout from "./StoryLayout";
 
 const meta: Meta = {
@@ -11,7 +11,7 @@ const meta: Meta = {
     controls: { expanded: true },
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/0t0pK5luEdxTorOcg92K49/My-Travel-App?node-id=49%3A24856",
+      url: Figma.Button,
     },
   },
 };

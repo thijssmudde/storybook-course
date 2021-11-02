@@ -3,7 +3,7 @@ import { Meta, Story } from "@storybook/react";
 
 import StoryLayout from "./StoryLayout";
 import { SideNav, ISideNavProps } from "../src";
-import { navItemsTop, navItemsBottom } from "../src/data";
+import { navItemsTop, navItemsBottom, Figma } from "../src/data";
 
 const meta: Meta = {
   title: "SideNav",
@@ -12,7 +12,7 @@ const meta: Meta = {
     controls: { expanded: true },
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/0t0pK5luEdxTorOcg92K49/?node-id=14%3A22794",
+      url: Figma.Navbar,
     },
   },
 };

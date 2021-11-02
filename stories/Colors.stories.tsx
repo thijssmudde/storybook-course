@@ -3,7 +3,7 @@ import { Meta, Story } from "@storybook/react";
 import StoryLayout from "./StoryLayout";
 
 import { ColorBox } from "../src";
-import { colors } from "../src/data";
+import { colors, Figma } from "../src/data";
 
 const meta: Meta = {
   title: "Colors",
@@ -11,7 +11,7 @@ const meta: Meta = {
     controls: { expanded: true },
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/0t0pK5luEdxTorOcg92K49/?node-id=5%3A15",
+      url: Figma.Colors,
     },
   },
 };
