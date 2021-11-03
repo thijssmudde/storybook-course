@@ -28,32 +28,21 @@ Now we can initialize TailwindCSS in our project
 
 ```
 npx tailwindcss init
-yarn add -D rollup-plugin-postcss
 ```
 
 Create tsdx.config.js in root
 
 ```
 // tsdx.config.js
-const postcss = require('rollup-plugin-postcss');
 
 module.exports = {
   rollup(config, options) {
-    config.plugins.push(
-      postcss({
-        config: {
-          path: './postcss.config.js',
-        },
-        extensions: ['.css'],
-        minimize: true,
-        inject: {
-          insertAt: 'top',
-        },
-      })
-    );
+    options.env = "production";
+
     return config;
   },
 };
+
 ```
 
 Create tailwind.css in /src
