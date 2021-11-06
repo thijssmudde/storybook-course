@@ -11,4 +11,10 @@ describe("RentalCard", () => {
 
     expect(asFragment()).toMatchSnapshot();
   });
+
+  it("Renders RentalCard without badge", () => {
+    const { asFragment } = render(<RentalCard rental={rentals[1]} />);
+
+    expect(asFragment()).toMatchSnapshot();
+  });
 });
