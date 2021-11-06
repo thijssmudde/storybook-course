@@ -1,0 +1,313 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RentalCard Renders RentalCard correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="relative flex flex-col bg-white rounded-lg shadow-md md:p-5 md:flex-row dark:bg-gray-800"
+  >
+    <div
+      class="relative w-full md:w-50 h-36"
+    >
+      <img
+        alt="Single bedroom apartment near Central Station"
+        class="object-cover w-full rounded-t-lg md:rounded-lg md:w-50 h-36"
+        src="https://res.cloudinary.com/tailwindcss/image/upload/v1634674297/image_1_egxeww.png"
+      />
+      <div
+        class="badge-base badge-primary badge-md  absolute bottom-2 left-2"
+      >
+        <svg
+          class="mr-1.5"
+          fill="none"
+          height="1em"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="12"
+            cy="8"
+            r="7"
+          />
+          <polyline
+            points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"
+          />
+        </svg>
+        Exclusive deal
+      </div>
+    </div>
+    <div
+      class="flex items-center px-5 pt-2 space-x-3 md:pr-0 md:hidden"
+    >
+      <p
+        class="text-lg font-bold text-black dark:text-white"
+      >
+        €480
+      </p>
+      <p
+        class="text-md font-normal text-gray-500 dark:text-white"
+      >
+        EUR total
+      </p>
+    </div>
+    <div
+      class="flex flex-col flex-grow px-5 md:pr-0"
+    >
+      <div
+        class="flex items-center justify-between"
+      >
+        <div>
+          <p
+            class="text-sm font-bold mt-3 mb-1 md:mt-0 text-primary-600 dark:text-primary-300"
+          >
+            Single bedroom apartment near Central Station
+          </p>
+          <p
+            class="text-md font-semibold mb-1 text-gray-900 dark:text-white"
+          >
+            In the heart of the flower market city centre
+          </p>
+        </div>
+        <button
+          class="btn-base absolute md:static right-2 top-24 btn-icon-md justify-center btn-secondary btn-secondary-hover btn-secondary-focus shadow-grayDark"
+        >
+          <svg
+            fill="none"
+            height="20"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="flex mt-5 mb-5"
+      >
+        <div
+          class="flex items-center space-x-1"
+        >
+          <svg
+            class="text-gray-200"
+            fill="#E4E7EC"
+            height="20"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+            />
+          </svg>
+          <svg
+            class="text-gray-200"
+            fill="#E4E7EC"
+            height="20"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+            />
+          </svg>
+          <svg
+            class="text-gray-200"
+            fill="#E4E7EC"
+            height="20"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+            />
+          </svg>
+          <svg
+            class="text-gray-200"
+            fill="#E4E7EC"
+            height="20"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+            />
+          </svg>
+          <svg
+            class="text-gray-200"
+            fill="#E4E7EC"
+            height="20"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+            />
+          </svg>
+        </div>
+        <p
+          class="text-md font-bold mx-2 select-none text-black dark:text-white"
+        >
+          0
+        </p>
+        <p
+          class="text-md font-normal text-gray-500 dark:text-gray-400"
+        >
+          20 reviews
+        </p>
+      </div>
+      <div
+        class="flex items-center justify-between mb-3 md:mb-0"
+      >
+        <div
+          class="flex items-center justify-between w-full md:w-auto"
+        >
+          <div
+            class="flex items-center"
+          >
+            <svg
+              class="text-gray-500 dark:text-white"
+              fill="none"
+              height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+              />
+              <circle
+                cx="12"
+                cy="10"
+                r="3"
+              />
+            </svg>
+            <p
+              class="text-md font-bold ml-2 mr-2 sm:mr-5 text-gray-500 dark:text-gray-300"
+            >
+              Prinsengracht
+            </p>
+          </div>
+          <div
+            class="items-center hidden xs:flex"
+          >
+            <svg
+              class="text-gray-500 dark:text-white"
+              fill="none"
+              height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+              />
+              <polyline
+                points="9 22 9 12 15 12 15 22"
+              />
+            </svg>
+            <p
+              class="text-md font-bold ml-2 mr-2 sm:mr-5 text-gray-500 dark:text-gray-300"
+            >
+              1 bed
+            </p>
+          </div>
+          <div
+            class="flex items-center"
+          >
+            <svg
+              class="text-gray-500 dark:text-white"
+              fill="none"
+              height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 12.55a11 11 0 0 1 14.08 0"
+              />
+              <path
+                d="M1.42 9a16 16 0 0 1 21.16 0"
+              />
+              <path
+                d="M8.53 16.11a6 6 0 0 1 6.95 0"
+              />
+              <line
+                x1="12"
+                x2="12.01"
+                y1="20"
+                y2="20"
+              />
+            </svg>
+            <p
+              class="text-md font-bold ml-2 mr-2 sm:mr-5 text-gray-500 dark:text-gray-300"
+            >
+              Wi-Fi
+            </p>
+          </div>
+        </div>
+        <div
+          class="items-center hidden space-x-3 md:flex"
+        >
+          <p
+            class="text-lg font-bold text-black dark:text-white"
+          >
+            €480
+          </p>
+          <p
+            class="text-md font-normal text-gray-500 dark:text-white"
+          >
+            EUR total
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

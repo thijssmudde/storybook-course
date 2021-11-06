@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Typography Renders correctly 1`] = `
+<DocumentFragment>
+  <h1
+    class="text-h1 font-normal tracking-tight text-black dark:text-white"
+  >
+    Heading example
+  </h1>
+</DocumentFragment>
+`;

@@ -1,4 +1,9 @@
-export const useRentalRating = (rating: number) => {
+interface IRating {
+  arrayStarsFilled: number[];
+  arrayStarsRemaining: number[];
+}
+
+export const useRentalRating = (rating: number): IRating => {
   const starsFilled = Math.ceil(rating);
   const starsRemaining = 5 - starsFilled;
 
