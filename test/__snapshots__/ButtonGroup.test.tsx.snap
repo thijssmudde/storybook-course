@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonGroup Renders correctly (icons) 1`] = `
+<DocumentFragment>
+  <button
+    class="inline-flex whitespace-nowrap items-center h-10 px-4 font-medium text-sm focus:outline-none hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-white border border-gray-300 dark:border-gray-500 rounded-l-lg border-r-0 bg-gray-50 dark:bg-gray-700"
+  >
+    <svg
+      fill="none"
+      height="20"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      width="20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <line
+        x1="8"
+        x2="21"
+        y1="6"
+        y2="6"
+      />
+      <line
+        x1="8"
+        x2="21"
+        y1="12"
+        y2="12"
+      />
+      <line
+        x1="8"
+        x2="21"
+        y1="18"
+        y2="18"
+      />
+      <line
+        x1="3"
+        x2="3.01"
+        y1="6"
+        y2="6"
+      />
+      <line
+        x1="3"
+        x2="3.01"
+        y1="12"
+        y2="12"
+      />
+      <line
+        x1="3"
+        x2="3.01"
+        y1="18"
+        y2="18"
+      />
+    </svg>
+  </button>
+  <button
+    class="inline-flex whitespace-nowrap items-center h-10 px-4 font-medium text-sm focus:outline-none hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-white border border-gray-300 dark:border-gray-500 rounded-r-lg"
+  >
+    <svg
+      fill="none"
+      height="20"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      width="20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        height="7"
+        width="7"
+        x="3"
+        y="3"
+      />
+      <rect
+        height="7"
+        width="7"
+        x="14"
+        y="3"
+      />
+      <rect
+        height="7"
+        width="7"
+        x="14"
+        y="14"
+      />
+      <rect
+        height="7"
+        width="7"
+        x="3"
+        y="14"
+      />
+    </svg>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`ButtonGroup Renders correctly (no icons) 1`] = `
+<DocumentFragment>
+  <button
+    class="inline-flex whitespace-nowrap items-center h-10 px-4 font-medium text-sm focus:outline-none hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-white border border-gray-300 dark:border-gray-500 rounded-l-lg border-r-0 bg-gray-50 dark:bg-gray-700"
+  >
+    Leading
+  </button>
+  <button
+    class="inline-flex whitespace-nowrap items-center h-10 px-4 font-medium text-sm focus:outline-none hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-white border border-gray-300 dark:border-gray-500 border-r-0"
+  >
+    Middle
+  </button>
+  <button
+    class="inline-flex whitespace-nowrap items-center h-10 px-4 font-medium text-sm focus:outline-none hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-white border border-gray-300 dark:border-gray-500 rounded-r-lg"
+  >
+    Trailing
+  </button>
+</DocumentFragment>
+`;
+
+exports[`ButtonGroup Renders correctly 1`] = `
+<DocumentFragment>
+  <button
+    class="inline-flex whitespace-nowrap items-center h-10 px-4 font-medium text-sm focus:outline-none hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-white border border-gray-300 dark:border-gray-500 rounded-l-lg border-r-0 bg-gray-50 dark:bg-gray-700"
+  >
+    Leading
+  </button>
+  <button
+    class="inline-flex whitespace-nowrap items-center h-10 px-4 font-medium text-sm focus:outline-none hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-white border border-gray-300 dark:border-gray-500 border-r-0"
+  >
+    Middle
+  </button>
+  <button
+    class="inline-flex whitespace-nowrap items-center h-10 px-4 font-medium text-sm focus:outline-none hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-white border border-gray-300 dark:border-gray-500 rounded-r-lg"
+  >
+    Trailing
+  </button>
+</DocumentFragment>
+`;
