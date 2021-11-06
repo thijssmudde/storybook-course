@@ -1,5 +1,5 @@
 import * as React from "react";
-import { render, cleanup, fireEvent } from "@testing-library/react"; // fireEvent
+import { render, cleanup, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import { ButtonGroup, options1 } from "../src";
 import { FiGrid, FiList } from "react-icons/fi";

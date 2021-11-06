@@ -5,6 +5,7 @@
   "search.exclude": {
     "node_modules": true,
     "dist": true,
-    "yarn.lock": true
+    "yarn.lock": true,
+    "coverage": true
   }
 }

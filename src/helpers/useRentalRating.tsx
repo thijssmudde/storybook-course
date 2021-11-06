@@ -6,9 +6,9 @@ export const useRentalRating = (rating: number) => {
     .fill(0)
     .map((_, i) => i + 1);
 
-  const arrayRemainingFilled = Array(starsRemaining)
+  const arrayStarsRemaining = Array(starsRemaining)
     .fill(0)
     .map((_, i) => i + 1);
 
-  return { arrayStarsFilled, arrayRemainingFilled };
+  return { arrayStarsFilled, arrayStarsRemaining };
 };

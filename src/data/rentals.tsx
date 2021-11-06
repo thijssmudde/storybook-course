@@ -7,7 +7,7 @@ const rental0: IRental = {
   subtitle: "In the heart of the flower market city centre",
   image: images.rental0,
   badge: "Exclusive deal",
-  rating: 4.8,
+  rating: 0,
   reviews: 20,
   address: "Prinsengracht",
   bed: "1 bed",

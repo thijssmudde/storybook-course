@@ -18,7 +18,7 @@ export interface RentalCardProps {
 }
 
 export const RentalCard: FC<RentalCardProps> = ({ rental }) => {
-  const { arrayStarsFilled, arrayRemainingFilled } = useRentalRating(
+  const { arrayStarsFilled, arrayStarsRemaining } = useRentalRating(
     rental.rating,
   );
 
@@ -88,7 +88,7 @@ export const RentalCard: FC<RentalCardProps> = ({ rental }) => {
                 className="text-warning-400"
               />
             ))}
-            {arrayRemainingFilled.map((index: number) => (
+            {arrayStarsRemaining.map((index: number) => (
               <FiStar
                 key={index}
                 size={20}

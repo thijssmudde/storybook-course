@@ -1,10 +1,5 @@
 # Storybook starter with React, Typescript, TailwindCSS and Figma using TSDX
 
-## TODO
-
-- Test coverage
-- Test for all components?
-
 ## Demo
 
 https://storybook-course.netlify.app/
