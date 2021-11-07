@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select Renders CountrySelect correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="relative inline-block w-50"
+    data-testid="selectContainer"
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      class="shadow-sm flex items-center text-md border border-gray-300 dark:border-gray-500 h-11 px-3.5 rounded-lg bg-white dark:bg-gray-800 focus:ring-4 focus:border-primary-300 dark:focus:border-gray-100 focus:ring-primary-100 dark:focus:ring-gray-100 dark:focus:ring-opacity-20 whitespace-nowrap text-gray-900 dark:text-white w-50"
+      data-testid="selectButton"
+      id="headlessui-listbox-button-1"
+      type="button"
+    >
+      <img
+        alt="nl"
+        class="w-5 h-5 mr-2"
+        src="https://res.cloudinary.com/tailwindcss/image/upload/v1635279277/nl_tpy2ab.svg"
+      />
+       Amsterdam, NL
+      <svg
+        class="text-gray-500 dark:text-gray-300 transform duration-100 ease-out ml-auto"
+        fill="none"
+        height="20"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <polyline
+          points="6 9 12 15 18 9"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Select Renders DateSelect correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="relative inline-block w-50"
+    data-testid="selectContainer"
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      class="shadow-sm flex items-center text-md border border-gray-300 dark:border-gray-500 h-11 px-3.5 rounded-lg bg-white dark:bg-gray-800 focus:ring-4 focus:border-primary-300 dark:focus:border-gray-100 focus:ring-primary-100 dark:focus:ring-gray-100 dark:focus:ring-opacity-20 whitespace-nowrap text-gray-900 dark:text-white w-50"
+      data-testid="selectButton"
+      id="headlessui-listbox-button-5"
+      type="button"
+    >
+      Okt 25 - Okt 31
+      <svg
+        class="text-gray-500 dark:text-gray-300 transform duration-100 ease-out ml-auto"
+        fill="none"
+        height="20"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <polyline
+          points="6 9 12 15 18 9"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Select Renders PriceSelect correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="relative inline-block w-50"
+    data-testid="selectContainer"
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      class="shadow-sm flex items-center text-md border border-gray-300 dark:border-gray-500 h-11 px-3.5 rounded-lg bg-white dark:bg-gray-800 focus:ring-4 focus:border-primary-300 dark:focus:border-gray-100 focus:ring-primary-100 dark:focus:ring-gray-100 dark:focus:ring-opacity-20 whitespace-nowrap text-gray-900 dark:text-white w-50"
+      data-testid="selectButton"
+      id="headlessui-listbox-button-3"
+      type="button"
+    >
+      Any price
+      <svg
+        class="text-gray-500 dark:text-gray-300 transform duration-100 ease-out ml-auto"
+        fill="none"
+        height="20"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <polyline
+          points="6 9 12 15 18 9"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;

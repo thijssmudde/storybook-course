@@ -1,91 +1,92 @@
-// import * as React from "react";
+import * as React from "react";
 import {
-  // render,
+  fireEvent,
+  render,
   cleanup,
-  // RenderResult,
+  RenderResult,
 } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
-// import { countries, prices, dates, Select, SelectProps } from "../src";
+import { countries, prices, dates, Select, SelectProps } from "../src";
 
 afterEach(cleanup);
 
-// interface ISetupSelect extends RenderResult {
-//   select: HTMLInputElement;
-// }
+interface ISetupSelect extends RenderResult {
+  select: HTMLSelectElement;
+}
 
-// const setup = ({
-//   options,
-//   selectedOption,
-//   setSelectedOption,
-//   placeholder = "Select an option",
-//   width = "w-50",
-// }: SelectProps): ISetupSelect => {
-//   const utils = render(
-//     <Select
-//       options={options}
-//       selectedOption={selectedOption}
-//       setSelectedOption={setSelectedOption}
-//       placeholder={placeholder}
-//       width={width}
-//     />,
-//   );
+const setup = ({
+  options,
+  selectedOption,
+  setSelectedOption,
+  placeholder = "Select an option",
+  width = "w-50",
+}: SelectProps): ISetupSelect => {
+  const utils = render(
+    <Select
+      options={options}
+      selectedOption={selectedOption}
+      setSelectedOption={setSelectedOption}
+      placeholder={placeholder}
+      width={width}
+    />,
+  );
 
-//   const select = utils.getByLabelText("select") as HTMLInputElement;
+  const select = utils.getByTestId("selectContainer") as HTMLSelectElement;
 
-//   return {
-//     select,
-//     ...utils,
-//   };
-// };
+  return {
+    select,
+    ...utils,
+  };
+};
 
+// TODO try to create snapshot of opened dropdown
 describe("Select", () => {
-  it("test pass", () => {
-    expect(2).toEqual(2);
+  it("Renders CountrySelect correctly", () => {
+    const { asFragment } = setup({
+      options: countries,
+      selectedOption: countries[0],
+      setSelectedOption: () => {},
+    });
+
+    expect(asFragment()).toMatchSnapshot();
   });
 
-  // it("Renders CountrySelect correctly", () => {
-  //   const { asFragment } = setup({
-  //     options: countries,
-  //     selectedOption: countries[0],
-  //     setSelectedOption: () => {},
-  //   });
+  it("Renders PriceSelect correctly", () => {
+    const { asFragment } = setup({
+      options: prices,
+      selectedOption: undefined,
+      placeholder: "Select a price",
+      setSelectedOption: () => {},
+    });
 
-  //   expect(asFragment()).toMatchSnapshot();
-  // });
+    expect(asFragment()).toMatchSnapshot();
+  });
 
-  // it("Renders PriceSelect correctly", () => {
-  //   const { asFragment } = setup({
-  //     options: prices,
-  //     selectedOption: prices[0],
-  //     setSelectedOption: () => {},
-  //   });
+  it("Renders DateSelect correctly", () => {
+    const { asFragment } = setup({
+      options: dates,
+      selectedOption: dates[0],
+      setSelectedOption: () => {},
+    });
 
-  //   expect(asFragment()).toMatchSnapshot();
-  // });
+    expect(asFragment()).toMatchSnapshot();
+  });
 
-  // it("Renders DateSelect correctly", () => {
-  //   const { asFragment } = setup({
-  //     options: dates,
-  //     selectedOption: dates[0],
-  //     setSelectedOption: () => {},
-  //   });
+  it("Selecting an option works", () => {
+    const setSelectedOption = jest.fn();
 
-  //   expect(asFragment()).toMatchSnapshot();
-  // });
+    const { getByText, getByTestId } = setup({
+      options: countries,
+      selectedOption: countries[0],
+      setSelectedOption,
+    });
+    const { value } = countries[4];
 
-  // it("Selecting an option works", () => {
-  //   const setSelectedOption = jest.fn();
+    // Click on button
+    fireEvent.click(getByTestId("selectButton"));
+    // Panel opens, select US
+    fireEvent.click(getByText("Washington, US"));
 
-  //   const { select } = setup({
-  //     options: countries,
-  //     selectedOption: countries[0],
-  //     setSelectedOption,
-  //   });
-  //   const { value } = countries[4];
-
-  //   // TODO fire change event
-  //   fireEvent.change(select, { target: { value } });
-
-  //   expect(setSelectedOption).toHaveBeenCalledWith(value);
-  // });
+    expect(setSelectedOption).toHaveBeenCalledWith(value);
+  });
 });

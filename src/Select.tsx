@@ -22,15 +22,18 @@ export const Select: FC<SelectProps> = ({
   width,
 }) => {
   return (
-    <div className={classNames("relative inline-block", width)}>
+    <div
+      data-testid="selectContainer"
+      className={classNames("relative inline-block", width)}
+    >
       <Listbox
         value={selectedOption && selectedOption.value}
         onChange={setSelectedOption}
-        aria-label="select"
       >
         {({ open }) => (
           <>
             <Listbox.Button
+              data-testid="selectButton"
               className={classNames(
                 "shadow-sm flex items-center text-md border border-gray-300 dark:border-gray-500 h-11 px-3.5 rounded-lg bg-white dark:bg-gray-800",
                 "focus:ring-4 focus:border-primary-300 dark:focus:border-gray-100 focus:ring-primary-100 dark:focus:ring-gray-100 dark:focus:ring-opacity-20 whitespace-nowrap",
