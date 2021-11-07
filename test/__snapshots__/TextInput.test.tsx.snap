@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInput Renders TextInput correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+  >
+    <div
+      class="h-11 shadow-sm rounded-lg w-full absolute flex items-center justify-between px-3.5 pointer-events-none"
+    >
+      <div />
+    </div>
+    <input
+      aria-label="input"
+      class="w-full select-none text-gray-900 dark:text-white text-md border h-11 rounded-lg border-gray-300 dark:border-gray-500 focus:ring-4 focus:border-primary-300 dark:focus:border-gray-100 focus:ring-primary-100 dark:focus:ring-gray-100 dark:focus:ring-opacity-20 bg-white dark:bg-gray-800"
+      placeholder="veronica@example.com"
+      type="email"
+      value=""
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TextInput Renders TextInput with LeadingIcon and TrailingIcon 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+  >
+    <div
+      class="h-11 shadow-sm rounded-lg w-full absolute flex items-center justify-between px-3.5 pointer-events-none"
+    >
+      <svg
+        class="text-gray-500"
+        fill="none"
+        height="1em"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+        />
+        <polyline
+          points="22,6 12,13 2,6"
+        />
+      </svg>
+      <svg
+        class="text-gray-400"
+        fill="none"
+        height="1em"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="12"
+          cy="12"
+          r="10"
+        />
+        <path
+          d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"
+        />
+        <line
+          x1="12"
+          x2="12.01"
+          y1="17"
+          y2="17"
+        />
+      </svg>
+    </div>
+    <input
+      aria-label="input"
+      class="w-full select-none text-gray-900 dark:text-white text-md border h-11 pl-9 pr-9 rounded-lg border-gray-300 dark:border-gray-500 focus:ring-4 focus:border-primary-300 dark:focus:border-gray-100 focus:ring-primary-100 dark:focus:ring-gray-100 dark:focus:ring-opacity-20 bg-white dark:bg-gray-800"
+      placeholder="veronica@example.com"
+      type="email"
+      value=""
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TextInput Renders TextInput with leadingText correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="relative flex items-center"
+  >
+    <div
+      class="h-11 shadow-sm rounded-lg w-full absolute flex items-center justify-between px-3.5 pointer-events-none"
+    >
+      <div />
+    </div>
+    <div
+      class="flex items-center h-11 text-lg text-gray-500 pl-3.5 pr-3 border border-r-0 rounded-l-lg border-gray-300 dark:border-gray-500 dark:bg-gray-800"
+    >
+      https://
+    </div>
+    <input
+      aria-label="input"
+      class="w-full select-none text-gray-900 dark:text-white text-md border h-11 rounded-l-0 rounded-r-lg border-gray-300 dark:border-gray-500 focus:ring-4 focus:border-primary-300 dark:focus:border-gray-100 focus:ring-primary-100 dark:focus:ring-gray-100 dark:focus:ring-opacity-20 bg-white dark:bg-gray-800"
+      placeholder="veronica@example.com"
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    class="mt-1.5 text-gray-500 text-sm"
+  >
+    This is a hint text to help the user.
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TextInput Renders TextInput with only a TrailingIcon 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+  >
+    <div
+      class="h-11 shadow-sm rounded-lg w-full absolute flex items-center justify-between px-3.5 pointer-events-none"
+    >
+      <div />
+      <svg
+        class="text-gray-400"
+        fill="none"
+        height="1em"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="12"
+          cy="12"
+          r="10"
+        />
+        <path
+          d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"
+        />
+        <line
+          x1="12"
+          x2="12.01"
+          y1="17"
+          y2="17"
+        />
+      </svg>
+    </div>
+    <input
+      aria-label="input"
+      class="w-full select-none text-gray-900 dark:text-white text-md border h-11 pr-9 rounded-lg border-gray-300 dark:border-gray-500 focus:ring-4 focus:border-primary-300 dark:focus:border-gray-100 focus:ring-primary-100 dark:focus:ring-gray-100 dark:focus:ring-opacity-20 bg-white dark:bg-gray-800"
+      placeholder="veronica@example.com"
+      type="email"
+      value=""
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TextInput Renders disabled TextInput correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+  >
+    <div
+      class="h-11 shadow-sm rounded-lg w-full absolute flex items-center justify-between px-3.5 pointer-events-none"
+    >
+      <div />
+    </div>
+    <input
+      aria-label="input"
+      class="w-full select-none text-gray-900 dark:text-white text-md border h-11 rounded-lg border-gray-300 dark:border-gray-500 focus:ring-4 focus:border-primary-300 dark:focus:border-gray-100 focus:ring-primary-100 dark:focus:ring-gray-100 dark:focus:ring-opacity-20 bg-gray-50 dark:bg-gray-700"
+      disabled=""
+      placeholder="veronica@example.com"
+      type="email"
+      value=""
+    />
+  </div>
+</DocumentFragment>
+`;

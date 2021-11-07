@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MobileNavbar Renders MobileNavbar closed correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="z-40 flex items-center justify-between h-20 py-6 bg-white shadow-md dark:bg-gray-900 px-9"
+  >
+    <img
+      alt="logo"
+      class="w-8 h-8 select-none"
+      src="https://res.cloudinary.com/tailwindcss/image/upload/v1634916081/Logo_Icon_dq276z.png"
+    />
+    <h6
+      class="text-h6 font-medium select-none text-black dark:text-white"
+    >
+      My Travel App
+    </h6>
+    <svg
+      class="text-gray-500 transition-all duration-100 ease-out cursor-pointer stroke-current hover:text-gray-900 dark:text-white dark:hover:text-gray-200"
+      data-testid="toggleOpen"
+      height="32"
+      viewBox="0 0 32 32"
+      width="32"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M4 16H22.6667M4 8H28M4 24H28"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+      />
+    </svg>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`MobileNavbar Renders MobileNavbar open correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="z-40 flex items-center justify-between h-20 py-6 bg-white shadow-md dark:bg-gray-900 px-9"
+  >
+    <img
+      alt="logo"
+      class="w-8 h-8 select-none"
+      src="https://res.cloudinary.com/tailwindcss/image/upload/v1634916081/Logo_Icon_dq276z.png"
+    />
+    <h6
+      class="text-h6 font-medium select-none text-black dark:text-white"
+    >
+      My Travel App
+    </h6>
+    <svg
+      class="text-gray-500 transition-all duration-100 ease-out cursor-pointer stroke-current hover:text-gray-900 dark:text-white dark:hover:text-gray-200 opacity-0"
+      data-testid="toggleOpen"
+      height="32"
+      viewBox="0 0 32 32"
+      width="32"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M4 16H22.6667M4 8H28M4 24H28"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+      />
+    </svg>
+  </div>
+</DocumentFragment>
+`;

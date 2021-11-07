@@ -15,6 +15,7 @@ export const MobileNavbar: FC<MobileNavbarProps> = ({ open, toggleOpen }) => (
       My Travel App
     </Typography>
     <svg
+      data-testid="toggleOpen"
       width="32"
       height="32"
       viewBox="0 0 32 32"

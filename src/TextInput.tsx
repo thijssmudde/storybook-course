@@ -5,7 +5,7 @@ import { Typography } from "./Typography";
 export interface TextInputProps {
   type: "text" | "email";
   value: string;
-  handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  handleChange: (value: string) => void;
   label?: string;
   leadingText?: string;
   placeholder: string;
@@ -33,6 +33,7 @@ export const TextInput: FC<TextInputProps> = ({
     <>
       {label ? (
         <Typography
+          as="label"
           variant="sm"
           customWeight="medium"
           customColor="text-gray-700 dark:text-white"
@@ -79,8 +80,13 @@ export const TextInput: FC<TextInputProps> = ({
         <input
           type={type}
           value={value}
-          onChange={handleChange}
+          onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+            if (!disabled) {
+              handleChange(event.target.value);
+            }
+          }}
           placeholder={placeholder}
+          aria-label="input"
           className={classNames(
             "w-full select-none text-gray-900 dark:text-white text-md border h-11",
             {

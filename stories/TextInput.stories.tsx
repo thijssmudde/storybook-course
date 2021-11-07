@@ -26,8 +26,8 @@ interface Props extends TextInputProps {
 const StoryTextInput: Story<Props> = (args) => {
   const [text1, setText1] = React.useState<string>(args.value);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setText1(e.target.value);
+  const handleChange = (value: string) => {
+    setText1(value);
   };
 
   return (

@@ -24,14 +24,6 @@ type TypographyWeightValue =
   | "font-semibold"
   | "font-bold";
 
-export interface TypographyProps {
-  variant: TypographyVariant;
-  customColor?: string;
-  customWeight?: TypographyWeightOption;
-  className?: string;
-  children: string | React.ReactNode;
-}
-
 const TypographyVariantClasses: Record<TypographyVariant, string> = {
   xs: "text-xs",
   sm: "text-sm",
@@ -56,7 +48,17 @@ const TypographyWeightClasses: Record<
   bold: "font-bold",
 };
 
+export interface TypographyProps {
+  as?: "label";
+  variant: TypographyVariant;
+  customColor?: string;
+  customWeight?: TypographyWeightOption;
+  className?: string;
+  children: string | React.ReactNode;
+}
+
 export const Typography: FC<TypographyProps> = ({
+  as,
   variant = "md",
   customColor,
   customWeight = "regular",
@@ -69,7 +71,9 @@ export const Typography: FC<TypographyProps> = ({
   // h1-h6 should have corresponding component
   // others should be p
   const isHeading = variant.startsWith("h");
-  const Component = (isHeading ? variant : "p") as keyof JSX.IntrinsicElements;
+  const Component = as
+    ? as
+    : ((isHeading ? variant : "p") as keyof JSX.IntrinsicElements);
 
   return (
     <Component

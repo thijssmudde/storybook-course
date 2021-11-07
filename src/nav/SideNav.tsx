@@ -35,9 +35,7 @@ export const SideNav: FC<ISideNavProps> = ({
   const [activeSubNavItem, setActiveSubNavItem] = React.useState<string>("");
   const [openDropdowns, setOpenDropdowns] = React.useState<string[]>([]);
 
-  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchString(e.target.value);
-  };
+  const handleSearch = (value: string) => setSearchString(value);
 
   const onClickNavItem = (item: INavItem, subNavPath?: string) => {
     if (subNavPath) {

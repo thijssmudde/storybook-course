@@ -26,6 +26,7 @@ export const Select: FC<SelectProps> = ({
       <Listbox
         value={selectedOption && selectedOption.value}
         onChange={setSelectedOption}
+        aria-label="select"
       >
         {({ open }) => (
           <>

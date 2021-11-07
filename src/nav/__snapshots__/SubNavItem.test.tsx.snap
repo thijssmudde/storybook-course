@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SubNavItem Renders SubNavItems correctly 1`] = `
+<DocumentFragment>
+  <li
+    class="navItem group"
+  >
+    <p
+      class="text-md font-medium flex-grow pl-13 group-hover:text-primary-600 dark:group-hover:text-white text-gray-800 dark:text-white"
+    >
+      Analytics
+    </p>
+  </li>
+  <li
+    class="navItem group"
+  >
+    <p
+      class="text-md font-medium flex-grow pl-13 group-hover:text-primary-600 dark:group-hover:text-white text-gray-800 dark:text-white"
+    >
+      Apps
+    </p>
+  </li>
+  <li
+    class="navItem group"
+  >
+    <p
+      class="text-md font-medium flex-grow pl-13 group-hover:text-primary-600 dark:group-hover:text-white text-gray-800 dark:text-white"
+    >
+      Learn
+    </p>
+  </li>
+</DocumentFragment>
+`;
+
+exports[`SubNavItem Renders SubNavItems with inDropdown=true correctly 1`] = `
+<DocumentFragment>
+  <li
+    class="navItem group"
+  >
+    <p
+      class="text-md font-medium flex-grow pl-4 group-hover:text-primary-600 dark:group-hover:text-white text-gray-800 dark:text-white"
+    >
+      Analytics
+    </p>
+  </li>
+  <li
+    class="navItem group"
+  >
+    <p
+      class="text-md font-medium flex-grow pl-4 group-hover:text-primary-600 dark:group-hover:text-white text-gray-800 dark:text-white"
+    >
+      Apps
+    </p>
+  </li>
+  <li
+    class="navItem group"
+  >
+    <p
+      class="text-md font-medium flex-grow pl-4 group-hover:text-primary-600 dark:group-hover:text-white text-gray-800 dark:text-white"
+    >
+      Learn
+    </p>
+  </li>
+</DocumentFragment>
+`;
