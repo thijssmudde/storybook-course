@@ -55,6 +55,49 @@ exports[`Select Renders DateSelect correctly 1`] = `
       id="headlessui-listbox-button-5"
       type="button"
     >
+      <div
+        class="w-5 h-5 mr-2 overflow-hidden"
+      >
+        <svg
+          class="text-gray-400"
+          fill="none"
+          height="20"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            height="18"
+            rx="2"
+            ry="2"
+            width="18"
+            x="3"
+            y="4"
+          />
+          <line
+            x1="16"
+            x2="16"
+            y1="2"
+            y2="6"
+          />
+          <line
+            x1="8"
+            x2="8"
+            y1="2"
+            y2="6"
+          />
+          <line
+            x1="3"
+            x2="21"
+            y1="10"
+            y2="10"
+          />
+        </svg>
+      </div>
       Okt 25 - Okt 31
       <svg
         class="text-gray-500 dark:text-gray-300 transform duration-100 ease-out ml-auto"
@@ -86,12 +129,38 @@ exports[`Select Renders PriceSelect correctly 1`] = `
     <button
       aria-expanded="false"
       aria-haspopup="true"
-      class="shadow-sm flex items-center text-md border border-gray-300 dark:border-gray-500 h-11 px-3.5 rounded-lg bg-white dark:bg-gray-800 focus:ring-4 focus:border-primary-300 dark:focus:border-gray-100 focus:ring-primary-100 dark:focus:ring-gray-100 dark:focus:ring-opacity-20 whitespace-nowrap text-gray-900 dark:text-white w-50"
+      class="shadow-sm flex items-center text-md border border-gray-300 dark:border-gray-500 h-11 px-3.5 rounded-lg bg-white dark:bg-gray-800 focus:ring-4 focus:border-primary-300 dark:focus:border-gray-100 focus:ring-primary-100 dark:focus:ring-gray-100 dark:focus:ring-opacity-20 whitespace-nowrap text-gray-500 dark:text-gray-300 w-50"
       data-testid="selectButton"
       id="headlessui-listbox-button-3"
       type="button"
     >
-      Any price
+      <div
+        class="w-5 h-5 mr-2 overflow-hidden"
+      >
+        <svg
+          class="text-gray-400"
+          fill="none"
+          height="20"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="12"
+            x2="12"
+            y1="1"
+            y2="23"
+          />
+          <path
+            d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+          />
+        </svg>
+      </div>
+      Select a price
       <svg
         class="text-gray-500 dark:text-gray-300 transform duration-100 ease-out ml-auto"
         fill="none"
@@ -109,6 +178,194 @@ exports[`Select Renders PriceSelect correctly 1`] = `
         />
       </svg>
     </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Select Snapshot of opened select 1`] = `
+<DocumentFragment>
+  <div
+    class="relative inline-block w-50"
+    data-testid="selectContainer"
+  >
+    <button
+      aria-controls="headlessui-listbox-options-8"
+      aria-expanded="true"
+      aria-haspopup="true"
+      class="shadow-sm flex items-center text-md border border-gray-300 dark:border-gray-500 h-11 px-3.5 rounded-lg bg-white dark:bg-gray-800 focus:ring-4 focus:border-primary-300 dark:focus:border-gray-100 focus:ring-primary-100 dark:focus:ring-gray-100 dark:focus:ring-opacity-20 whitespace-nowrap text-gray-900 dark:text-white w-50"
+      data-testid="selectButton"
+      id="headlessui-listbox-button-7"
+      type="button"
+    >
+      <img
+        alt="nl"
+        class="w-5 h-5 mr-2"
+        src="https://res.cloudinary.com/tailwindcss/image/upload/v1635279277/nl_tpy2ab.svg"
+      />
+       Amsterdam, NL
+      <svg
+        class="text-gray-500 dark:text-gray-300 transform duration-100 ease-out -rotate-180 ml-auto"
+        fill="none"
+        height="20"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <polyline
+          points="6 9 12 15 18 9"
+        />
+      </svg>
+    </button>
+    <ul
+      aria-activedescendant="headlessui-listbox-option-9"
+      aria-labelledby="headlessui-listbox-button-7"
+      aria-orientation="vertical"
+      class="absolute z-10 inline-flex flex-col w-full bg-white border border-gray-300 rounded-lg shadow-lg top-13 dark:border-gray-500 dark:bg-gray-800"
+      id="headlessui-listbox-options-8"
+      role="listbox"
+      tabindex="0"
+    >
+      <li
+        aria-selected="true"
+        class="flex items-center pl-3.5 pr-3 justify-between h-11 text-gray-900 dark:text-white text-md cursor-pointer hover:bg-primary-25 dark:hover:bg-gray-100 dark:hover:bg-opacity-10 whitespace-nowrap bg-primary-25 dark:bg-gray-100 dark:bg-opacity-10 rounded-t-lg"
+        id="headlessui-listbox-option-9"
+        role="option"
+        tabindex="-1"
+      >
+        <div
+          class="flex items-center"
+        >
+          <img
+            alt="nl"
+            class="w-5 h-5 mr-2"
+            src="https://res.cloudinary.com/tailwindcss/image/upload/v1635279277/nl_tpy2ab.svg"
+          />
+           Amsterdam, NL
+        </div>
+        <svg
+          class="ml-5 text-primary-600 dark:text-white"
+          fill="none"
+          height="1em"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polyline
+            points="20 6 9 17 4 12"
+          />
+        </svg>
+      </li>
+      <li
+        class="flex items-center pl-3.5 pr-3 justify-between h-11 text-gray-900 dark:text-white text-md cursor-pointer hover:bg-primary-25 dark:hover:bg-gray-100 dark:hover:bg-opacity-10 whitespace-nowrap"
+        id="headlessui-listbox-option-10"
+        role="option"
+        tabindex="-1"
+      >
+        <div
+          class="flex items-center"
+        >
+          <img
+            alt="it"
+            class="w-5 h-5 mr-2"
+            src="https://res.cloudinary.com/tailwindcss/image/upload/v1635279276/it_dwah46.svg"
+          />
+           Rome, IT
+        </div>
+      </li>
+      <li
+        class="flex items-center pl-3.5 pr-3 justify-between h-11 text-gray-900 dark:text-white text-md cursor-pointer hover:bg-primary-25 dark:hover:bg-gray-100 dark:hover:bg-opacity-10 whitespace-nowrap"
+        id="headlessui-listbox-option-11"
+        role="option"
+        tabindex="-1"
+      >
+        <div
+          class="flex items-center"
+        >
+          <img
+            alt="de"
+            class="w-5 h-5 mr-2"
+            src="https://res.cloudinary.com/tailwindcss/image/upload/v1635279281/de_umqzrw.svg"
+          />
+           Berlin, DE
+        </div>
+      </li>
+      <li
+        class="flex items-center pl-3.5 pr-3 justify-between h-11 text-gray-900 dark:text-white text-md cursor-pointer hover:bg-primary-25 dark:hover:bg-gray-100 dark:hover:bg-opacity-10 whitespace-nowrap"
+        id="headlessui-listbox-option-12"
+        role="option"
+        tabindex="-1"
+      >
+        <div
+          class="flex items-center"
+        >
+          <img
+            alt="fr"
+            class="w-5 h-5 mr-2"
+            src="https://res.cloudinary.com/tailwindcss/image/upload/v1635279284/fr_kfnvdu.svg"
+          />
+           Paris, FR
+        </div>
+      </li>
+      <li
+        class="flex items-center pl-3.5 pr-3 justify-between h-11 text-gray-900 dark:text-white text-md cursor-pointer hover:bg-primary-25 dark:hover:bg-gray-100 dark:hover:bg-opacity-10 whitespace-nowrap"
+        id="headlessui-listbox-option-13"
+        role="option"
+        tabindex="-1"
+      >
+        <div
+          class="flex items-center"
+        >
+          <img
+            alt="us"
+            class="w-5 h-5 mr-2"
+            src="https://res.cloudinary.com/tailwindcss/image/upload/v1635279279/us_bid855.svg"
+          />
+           Washington, US
+        </div>
+      </li>
+      <li
+        class="flex items-center pl-3.5 pr-3 justify-between h-11 text-gray-900 dark:text-white text-md cursor-pointer hover:bg-primary-25 dark:hover:bg-gray-100 dark:hover:bg-opacity-10 whitespace-nowrap"
+        id="headlessui-listbox-option-14"
+        role="option"
+        tabindex="-1"
+      >
+        <div
+          class="flex items-center"
+        >
+          <img
+            alt="ru"
+            class="w-5 h-5 mr-2"
+            src="https://res.cloudinary.com/tailwindcss/image/upload/v1635279278/ru_dcbkqy.svg"
+          />
+           Moscow, RU
+        </div>
+      </li>
+      <li
+        class="flex items-center pl-3.5 pr-3 justify-between h-11 text-gray-900 dark:text-white text-md cursor-pointer hover:bg-primary-25 dark:hover:bg-gray-100 dark:hover:bg-opacity-10 whitespace-nowrap rounded-b-lg"
+        id="headlessui-listbox-option-15"
+        role="option"
+        tabindex="-1"
+      >
+        <div
+          class="flex items-center"
+        >
+          <img
+            alt="be"
+            class="w-5 h-5 mr-2"
+            src="https://res.cloudinary.com/tailwindcss/image/upload/v1635279280/be_jrkj6d.svg"
+          />
+           Brussels, BE
+        </div>
+      </li>
+    </ul>
   </div>
 </DocumentFragment>
 `;

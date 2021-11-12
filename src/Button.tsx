@@ -77,7 +77,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const Button: FC<ButtonProps> = ({
   children,
   className,
-  variant = "primary",
+  variant,
   size = "md",
   LeadingIcon,
   TrailingIcon,

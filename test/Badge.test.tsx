@@ -10,6 +10,10 @@ describe("Badge", () => {
   it("Renders badges correctly", () => {
     const { asFragment } = render(
       <>
+        <Badge variant="gray" LeadingIcon={<FiStar />}>
+          Label
+        </Badge>
+
         <Badge variant="gray" size="sm" LeadingIcon={<FiStar />}>
           Label
         </Badge>

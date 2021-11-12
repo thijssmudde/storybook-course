@@ -7,6 +7,7 @@ import {
 } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import { countries, prices, dates, Select, SelectProps } from "../src";
+import { FiCalendar, FiDollarSign } from "react-icons/fi";
 
 afterEach(cleanup);
 
@@ -18,6 +19,7 @@ const setup = ({
   options,
   selectedOption,
   setSelectedOption,
+  LeadingIcon,
   placeholder = "Select an option",
   width = "w-50",
 }: SelectProps): ISetupSelect => {
@@ -26,6 +28,7 @@ const setup = ({
       options={options}
       selectedOption={selectedOption}
       setSelectedOption={setSelectedOption}
+      LeadingIcon={LeadingIcon}
       placeholder={placeholder}
       width={width}
     />,
@@ -39,7 +42,7 @@ const setup = ({
   };
 };
 
-// TODO try to create snapshot of opened dropdown
+// TODO try to create snapshot of opened dropdown with selectedOption active
 describe("Select", () => {
   it("Renders CountrySelect correctly", () => {
     const { asFragment } = setup({
@@ -57,6 +60,7 @@ describe("Select", () => {
       selectedOption: undefined,
       placeholder: "Select a price",
       setSelectedOption: () => {},
+      LeadingIcon: <FiDollarSign />,
     });
 
     expect(asFragment()).toMatchSnapshot();
@@ -67,7 +71,20 @@ describe("Select", () => {
       options: dates,
       selectedOption: dates[0],
       setSelectedOption: () => {},
+      LeadingIcon: <FiCalendar />,
     });
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it("Snapshot of opened select", () => {
+    const { asFragment, getByTestId } = setup({
+      options: countries,
+      selectedOption: countries[0],
+      setSelectedOption: () => {},
+    });
+
+    fireEvent.click(getByTestId("selectButton"));
 
     expect(asFragment()).toMatchSnapshot();
   });

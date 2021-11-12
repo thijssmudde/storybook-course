@@ -59,7 +59,7 @@ export interface TypographyProps {
 
 export const Typography: FC<TypographyProps> = ({
   as,
-  variant = "md",
+  variant,
   customColor,
   customWeight = "regular",
   className,

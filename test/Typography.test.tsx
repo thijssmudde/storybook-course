@@ -22,6 +22,19 @@ describe("Typography", () => {
     expect(textElement.outerHTML).toMatch("h1");
   });
 
+  it("Check if renders correct element (label)", () => {
+    const content = "Heading example";
+
+    const { getByText } = render(
+      <Typography as="label" variant="h1">
+        {content}
+      </Typography>,
+    );
+
+    const textElement = getByText(content);
+    expect(textElement.outerHTML).toMatch("label");
+  });
+
   it("Check if renders correct element (p)", () => {
     const content = "Paragraph example";
 

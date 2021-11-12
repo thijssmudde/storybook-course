@@ -20,6 +20,7 @@ const setup = ({
   disabled,
   label,
   type = "email",
+  error,
   helperText,
   leadingText,
   LeadingIcon,
@@ -32,6 +33,7 @@ const setup = ({
       leadingText={leadingText}
       handleChange={handleChange}
       label={label}
+      error={error}
       placeholder="veronica@example.com"
       helperText={helperText}
       LeadingIcon={LeadingIcon}
@@ -51,7 +53,8 @@ const setup = ({
 describe("TextInput", () => {
   it("Renders TextInput correctly", () => {
     const { asFragment } = setup({
-      error: "this is an error",
+      label: "Email",
+      error: "This is an error message",
     });
 
     expect(asFragment()).toMatchSnapshot();
